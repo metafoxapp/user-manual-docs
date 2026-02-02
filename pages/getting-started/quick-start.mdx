@@ -1,0 +1,206 @@
+# Quick Start Guide
+
+Get your phpFox site up and running in just a few minutes!
+
+## Step 1: Access Your Admin Panel
+
+After installation, log in to your admin panel:
+
+1. Navigate to `http://yourdomain.com/admincp`
+2. Enter your admin credentials
+3. You'll see the admin dashboard
+
+## Step 2: Basic Site Configuration
+
+### Site Settings
+
+Configure your basic site settings:
+
+1. Go to **Settings** → **Site Settings**
+2. Set your site name and description
+3. Configure your site URL
+4. Set default language and timezone
+
+```javascript
+// Example site configuration
+{
+  "siteName": "My Social Network",
+  "siteDescription": "A community for sharing and connecting",
+  "timezone": "America/New_York",
+  "language": "en"
+}
+```
+
+### Email Configuration
+
+Set up email for notifications:
+
+1. Navigate to **Settings** → **Email Settings**
+2. Choose your email method (SMTP recommended)
+3. Enter your SMTP credentials
+
+**SMTP Configuration Example:**
+```
+SMTP Host: smtp.gmail.com
+SMTP Port: 587
+SMTP User: your-email@gmail.com
+SMTP Password: your-app-password
+Encryption: TLS
+```
+
+## Step 3: Customize Your Theme
+
+### Choose a Theme
+
+1. Go to **Appearance** → **Themes**
+2. Browse available themes
+3. Click **Activate** on your preferred theme
+
+### Customize Colors
+
+1. Navigate to **Appearance** → **Theme Customizer**
+2. Adjust colors, fonts, and layout
+3. Click **Save Changes**
+
+## Step 4: Create Essential Pages
+
+Create some basic pages for your site:
+
+### About Page
+1. Go to **Content** → **Pages** → **Add New**
+2. Title: "About Us"
+3. Add content describing your site
+4. Click **Publish**
+
+### Terms of Service
+1. Create a new page: "Terms of Service"
+2. Add your terms and conditions
+3. Mark as important in site footer
+
+### Privacy Policy
+1. Create a new page: "Privacy Policy"
+2. Add your privacy policy content
+3. Link in footer
+
+import { Steps } from 'nextra/components'
+
+<Steps>
+
+### Configure User Registration
+
+Go to **Users** → **Registration Settings**
+- Enable/disable open registration
+- Set email verification requirements
+- Configure captcha for spam prevention
+
+### Set Up User Roles
+
+Navigate to **Users** → **User Roles**
+- Review default roles (Admin, Moderator, Member)
+- Create custom roles if needed
+- Configure permissions for each role
+
+### Enable Core Features
+
+Go to **Apps** → **Manage Apps**
+- Enable essential apps (Profile, Feed, Photos, etc.)
+- Configure app-specific settings
+- Install additional apps from marketplace
+
+</Steps>
+
+## Step 5: Add Sample Content
+
+To make your site look active, add some initial content:
+
+### Create a Test User
+```bash
+1. Users → Add New User
+2. Fill in user details
+3. Set as "Active" status
+4. Assign appropriate user role
+```
+
+### Add Sample Posts
+1. Log in as your test user
+2. Create a few posts in the activity feed
+3. Upload some photos
+4. Share a video
+
+### Create a Group
+1. Go to **Groups** → **Create New**
+2. Name: "General Discussion"
+3. Set as public group
+4. Add description and cover photo
+
+## Step 6: Configure Notifications
+
+Set up notification preferences:
+
+1. **Settings** → **Notifications**
+2. Enable email notifications for:
+   - New user registrations
+   - Reported content
+   - System updates
+3. Set notification frequency
+
+## Step 7: Set Up Search & SEO
+
+### Enable Search
+1. **Settings** → **Search Settings**
+2. Enable full-text search
+3. Configure search indexing
+
+### SEO Configuration
+```javascript
+// Settings → SEO
+{
+  "metaTitle": "My Social Network - Connect & Share",
+  "metaDescription": "Join our community to connect with friends...",
+  "enableSitemap": true,
+  "enableRobotsTxt": true
+}
+```
+
+## Step 8: Mobile Configuration
+
+Ensure your site works great on mobile:
+
+1. **Settings** → **Mobile Settings**
+2. Enable responsive design
+3. Test on various devices
+4. Configure mobile-specific features
+
+## Quick Checklist
+
+Before launching your site, ensure you've completed:
+
+- [ ] Site settings configured
+- [ ] Email working properly
+- [ ] Theme customized
+- [ ] Essential pages created
+- [ ] User roles configured
+- [ ] Sample content added
+- [ ] Notifications enabled
+- [ ] SEO settings optimized
+- [ ] Mobile responsiveness tested
+- [ ] Backup system configured
+
+## What's Next?
+
+Now that your site is set up, explore these topics:
+
+- [User Management](/user-guide/users) - Learn how to manage users effectively
+- [Content Moderation](/user-guide/moderation) - Keep your community safe
+- [Customization](/advanced/customization) - Advanced theme and feature customization
+- [Performance](/advanced/performance) - Optimize your site for speed
+
+import { Callout } from 'nextra/components'
+
+<Callout type="warning">
+  **Important**: Don't forget to set up regular backups of your database and files!
+</Callout>
+
+<Callout type="info">
+  **Pro Tip**: Start with a soft launch to a small group of users to test everything works smoothly before opening to everyone.
+</Callout>

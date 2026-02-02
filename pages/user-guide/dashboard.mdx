@@ -1,0 +1,313 @@
+# Dashboard Overview
+
+The phpFox admin dashboard is your central hub for managing your social network. This guide will help you understand and navigate the dashboard effectively.
+
+## Dashboard Layout
+
+### Top Navigation Bar
+
+The top navigation bar provides quick access to:
+
+- **Site Preview** - View your site as a visitor
+- **Notifications** - Admin notifications and alerts
+- **Quick Actions** - Common administrative tasks
+- **Profile** - Your admin profile and settings
+- **Logout** - Sign out of admin panel
+
+### Main Dashboard Widgets
+
+#### Statistics Overview
+
+The dashboard displays key metrics at a glance:
+
+```
+┌─────────────────────────────────────────────────┐
+│  Total Users: 1,234      New Today: 12          │
+│  Total Posts: 5,678      New Today: 45          │
+│  Active Groups: 89       New This Week: 3       │
+│  Pending Reports: 2      Pending Approvals: 5   │
+└─────────────────────────────────────────────────┘
+```
+
+#### User Activity Chart
+
+Visual representation of user activity:
+
+- Daily active users
+- Registration trends
+- Peak activity hours
+- User engagement metrics
+
+#### Recent Activity Feed
+
+Monitor recent site activity:
+
+- New user registrations
+- Recent posts and comments
+- Reported content
+- System events
+
+#### Quick Stats Cards
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '1rem 0' }}>
+  <div style={{ padding: '1rem', border: '1px solid #e5e7eb', borderRadius: '0.5rem' }}>
+    <h4>👥 Users</h4>
+    <p style={{ fontSize: '2rem', margin: '0.5rem 0' }}>1,234</p>
+    <p style={{ color: 'green', margin: 0 }}>↑ 12% this month</p>
+  </div>
+  <div style={{ padding: '1rem', border: '1px solid #e5e7eb', borderRadius: '0.5rem' }}>
+    <h4>📝 Posts</h4>
+    <p style={{ fontSize: '2rem', margin: '0.5rem 0' }}>5,678</p>
+    <p style={{ color: 'green', margin: 0 }}>↑ 8% this month</p>
+  </div>
+  <div style={{ padding: '1rem', border: '1px solid #e5e7eb', borderRadius: '0.5rem' }}>
+    <h4>💬 Comments</h4>
+    <p style={{ fontSize: '2rem', margin: '0.5rem 0' }}>12,345</p>
+    <p style={{ color: 'green', margin: 0 }}>↑ 15% this month</p>
+  </div>
+  <div style={{ padding: '1rem', border: '1px solid #e5e7eb', borderRadius: '0.5rem' }}>
+    <h4>⚠️ Reports</h4>
+    <p style={{ fontSize: '2rem', margin: '0.5rem 0' }}>2</p>
+    <p style={{ color: 'orange', margin: 0 }}>Needs attention</p>
+  </div>
+</div>
+
+## Left Sidebar Menu
+
+### Main Sections
+
+#### Dashboard
+- Overview and statistics
+- Quick actions
+- Recent activity
+
+#### Users
+- Manage users
+- User groups and roles
+- Registration settings
+- Ban management
+
+#### Content
+- Posts and updates
+- Photos and videos
+- Pages and blogs
+- Comments management
+
+#### Apps
+- Installed apps
+- App marketplace
+- App settings
+
+#### Appearance
+- Themes
+- Theme customizer
+- Menus
+- Widgets
+
+#### Settings
+- General settings
+- Site configuration
+- Email settings
+- Advanced options
+
+## Dashboard Customization
+
+### Widget Management
+
+Customize your dashboard by:
+
+1. **Adding Widgets**
+   - Click "Add Widget" button
+   - Select from available widgets
+   - Configure widget settings
+
+2. **Rearranging Widgets**
+   - Drag and drop widgets
+   - Resize widget containers
+   - Create custom layouts
+
+3. **Removing Widgets**
+   - Click the "×" on any widget
+   - Confirm removal
+   - Restore from widget library
+
+### Custom Dashboard Views
+
+Create different dashboard views for:
+
+- Overview (default)
+- User management focus
+- Content moderation focus
+- Analytics and reporting
+
+## Key Dashboard Features
+
+### Quick Actions Panel
+
+Access common tasks quickly:
+
+```javascript
+Quick Actions:
+├── Add New User
+├── Create Page
+├── Manage Reported Content
+├── View Site Statistics
+├── Backup Database
+└── Clear Cache
+```
+
+### System Status Monitor
+
+Monitor system health:
+
+| Component | Status | Details |
+|-----------|--------|---------|
+| Web Server | ✅ Running | Apache 2.4.52 |
+| Database | ✅ Connected | MySQL 8.0.28 |
+| Cache | ✅ Active | Redis 6.2 |
+| Storage | ⚠️ Warning | 78% used |
+| Memory | ✅ Good | 2.1 GB / 4 GB |
+
+### Notifications Center
+
+Stay informed about:
+
+- **Critical Alerts** - Security issues, system errors
+- **Moderation Queue** - Reported content, pending approvals
+- **User Activity** - Suspicious activity, mass registrations
+- **System Updates** - Available updates, maintenance reminders
+
+## Analytics Dashboard
+
+### Traffic Overview
+
+Monitor site traffic:
+
+- Page views per day/week/month
+- Unique visitors
+- Bounce rate
+- Average session duration
+
+### User Engagement Metrics
+
+Track user engagement:
+
+- Daily/Monthly Active Users (DAU/MAU)
+- Posts per user
+- Comments and interactions
+- Time spent on site
+
+### Content Performance
+
+Analyze content success:
+
+- Most viewed posts
+- Most liked content
+- Trending topics
+- Popular hashtags
+
+### Growth Metrics
+
+Monitor community growth:
+
+```
+Registration Trend (Last 30 Days)
+     ▁▂▃▄▅▆▇█
+Day  1 5 3 8 12 9 15 18
+```
+
+## Admin Tasks Workflow
+
+### Daily Tasks Checklist
+
+- [ ] Check reported content
+- [ ] Review pending user approvals
+- [ ] Monitor site statistics
+- [ ] Respond to user inquiries
+- [ ] Check system status
+
+### Weekly Tasks
+
+- [ ] Review analytics reports
+- [ ] Update featured content
+- [ ] Check for spam accounts
+- [ ] Backup database
+- [ ] Review and update policies
+
+### Monthly Tasks
+
+- [ ] Analyze growth metrics
+- [ ] Plan content strategy
+- [ ] Review user feedback
+- [ ] Update plugins and themes
+- [ ] Security audit
+
+## Dashboard Tips & Tricks
+
+import { Callout } from 'nextra/components'
+
+<Callout type="info">
+  **Pro Tip**: Customize your dashboard to show only the widgets most relevant to your daily tasks. This helps you focus on what matters most.
+</Callout>
+
+<Callout type="warning">
+  **Important**: Regularly check the system status widget to catch potential issues before they become problems.
+</Callout>
+
+### Keyboard Shortcuts
+
+Speed up navigation with shortcuts:
+
+| Shortcut | Action |
+|----------|--------|
+| `G + D` | Go to Dashboard |
+| `G + U` | Go to Users |
+| `G + C` | Go to Content |
+| `G + S` | Go to Settings |
+| `/` | Focus search |
+| `Esc` | Close modal |
+
+### Export Reports
+
+Export dashboard data:
+
+1. Click "Export" button on any widget
+2. Choose format (CSV, PDF, Excel)
+3. Select date range
+4. Download report
+
+## Mobile Dashboard
+
+Access dashboard on mobile devices:
+
+- Responsive design
+- Touch-friendly interface
+- Essential features available
+- Push notifications supported
+
+## Troubleshooting
+
+### Dashboard Not Loading
+
+If dashboard doesn't load:
+
+1. Clear browser cache
+2. Check server status
+3. Verify database connection
+4. Review error logs
+
+### Slow Dashboard Performance
+
+To improve performance:
+
+1. Reduce number of widgets
+2. Enable caching
+3. Optimize database
+4. Upgrade server resources
+
+## Next Steps
+
+- [Learn about User Management](/user-guide/users)
+- [Explore Content Management](/user-guide/content)
+- [Master Moderation Tools](/user-guide/moderation)
+- [Customize Your Site](/advanced/customization)
