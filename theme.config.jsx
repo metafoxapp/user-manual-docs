@@ -1,8 +1,9 @@
 import React from 'react'
+import TagManager from 'react-gtm-module'
 
 const config = {
-  logo: <span style={{ fontWeight: 700, fontSize: '1.25rem' }}>phpFox User Manual</span>,
-
+  logo: <img src="/logo.png" alt="document" height="32px" width={112} />,
+  logoLink: '/',
   project: {
     link: 'https://github.com/metafoxapp/user-manual-docs',
   },
@@ -11,9 +12,23 @@ const config = {
 
   footer: {
     content: (
-      <span>
-        {new Date().getFullYear()} © phpFox Documentation
-      </span>
+        <>
+          <noscript>
+            <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-WB52HRS"
+                height="0"
+                width="0"
+                style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          <span>
+          Copyright {new Date().getFullYear()} © &nbsp;
+              <a href="https://phpfox.com" target="_blank">
+            phpFox LLC
+          </a>
+          . All rights reserved.
+        </span>
+        </>
     ),
   },
 
@@ -23,14 +38,22 @@ const config = {
     }
   },
 
-  head: () => (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="phpFox User Manual and Documentation" />
-      <meta property="og:title" content="phpFox User Manual" />
-      <meta property="og:description" content="Comprehensive user manual for phpFox social networking platform" />
-    </>
-  ),
+  head: () => {
+    React.useEffect(() => {
+      TagManager.initialize({
+        gtmId: "GTM-WB52HRS",
+      });
+    }, [])
+
+    return (
+        <>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta name="description" content="phpFox User Manual and Documentation"/>
+          <meta property="og:title" content="phpFox User Manual"/>
+          <meta property="og:description" content="Comprehensive user manual for phpFox social networking platform"/>
+        </>
+    )
+  },
 
   sidebar: {
     defaultMenuCollapseLevel: 1,
@@ -46,7 +69,7 @@ const config = {
   },
 
   editLink: {
-    content: 'Edit this page on GitHub →'
+    content: 'Edit this page →'
   },
 
   feedback: {
