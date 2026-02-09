@@ -1,0 +1,23 @@
+---
+title: Set up different storage system for user files
+---
+
+# Set up different storage system for user files
+
+Assume that you are having some external storage systems, such as Amazon S3 and Digital Ocean Spaces, etc along with local storage of server disk. MetaFox supports to set up different storages for file types (musics, videos, photos, etc.). For example, you can set up to store videos on Amazon S3, music on Digital Ocean Spaces while others are stored on the local server. The detailed guide on how to set up storage systems, such as Amazon S3, etc. will be in other topics.
+
+In this article, we assume that the configurations of Storages have been set up properly and this article will walk you through step-by-step guide to configure those storages to store corresponding user files.
+
+Let's log into AdminCP. Then go to **Settings** > **Storage** . Then choose the **Storages** menu as below
+
+![Screenshot 2023-08-31 at 10.53.21.png](/images/Screenshot%202023-08-31%20at%2010.53.21.png)
+
+In the storage files, you will see the list of many item types and default local storage will be used for them
+
+![Screenshot 2023-08-31 at 10.55.09.png](/images/Screenshot%202023-08-31%20at%2010.55.09.png)
+
+Now, we will configure to store video files on the Amazon S3 which has been set up with configuration **s3.** Then save it.
+
+**![Screenshot 2023-08-31 at 10.56.54.png](/images/Screenshot%202023-08-31%20at%2010.56.54.png)**
+
+Done. You just completed the configuration to store videos on Amazon S3. As of now, new videos uploaded will be stored on the Amazon S3.

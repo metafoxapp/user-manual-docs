@@ -1,0 +1,73 @@
+---
+title: Install PHP pcntl extension on Ubuntu
+---
+
+# Install PHP pcntl extension on Ubuntu
+
+PHP **`pcntl`** extension (**Process Control Extension**) is required by MetaFox script. In some cases that the PHP **`pcntl`** extension isn't available on the default PHP build or is restricted to web server, you might have to compile this PHP extension **`pcntl`** from the source manually. This guide will walk you through the process of compiling and installing the **`pcntl`** extension on an **Ubuntu** server using the command line.
+
+If you're using CentOS or Red Hat Enterprise Linux, the process is similar. Instead of using **`apt-get`**, use **`yum`** for package installation, and follow the steps accordingly.
+
+### Prerequisites
+
+Before you begin, make sure you have the following:
+
+-   An Ubuntu server with root or sudo privileges.
+-   PHP and the necessary build tools installed on your server.
+
+### Step 1: Install Build Dependencies
+
+To compile the `pcntl` extension, you'll need the necessary build tools and development packages. Open a terminal and run the following command to install them:
+
+### Step 2: Download PHP Source Code
+
+To compile the extension, you'll need the PHP source code corresponding to the PHP version you're using. Follow these steps to download the source code:
+
+**Check PHP Version**: Determine your PHP version by running the following command:
+
+Note down the PHP version for later use.
+
+**Download PHP Source**: Visit the PHP website's [downloads page](https://www.php.net/downloads.php) and download the source code for your PHP version. Alternatively, you can use the following command to download it directly:
+
+Replace `X.Y.Z` with your PHP version (e.g., 8`.1.22`).
+
+**Extract Source Code**: Extract the downloaded archive:
+
+### Step 3: Compile the pcntl Extension
+
+**Navigate to Extension Directory**: Change into the directory containing the PHP source code:
+
+**Compile the Extension**: Use the following commands to compile the `pcntl` extension:
+
+### Step 4: Install the Extension
+
+After successfully compiling the extension, you can proceed to install it:
+
+**Install Extension**: Run the following command to install the compiled extension:
+
+### Step 5: Enable the Extension
+
+To enable the `pcntl` extension, follow these steps:
+
+**Create .ini file for PHP extension**: Create the PHP configuration file in a text editor (e.g., nano):
+
+Replace `X.Y` with your PHP version (e.g., 8`.1`)
+
+**Add Extension**: Add the following line to enable the `pcntl` extension. Add it under the "Dynamic Extensions" section:
+
+**Save and Exit**: Save the file and exit the text editor.
+
+### Step 6: Restart services PHP-FPM and Web server (Apache)
+
+**Restart PHP-FPM**: 
+
+If you are using PHP-FPM, run following command to restart PHP-FPM service
+
+  
+
+**Restart Apache**: 
+
+If you are using webserver with Apache, run following command to restart
+
+####   
+You have successfully compiled and installed the pcntl extension for PHP on your Ubuntu server.

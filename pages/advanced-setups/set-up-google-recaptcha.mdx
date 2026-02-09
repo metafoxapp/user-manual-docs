@@ -1,0 +1,90 @@
+---
+title: Set up Google reCaptcha
+---
+
+# Set up Google reCaptcha
+
+### What is reCAPTCHA?
+
+reCAPTCHA is a free service from Google that helps protect your website from spammers and abuse. A “CAPTCHA” is a turing test to tell human and bots apart. It is easy for humans to solve, but hard for “bots” and other malicious software to figure out. By adding reCAPTCHA to a site, you can block automated software while helping your welcome users to enter with ease.
+
+To Enable the CAPTCHA app, go to your AdminCP>> Setting >> Captcha. MetaFox supports 2 default captcha that are ReCaptcha v3 and Image captcha 
+
+![image2022-12-6_15-17-51.png](/images/image2022-12-6_15-17-51.png)
+
+  
+
+## Setting up Recaptcha v3
+
+First of all, you'll need to set up your [Google reCAPTCHA](https://www.google.com/recaptcha/admin) account.
+
+![image2022-12-6_15-26-45.png](/images/image2022-12-6_15-26-45.png)  
+
+  
+
+1.  Add a Label so you know which site this is for.
+2.  Select ReCaptcha v3
+3.  Add your domain such as [yourdomain.com](http://yourdomain.com) . It will be for the full domain range so if you have subfolders or subdomains, it will work for those.
+4.  Owner: enter your email address as the owner
+5.  Choose if you want to get alerts if Google detects problems with your site, such as misconfiguration errors or an increase in suspicious traffic.
+6.  Hit submit button to register.
+
+  
+
+![image2022-12-6_15-27-15.png](/images/image2022-12-6_15-27-15.png)
+
+  
+
+Once you've registered, you'll get the Site Key and Secret Key. Copy those as you'll need them for the next step.
+
+  
+
+![image2022-12-6_15-29-20.png](/images/image2022-12-6_15-29-20.png)
+
+  
+
+-   Go back to AdminCP >> Settings >> Captcha >> Select the reCaptcha V3>> choose Edit 
+
+  
+
+![image2022-12-6_15-45-56.png](/images/image2022-12-6_15-45-56.png)
+
+-   On the next page, you'll see there are 2 fields where you paste the **Site Key** and **Secret Key.** Don't forget to **Save changes**. 
+
+  
+
+![image2022-12-6_15-46-32.png](/images/image2022-12-6_15-46-32.png)
+
+  
+
+Tip
+
+It's always a good idea to clear your [site's cache](https://docs.phpfox.com/display/FOX4MAN/Clearing+Cache) after adding anything.
+
+  
+
+After setting up ReCaptcha v3, you can enable the captcha on login and registration.
+
+Select the Rules tab on the top right, and you will see the list of options including  2 options '**Captcha on Login**' & '**Captcha on Registration**'.
+
+![image2022-12-6_16-37-2.png](/images/image2022-12-6_16-37-2.png)
+
+  
+
+Remember to hit **Save Changes** to save each setting.
+
+Now registration form and login form of your site will be protected by Captcha. Users need to finish the captcha before submitting the form.
+
+## Setting up Image Captcha 
+
+  
+
+It's more simple to set up an image captcha. From **Admin cp>> Settings>> Captcha>> Settings>> Select Image Captcha**
+
+![image2022-12-6_16-44-32.png](/images/image2022-12-6_16-44-32.png)
+
+  
+
+This is how the image captcha challenge looks like
+
+![image2022-12-6_16-51-9.png](/images/image2022-12-6_16-51-9.png)

@@ -1,0 +1,63 @@
+---
+title: Install MetaFox
+---
+
+# Install MetaFox
+
+MetaFox can be installed with either Docker or LAMP server. Before starting, you will need to complete all preparation steps for Installation with either or .
+
+Now, we will walk you through the steps to properly install MetaFox with MetaFox Installation Wizard
+
+Assume that your webserver has been set up with the domain *yourdomain.com*. You can visit the Installation Wizard at the link: [https://yourdomain.com/install/](https://yourdomain.com/install/) 
+
+Follow installation steps and input all required info in the Installation Wizard to complete the installation:
+
+-   **System Requirements**: Please make sure that all items under System Requirements have **green** checks as below.
+
+![Screen Shot 2023-02-12 at 22.51.13.png](/images/Screen%20Shot%202023-02-12%20at%2022.51.13.png)
+
+-   **License Key and Private Key**: You can get the license info within Client Area. Note that your license domain will be verified at this step also.
+
+![Screen Shot 2023-02-12 at 22.52.54.png](/images/Screen%20Shot%202023-02-12%20at%2022.52.54.png)
+
+-   Database: At this step, you will fill in all database credentials that you have created during the preparation steps.
+
+![Screen Shot 2023-02-12 at 22.57.28.png](/images/Screen%20Shot%202023-02-12%20at%2022.57.28.png)
+
+-   **Site Info**: You are going to fill in info of Site Name and the Super Administrator user (username, email address and password) in this step.
+
+![Screen Shot 2023-02-12 at 23.00.45.png](/images/Screen%20Shot%202023-02-12%20at%2023.00.45.png)
+
+**Applications**: If you have purchased apps on the Appstore, such as ChatPlus, etc. you can select those apps to install at this step
+
+![Screen Shot 2023-02-12 at 23.03.08.png](/images/Screen%20Shot%202023-02-12%20at%2023.03.08.png)
+
+After all info is given properly, you can proceed the last step to install MetaFox site.
+
+![Screen Shot 2023-02-12 at 23.03.25.png](/images/Screen%20Shot%202023-02-12%20at%2023.03.25.png)
+
+Done: When installation is completed successfully, you will see this screen
+
+![Screen Shot 2023-02-12 at 23.08.09.png](/images/Screen%20Shot%202023-02-12%20at%2023.08.09.png)
+
+Now, going to the Landing page at the main URL, you should see the default Landing page of MetaFox
+
+![Screen Shot 2023-02-12 at 23.19.35.png](/images/Screen%20Shot%202023-02-12%20at%2023.19.35.png)
+
+After the installation is completed, you should remove the public/install folder to avoid security risks.
+
+## Setup Cron
+
+Many features require cron to work. Please configure two following crons. You can get the cron command in AdminCP > Settings > Schedule page
+
+  
+
+Cron for Schedule runs ***every minute***
+
+/dev/null 2>&1\]\] >
+
+Cron for Queue runs ***every 5 minutes***
+
+/dev/null 2>&1\]\] >
+
+### The MetaFox Installation is done. You can start to enjoy and go ahead to configure your MetaFox site.

@@ -1,0 +1,39 @@
+---
+title: Change domain
+---
+
+# Change domain
+
+This article will guide you to change the domain of MetaFox site. Assume that your MetaFox site has been installed successfully at the URL: ***https://olddomain.com*** . Now, you would like to change the domain to ***https://newdomain.com*** 
+
+You should update the license domain in Client Area before updating the domain on your MetaFox site.
+
+### Configure new domain with the server
+
+Assume that you have purchased the new domain from the domain issuer. You will need to make sure that the new domain (newdomain.com) has been set up properly as below
+
+-   DNS of new domain is pointed to your current server
+-   New domain has been set up with the webserver (Apache or NginX).
+-   Set up SSL for the new domain on server (optional)
+
+You can contact your hosting provider for support to set up new domain on your server if you don't know how to do it.
+
+### Update the .env file
+
+The ***.env*** file will be generated automatically under the webroot folder when installing MetaFox site. This file contains many critical configuration for database and site URL.
+
+To access and update this with your new domain, you'll need to find your FTP credentials from your hosting provider, or use File Manager of Server Management Tool (such as cPanel, Plesk).
+
+Once you have access to the server, browse to the webroot folder (such as public\_html), edit the ***.env*** file. What you will see is similar below:
+
+You can look for the config **APP\_URL** and update it with the new domain as below. 
+
+  
+
+Then, Save the .env file.
+
+### Clear cache and rebuild frontend in AdminCP
+
+You can log into the AdminCP and go to clear cache and rebuild frontend in AdminCP.
+
+Congratulation. The procedure to change domain is done. You can check your site with the new domain now.

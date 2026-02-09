@@ -1,0 +1,207 @@
+---
+title: MetaFox 5112
+---
+
+# MetaFox 5112
+
+**Release Date: July 30th, 2024**
+
+### Core 
+
+-   Mobile apps - Update to SDK 34 to comply new target API requirement on Android 14
+-   UI/UX Improvements
+    -   Frontend Web
+        -   Members - Improve UI of the Date Custom field
+        -   Account Settings - The Current Password field should be hidden the first time users register via the Social Connect app and set their passwords.
+        -   On the long setting forms in AdminCP, apply fixed position of the Submit buttons 
+        -   Refresh the breadcrumb automatically after the forum thread is changed.
+        -   User Profile - Adjust the locate of the search bar to the right side to sync with other pages on the Tablet layout
+        -   Not show required label on fields of country city
+        -   Cancel Account: Update the warning message on the Password field
+        -   On the Registration form, trim spaces before triggering email validation when handling email input
+    -   AdminCP
+        -   Menus - Hide menu items if associated apps are deactivated.
+    -   Mobile Apps  
+        -   Move the settings option to the header view for better accessibility.
+        -   Update the phrase of the "Videos and Photos" setting.
+        -   Update the "Videos and Photos" text to "Video Settings" on the Account Settings page.
+-   Socialite - Add a new setting to control whether the system should prompt users to set their passwords for the first time they register via the Socialite app.
+-   Custom Fields:
+    -   Administrators can duplicate custom fields.
+    -   Add a new custom field component to enable users to enter URLs.
+    -   Not allow similar names of fields and sections to avoid overlapping issues when translating their labels.
+-   Mail Settings: the email signature can be translatable into multiple languages.
+-   Security Enhancement for MIME Proofing
+-   SEO Improvements: Support canonical tags
+-   Editor Mode: Support admin can config show/hide Icon menu on Header (Mobile Responsive)
+-   Ordering items by "Recent" will be based on the creation date rather than by the item IDs.
+-   Registration: Only send Pending approval user notifications to administrators after users verify their accounts.
+-   Performance Improvements
+    -   Improve loading speed on frontend web by reducing chunk size.
+    -   Scan & refactor code that calls command cache:reset under a loop that might cause performance issues.
+    -   Optimize the performance of the cleanup notification jobs.
+-   MFA: the email/SMS authentication should only be shown if the email and SMS channels have been configured accordingly.
+-   Change user password:
+    -   Open a new page to suggest users log out of other devices after changing password.
+    -   Show the warning message if using an invalid password before showing the "Logout Other Devices" popup.
+-   Fix bugs
+
+### Page
+
+-   UI/UX Improvements
+    -   Mobile app:
+        -   Show "Landing Page" field on the Edit Page Info.
+        -   Adjust the padding of thumbnail for better displaying when sharing the page on Mobile Flatten app
+    -   Frontend Web:
+        -   On the Page Details, move the External Link to the About block.
+            
+        -   Update the header page from "Page About" to "About page"
+-   Page Photo: Support page admin can select the photo from the page when creating/editing the photo album
+-   Fix bugs
+
+### Advertise
+
+-   UI/UX Improvements for Advertise block
+-   Fix bugs
+
+### Event
+
+-   UI/UX Improvements on Mobile apps -  Add a line between the post and description.
+-   Fix bugs
+
+### Follow
+
+-   Define specific notification types to control the follower notification based on the entity types/context.
+-   Optimize performance as the follower database grows more significant over time.
+-   Fix bugs
+
+### Friends
+
+-   UI/UX Improvements
+    -   Apply the same popup layout for "Add New List" and "Edit Friend List".
+    -   On the Mutual Friends popup - Improve the layout when friends' names are too long
+-   Display info of "Mutual Friends" on the Friend Requests
+-   Fix bugs
+
+### Groups
+
+-   UI/UX Improvements
+    -   Mobile apps:
+        -   Manage Group - Add the "Landing Page" setting
+    -   Improve phrases in the option list.
+    -   Group Browse - Hide the redundant dot on the group item when user cannot view the group type.
+-   Fix bugs
+
+### Comment
+
+-   UI Improvement on the Pending Comments page
+-   Fix bug
+
+### Social Connect
+
+-   In Invite Only mode, users are required to enter the invite code when signing up with social accounts.
+-   Fix bugs
+
+### SMS
+
+-   Use the new 3rd library for the phone number validator.
+
+### Stories
+
+-   Hide the "Created Story" notification after the story has ended.
+-   Fix bugs
+
+### Announcement
+
+-   Fix bugs
+
+### Activity Points
+
+-   UI/UX Improvement
+    -   Hide the "Point Packages" page when the "Allow member to purchase Activity Points?" setting is turned off.
+-   Fix bugs
+
+### Photos
+
+-   When updating profile cover, not allow users to use warning photos.
+-   Fix bugs
+
+### Chat
+
+-   UI/UX Improvements for reply message in the conversation when clicking on it
+-   Add the Permission page to manage the Chat app
+-   Fix bugs
+
+### ChatPlus
+
+-   UI/UX Improvements
+    -   Web
+        -   Add a dot to the member card on the Recent Active page to display the user's current status.
+        -   Hide the Attachment button when editing the message.
+    -   Mobile apps
+        -   Improve the file icon when the file name is too long.
+        -   Support users to back to the previous screen when users use the Back button on the device (Android).
+        -   Improve the background for the selected reaction on the reaction icon dialog.
+-   Fix bugs
+
+### Marketplace
+
+-   Fix bugs
+
+### Subscriptions
+
+-   UI/UX Improvements for the title on the Edit package form
+-   Fix bugs
+
+### EWallet
+
+-   UI/UX Improvements
+    -   Improve layout for the Insights page
+    -   Add the description below a currency on the Select Balance popup.
+-   Fix bugs
+
+### Video
+
+-   Add a setting for control the timeout of processing video job.
+-   UI/UX Improvements
+    -   Improve the video status when users act on the video detail page.
+    -   Improve the Menu app on the search result page when opening the first time.
+    -   Have the progress bar when users upload a video from the device.
+-   Fix bugs
+
+### Status Background
+
+-   Allow administrators to select text color (black / white) for individual background photo.
+-   UI/UX Improvements
+    -   Improve the pointer when creating/editing the background feed.
+    -   bold the text when creating and editing the status background feed.
+-   Fix bugs
+
+### Feed
+
+-   Enable selecting different sort orders for the activity feeds either by recent comments or recent posts.
+-   UI/UX Improvements
+    -   Show a friendly error message when configuring  an invalid Google Translate API key. 
+    -   Layout of feed item of new registration
+-   Fix bugs
+
+### Invitations
+
+-   Add the Reset button on the All Invitations page.
+-   Fix bugs
+
+### Blog
+
+-   Fix bugs
+
+### Reactions
+
+-   Fix bugs
+
+### Search
+
+-   Fix bugs
+
+### Newsletter
+
+-   Fix bug

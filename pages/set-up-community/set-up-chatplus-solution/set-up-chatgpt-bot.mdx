@@ -1,0 +1,53 @@
+---
+title: Set up ChatGPT Bot
+---
+
+# Set up ChatGPT Bot
+
+In this article, we are going to guide you how to set up ChatGPT Bot on your MetaFox site.
+
+### Prerequisites
+
+-   The ChatGPT Bot is currently supported for [**ChatPlus**](https://appstore.phpfox.com/apps/chatplus/) only. So you will need to purchase and install ChatPlus on your site first.
+-   OpenAI key is required to use APIs of OpenAI . OpenAI charges a fee for API usage. You should check [their pricing](https://openai.com/pricing) first.
+
+### Obtain OpenAI key
+
+Assume that you have registered your account at the OpenAI website at [https://openai.com](https://openai.com/) and subscribe an API plan that fits your needs successfully. Let's log in using your existing credentials.
+
+Now you can generate an API key. API keys are used to authenticate your requests to OpenAI's API.
+
+-   Go to your OpenAI account settings. You can usually find this by clicking on your account profile or settings icon.
+    
+-   Look for the **API Key** section and click on "Generate API Key" or a similar button to create a new API key.
+    
+
+![Screenshot 2023-10-04 at 10.49.35.png](/images/Screenshot%202023-10-04%20at%2010.49.35.png)
+
+Once you've generated an API key, it's crucial to keep it secure. Treat your API key like a password and never share it publicly. You can use environment variables or other secure methods to store and access your API key in your applications.
+
+### **Configure OpenAI key and Enable ChatGPT Bot on MetaFox site**
+
+Assume that you can install the ChatGPT Bot app on your MetaFox site in AdminCP
+
+After installing this app successfully, go to **AdminCP** > **App Settings** > **ChatGPT Bot** > **Settings** page
+
+Configure setting of **OpenAI API Key** with the API key obtained above and then enable ChatGPT Bot as the screenshot.
+
+You can also configure either GPT-3.5 GPT-4 models as well as the bot's creative elements, from its style and tone to its visual presentation
+
+Then click **Save Changes** button.
+
+![Screenshot 2023-10-04 at 10.36.36.png](/images/Screenshot%202023-10-04%20at%2010.36.36.png)
+
+Now, ChatGPT Bot will display to users at the right-bottom corner of your site as below
+
+![Screenshot 2023-10-04 at 10.40.29.png](/images/Screenshot%202023-10-04%20at%2010.40.29.png)
+
+### Train your ChatGPT Bot
+
+You may need to train your ChatGPT Bot for certain knowledge about your community. Let's go to **AdminCP** > **App Settings** > **ChatGPT Bot** > **Chat Bots** page. Then Edit the current ChatGPT bot
+
+![Screenshot 2023-10-04 at 10.44.41.png](/images/Screenshot%202023-10-04%20at%2010.44.41.png)
+
+You can configure the **Knowledge Base** setting for the knowledge you want to train your Chatbots. Then click **Save Changes** button.

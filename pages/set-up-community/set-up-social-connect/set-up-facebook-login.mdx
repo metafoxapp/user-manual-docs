@@ -1,0 +1,81 @@
+---
+title: Set up Facebook Login
+---
+
+# Set up Facebook Login
+
+Since Facebook is one of the largest and most popular social network sites for the publicity, many people would like to use their Facebook accounts to join to other networks. By using Facebook Connect app, your users can join your community conveniently by logging in with their Facebook account.
+
+This guide will instruct you to set up the Facebook login for your site using Facebook Connect.
+
+## Create a Facebook Application
+
+-   Go to [Facebook Developers page](https://developers.facebook.com/) and Login to your Facebook account.
+-   From header menu, select **My App ,** then **Create app**   
+      
+    
+
+![image2021-7-12_22-3-34.png](/images/image2021-7-12_22-3-34.png)
+
+Enter the **Display Name** and **Contact Email** for your app and click on **Create App ID** to create your app. You might need to enter the captcha to verify.  
+![Screenshot(1).png](/images/Screenshot(1).png)
+
+Choose **Settings** from the left menu >> **Basic** content will appear on the right.  
+![app id and secret.png](/images/app%20id%20and%20secret.png)
+
+On **Setting** content, you will see **App ID**. Click on **Show** button to reveal **App Secret**. Now you already have both **App ID & App Secret** to use with Facebook Connect app. However, you need to configure your Facebook app a bit more to make it fully work.
+
+Choose **Settings** from the left menu and select **Basic**. Enter your **website URL** , **App Domains,**  **Contact email** and hit **Save changes**   
+![Screen Shot 2023-04-28 at 10.01.25.png](/images/Screen%20Shot%202023-04-28%20at%2010.01.25.png)
+
+Scrolling down, select **Add Platform** and choose **Website** from the list on the popup.  
+![Screenshot(4).png](/images/Screenshot(4).png)
+
+New Website field shows up below after select Website platform. **Enter your Site URL** in this field then **Save changes**  
+![Screenshot(5).png](/images/Screenshot(5).png)
+
+On the top panel, switch to **Live** for **App Mode** to make your app work with normal user.  
+![Screen Shot 2023-04-28 at 09.40.24.png](/images/Screen%20Shot%202023-04-28%20at%2009.40.24.png)
+
+From **Product** > click on **Add product,** choose **Facebook login**
+
+![image2021-7-12_21-55-28.png](/images/image2021-7-12_21-55-28.png)
+
+  
+
+On the next page, select **Settings** under the **Facebook login,** set settings as shown in the below screenshot
+
+In **Products** > Choose **Settings** under **Facebook Login** (You might need to add Facebook Login section before proceeding).
+
+Choose the settings as instructed in the below image.
+
+![Screen Shot 2023-04-28 at 09.48.24.png](/images/Screen%20Shot%202023-04-28%20at%2009.48.24.png)
+
+  
+
+Input your Site Domains into **Allowed Domains for the JavaScript SDK** field.
+
+## Request required permissions for Facebook Login
+
+Facebook Login requires 2 permissions with access level of **Advanced Access**: **public\_profile** and **email**
+
+At this step, you can go to the App Review > Permissions and Features, search 2 permissions of public\_profile and email then request for Advanced access as the below
+
+![Screenshot 2023-09-25 at 14.23.15.png](/images/Screenshot%202023-09-25%20at%2014.23.15.png)
+
+You will need to follow Facebook guide and provide necessary info if needed to complete the permission requests.
+
+Now you finish setup your Facebook app. Go back to **Dashboard** and note down **App ID & App Secret** of your Facebook app. We need these 2 information for next step.
+
+## Set up Facebook App on MetaFox site
+
+Let's log into your MetaFox site with Admin user and go to **AdminCP**, go to **App Settings** > **Social Connect** > **Facebook**
+
+From here you can see following settings:
+
+![Screen Shot 2023-04-28 at 09.54.54.png](/images/Screen%20Shot%202023-04-28%20at%2009.54.54.png)
+
+-   **Enable Facebook Login**: Enable/disable login via the Facebook account. We choose to Enable in this case to enable Facebook login.
+-   **Client ID**: Enter here your **App ID** of the Facebook app.
+-   **Client** **Secret**: Enter here **App Secret** of the Facebook app.  
+    Select **Save Changes** to save the settings. You have successfully setup for Facebook login.

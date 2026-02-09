@@ -1,0 +1,53 @@
+---
+title: Live Streaming - Set up transcoder server for live videos with webcam
+---
+
+# Live Streaming - Set up transcoder server for live videos with webcam
+
+Livestream (Live Video) has the feature to live from directly built-in devices on your computer without the streaming software's support. Furthermore, this new feature still leverages Mux and its features to provide a smooth experience for users. In this article, we will guide you to set up the transcoder server to enable this feature.
+
+### Requirements
+
+-   Dedicated server/VPS/cloud server for transcoder server
+-   At least 8G RAM, 4 vCPUs
+-   Live Video app version 5.1 or later.
+
+## Transcoder server setup
+
+Firstly, the transcoder server had been built and pushed to DockerHub at [https://hub.docker.com/r/foxsystem/metafox-transcoder-livevideo](https://hub.docker.com/r/foxsystem/metafox-transcoder-livevideo). Therefore, you can update **docker-compose.yml** to have a new service - "transcoder" as below.   
+**docker-compose.yml**
+
+  
+
+  
+
+Moreover, to make the server operate correctly, you also have to update your **.env** to adapt a few variables that the server needs  
+**.env**
+
+  
+
+Given that,
+
+-   WS\_PORT and WS\_EXTERNAL\_PORT: defining the internal and external WebSocket server ports.  
+-   NODE\_ENV: configures running mode for better performance.
+-   JWT\_SECRET: is the key used for signing and verifying JSON Web Tokens (JWTs). You can set to any random string.
+-   MFOX\_BASE\_API\_URL: specifies the API URL of MetaFox.
+
+Finally, you can just restart the docker to apply new service by using command
+
+  
+
+## Proxy Setup (Optional)
+
+You can set up web server (NginX/Apache) to proxy to transcoder service with certain domain. Here is the sample Nginx configuration to for transcoder with domain *demo-transcoder.metafox.app*
+
+## Configure MetaFox
+
+Now, let's go to **AdminCP** of **MetaFox** to configure Live Video with the transcoder server. Visit AdminCP > App Settings > Live Videos > Settings and configure two settings: **Allow Webcam Streaming** and **Transcoder Server Url** (see in image below).
+
+![Screenshot 2025-04-23 at 11.26.37.png](/images/Screenshot%202025-04-23%20at%2011.26.37.png)
+
+Given that,
+
+-   Allow Webcam Streaming: turn on if you want to allow streaming using webcam.
+-   Transcoder Server Url: the URL of transcoder webserver.

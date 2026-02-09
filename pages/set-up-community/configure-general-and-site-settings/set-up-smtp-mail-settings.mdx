@@ -1,0 +1,39 @@
+---
+title: Set up SMTP Mail settings
+---
+
+# Set up SMTP Mail settings
+
+SMTP settings are particular protocol that works for outgoing messages. Most email software is designed to use SMTP for communication purposes when sending emails.
+
+We recommend not using the default PHP mail functions are usually marked as spam by popular email providers. You should send emails by using the email service of good providers via SMTP method. We recommend Sendgrid, Sparkpost or some other transactional mail service. This tutorial will show you how to set SMTP settings for your mail needs, whether using your server SMTP or transactional mail.
+
+From **AdminCP > Settings > Mail**. Go to the **Mailer** tab.
+
+![image2022-12-13_15-20-35.png](/images/image2022-12-13_15-20-35.png)
+
+  
+
+There are many mailer options of popular mail service providers such as Mailgun, Postmark. In this tutorial, we will guide to to configure SMTP option which can be used for all mail service provider. Let's scroll down and choose the **SMTP** method, and fill in all of the fields from either the host SMTP or the Transactional Mail Service details.
+
+![image2022-12-13_15-31-6.png](/images/image2022-12-13_15-31-6.png)
+
+-   Enter the SMTP host and SMTP port. It is very important that you enter the correct port.
+
+![image2022-12-13_15-32-44.png](/images/image2022-12-13_15-32-44.png)
+
+-   Select the cryptographic protocol that is enabled on your SMTP mail server.
+
+![image2022-12-13_15-33-42.png](/images/image2022-12-13_15-33-42.png)
+
+-   Enter the SMTP username and SMTP password.
+
+![image2022-12-13_15-36-27.png](/images/image2022-12-13_15-36-27.png)
+
+-   Fill in your From and Email Address. Note that to keep things out of spam, the From and Email should be the same thing, both set to an email for the site. Anything other than a site email and you will wind up with many in spam.
+
+![image2022-12-13_15-37-52.png](/images/image2022-12-13_15-37-52.png)
+
+-   Don't forget to click on the Save Changes button to save your configurations.
+
+You also can test whether your configurations work by entering a test email.

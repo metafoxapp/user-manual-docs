@@ -1,0 +1,217 @@
+---
+title: MetaFox 5111
+---
+
+# MetaFox 5111
+
+**Release Date: June 26th, 2024**
+
+### Core 
+
+-   Admin can define custom error messages for different contexts.
+-   UI/UX Improvements on Web
+    -   Layout for Text Displaying on Presets of Editor Mode, Navigation.
+    -   Pagination on the Members page
+    -   Layout when viewing the feedback on the Cancel Members page.
+    -   Layout of Manage notification setting section when editing user
+    -   Unify the UX of the 'Add New' menu actions in AdminCP.
+    -   Description of the "Verify After Changing Phone Number" setting.
+    -   Description of some Quota Control's settings.
+    -   Manage Reports - Hide the search form when there are no reported items.
+    -   Manage Members: Rephrase "Pending Verification Email / Phone Number" as "Unverified Email / Phone Number"
+    -   Users can input a number to modify the photo scale on CK Editor.
+    -   Login Popup - Add a link to the registration page and social login buttons.
+    -   Keep the current page(URL) when logging in to AdminCP instead of redirecting to the Dashboard
+-   AdminCP
+    -   Manage Members:
+        -   Able to filter members by registration date and country.
+        -   Display the total count of search results.
+        -   Update the URL on the address bar with search parameters when searching.
+        -   Hide the Ban User option on the Super Admin.
+    -   Notify users having administrative privileges to approve members when new pending members are awaiting approval.
+    -   User Settings: revise the "User Role Filter Excludes" setting to control whether users of a specific role can be searched.
+    -   Custom Fields - The admin can reorder the Basic Information section
+-   Improve the query performance when checking for blocked user relations.
+-   Add Payment Settings group menu in Account Settings
+-   Improve Payment app for third-party gateways
+    -   Support rules and request validation for 3party gateways in all payment apps
+    -   Support multiple-step payment form.
+-   Can search Members by applicable custom fields upon choosing a specific role.
+-   Show item's category on the Item Detail page even though the category has been disabled.
+-   Support opt-in for using email and SMS services on the Registration form
+    -   Add a new setting to control whether the opt-in agreement should be shown in the registration process.
+    -   Users will still receive email/SMS for Email Welcome, Verification Code , Authentication Code even though they don't check this opt-in during Registration.
+-   Remove default MetaFox Favicon for Fresh Site Installation
+-   Account Setting - Notifications
+    -   Add a setting that allows users to control the entire notification channel.
+    -   Add the SMS Notifications page
+-   Mobile Apps
+    -   The admin can configure menu items of the Account Settings menu in AdminCP.
+    -   Use logo configured in AdminCP on the Login screen.
+    -   Show No Internet page when device is offline
+    -   Add the option "Copy Link Profile" on the User Profile
+    -   Support grid layout for app menu and account settings menu
+    -   Users can unselect the current State/City on the Edit Profile Info page.
+    -   Add the search field when viewing the gender (I am) drop-down.
+-   Fix bugs
+
+### Page
+
+-   Page admins can manage the scheduled posts on the Page.
+-   Fix bugs
+
+### Advertise
+
+-   AdminCP - Add a setting to control whether users will be asked to purchase sponsorship after creating an item.
+-   Mobile apps - Support the Create New Ad and Edit Ad screens
+-   UI/UX Improvement on the breadcrumb when viewing the transaction detail in AdminCP
+
+### Event
+
+-   UI/UX Improvements
+    -   Replace the Start time with End Time on the Past event
+    -   Enhance the RSVP workflow by replacing the default "Not Interested" option with a grayed-out Interested button.
+    -   Hide the Discussion tab and the Composer post on event when a user can moderate event, but they don't have permissions to start/view the discussion
+-   Mobile apps - Hide the option "Generate Invite Link" on the private event
+-   Fix bugs
+
+### Follow
+
+-   Optimize performance as the follower database grows larger over time.
+
+### Friends
+
+-   Friend Requests: Update phrase when there are no requests displayed
+-   Fix bugs
+
+### Groups
+
+-   UI/UX Improvements
+    -   Discussions: Improve the layout for the Photos block
+    -   Remove redundant space characters on the notification that the user updates the cover photo of the group
+-   Show item preview when sharing an item from a Closed/Secret group to the comment section in the same group.
+-   Send notifications to group moderators when there are new member requests.
+-   Fix bugs
+
+### Newsletter
+
+-   Improve compatibility with v5.1.11.
+
+### Stories
+
+-   Not allow to upload a video story if video services (Mux, FFMPEG) are unavailable.
+-   AdminCP: Add a new setting to control the duration of the video story.
+-   Fix bugs
+
+### Announcement
+
+-   Admin can select multiple genders and locations when configuring announcements.
+-   Fix bugs
+
+### Activity Points
+
+-   Update for Compatibility with version 5.1.11.
+
+### Photos
+
+-   UI/UX Improvements
+    -   Theme Default - Apply round corners on photos in the listing page and detail album.
+    -   Update the default title of the avatar added during registration.
+-   Fix bugs
+
+### ChatPlus
+
+-   UI/UX Improvements
+    -   Conversation listing when viewing it on the header menu.
+    -   Layout when editing Group Name on All Messages screen.
+    -   Phrases on the action menu of conversation.
+-   Fix bugs
+
+### Marketplace
+
+-   Users can reorder photos when adding/editing the listing.
+-   UI/UX Improvements
+    -   Reorder the currency fields on the Add New Listing page.
+    -   Update the time format between the Invoice Listing and the Invoice Detail pages.
+    -   Update the placeholder text in the search field.
+-   Fix bugs
+
+### Subscriptions
+
+-   UI/UX Improvements
+    -   The breadcrumb when viewing the transaction detail in AdminCP
+    -   Subscription - Layout on the recurring package.
+-   Fix bugs
+
+### EWallet
+
+-   UI/UX Improvements
+    -   Add more spaces between items in the Insights page
+    -   Add a line below the "Available" block to distinguish it from others.
+
+### Featured Items
+
+-   UI/UX Improvements
+    -   On the Items/ Invoices page, disable future days for the date picker of the From/To field, only allowing the user can search data to the current date.
+    -   On the Items/ Invoices page, increase the padding above the Search filters.
+    -   Font size for the column name on some pages.
+-   Mobile Apps:
+    -   Mobile Flatten - Support search by Time for the Items/Invoices page
+    -   Mobile Flatten - Items: Improve the layout of the package name and the Items/Invoices page.
+-   Fix bugs
+
+### Forums
+
+-   Hide the attachment file on the Quote Post form
+
+### Live Videos
+
+-   UI/UX Improvement on the live video detail page after users reload the page or edit the video.
+
+### Music
+
+-   UI/UX Improvements
+    -   Layout on the Navigation menu.
+    -   Hover state of the music bar.
+    -   Layout for the song title on Album detail page.
+-   Fix bugs
+
+### Polls
+
+-   Integrate with Featured Items app.
+-   UI/UX Improvements on the Navigation menu.
+-   Fix bugs
+
+### Quizzes
+
+-   Integrate with Featured Items app.
+-   UI/UX Improvements on the Navigation menu.
+-   Fix bugs
+
+### PayPal
+
+-   Support the payment process with multiple steps.
+
+### Reactions
+
+-   Fix bugs
+
+### Status Background
+
+-   Fix bugs
+
+### Forum
+
+-   Fix bugs
+
+### Saved Items
+
+-   Fix bugs
+
+### Feed
+
+-   Fix bugs
+
+### Comment
+
+-   Fix bugs
