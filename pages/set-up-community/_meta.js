@@ -1,0 +1,15 @@
+export default {
+  "configure-general-and-site-settings": "Configure General and Site Settings",
+  "manage-apps": "Manage Apps",
+  "configure-app-settings": "Configure App Settings",
+  "set-up-languages": "Set up Languages",
+  "configure-appearances-layout-and-themes": "Configure Appearances, Layout and Themes",
+  "set-up-chatplus-solution": "Set Up ChatPlus Solution",
+  "set-up-live-streaming-solution": "Set Up Live Streaming Solution",
+  "set-up-advertise": "Set up Advertise",
+  "set-up-social-connect": "Set up Social Connect",
+  "set-up-payment-gateways": "Set up payment gateways",
+  "set-up-storage": "Set up Storage",
+  "configure-user-settings": "Configure User Settings",
+  "set-up-subscription": "Set up Subscription",
+}

@@ -1,0 +1,75 @@
+---
+title: Build Android app with Mobile source code
+---
+
+# Build Android app with Mobile source code
+
+This article will guide you to build your Android apps with Mobile source code
+
+## Prerequisites
+
+### Mobile Devices
+
+\- Supported Android versions: 8.0+
+
+### Development Environment
+
+We recommend to use macOS system as a development environment because:
+
+-   Able to develop cross platform Mobile application (Android, iOS).
+-   We got tons of utilities scripts that were mainly written in Bash Script, which tested and worked compatibly only with Unix environment.
+
+We assume that you have experiences in React Native project and how to build React Native mobile apps. Please following this [Environment Setup guide](https://reactnative.dev/docs/environment-setup) to set up the development environment for React Native (RN) project
+
+-   Node version >= 16.14
+-   Yarn version = 1.21.0
+-   React Native version: 0.70.6
+
+## Project structure
+
+Folder ***packages***: contains all main RN/Javascript code
+
+Folder ***app***: Contains entrypoint for each module section from folder \`***packages***\`. Do not change anything here, we got the script to handle these generated code
+
+Folder ***android***: Contains Java/Kotlin native code - mostly handle native things for Android app
+
+Folder ***scripts***: contains all utilities scripts
+
+## Setup
+
+### Configuration
+
+You can update our mobile configuration and assets for Android app in:
+
+-   Copy the ***android/app/configuration\_example.json*** to ***android/app/configuration.json*** and configure this file with proper values.
+    -   Set \`enableGooglePay: true\` to enable Google Pay
+-   Firebase config file ***android/app/google-services.json***
+    -   Please refer this [guide](https://support.google.com/firebase/answer/7015592?hl=en#zippy=%2Cin-this-article) to download it from your Firebase project for Android app
+-   KeyStore file at ***android/app/<your\_app>.keystore***
+    -   Refer to this [guide](https://developer.android.com/studio/publish/app-signing) to create your keystore file
+
+### Mobile assets
+
+-   Update images of app icon, logo and login background in the folder ***android/app/src/main/res*** 
+
+-   Update splash screen: You can run following command to generate splash screen after updating app icon
+
+\--logo-width=100 --assets-path=assets\]\] >
+
+### Load configuration
+
+Whenever you change the configuration files above, you need to re-run these steps again:
+
+## Quick start
+
+Start React Native metro package manager
+
+Run the following commands to start Android app on Android emulator (default basing on Android Studio config)
+
+## Other Utilities scripts - CLI
+
+  
+Build release ***app.apk*** for Android alternatively Gradle build
+
+  
+Build release ***app.bundle*** for Android alternatively Gradle bundle

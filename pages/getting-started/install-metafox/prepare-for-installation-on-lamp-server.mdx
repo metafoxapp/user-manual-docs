@@ -1,0 +1,64 @@
+---
+title: Prepare for Installation on LAMP server
+---
+
+# Prepare for Installation on LAMP server
+
+Assume that your server already meets [MetaFox System Requirements](https://docs.phpfox.com/display/MFMAN/System+Requirements). In this article, we will walk you through the preparation steps to install MetaFox on a normal server with the LAMP stack (Apache2, PHP, and MySQL), includes following steps:
+
+1.  Upload MetaFox source on your server
+2.  Configure proper permissions of folders
+3.  Create database and database user
+
+## Upload MetaFox source on your server
+
+You can download the zip file of the latest MetaFox version in [Client Area](https://clients.phpfox.com/) and extract it on your local machine at */path/to/metafox* folder.
+
+![Screen Shot 2023-02-12 at 23.23.11.png](/images/Screen%20Shot%202023-02-12%20at%2023.23.11.png)
+
+Then, extract the ***/path/to/metafox/upload.zip*** file you will see the following source structure under the **upload** folder
+
+![Screen Shot 2022-10-28 at 14.33.31.png](/images/Screen%20Shot%202022-10-28%20at%2014.33.31.png)
+
+Then, upload ALL folders and files under the **upload** folder to the webroot folder of webserver. Normally, the webroot folder of your server usually has the name **public\_html.** 
+
+-   If you aren't sure where is the webroot folder, you should ask your hosting provider or system administrator.
+-   To avoid unexpected issues when uploading source files onto the server, it is highly recommended to upload the ***upload.zip*** file on your server and then extract source files to the webroot folder.
+
+  
+
+For easy explanation from now on, we will assume that the webroot folder is /home/metafox/public\_html
+
+## Create .htaccess file
+
+After extracting all source files at /home/metafox/public\_html, now can you can go to /home/metafox/public\_html and copy the content of *htaccess.example* to  the existing *.htaccess file .* 
+
+If the .htaccess file doesn't exist, you can simply rename the ***htaccess.example*** to .***htaccess***
+
+## Configure proper permissions of folders
+
+You will need to grant the write permission on the following folders:
+
+-   storage/\* (recursively)
+-   public/\* (recursively)
+-   bootstrap/cache/\* (recursively)
+-   config/\* (recursively)
+
+## Create database and database user
+
+Next step is to prepare the database user and database for the MetaFox site. There are many ways to set up database user and database on your server. Hosting service provider usually provide a server management tools, such as cPanel, Plesk, DirectAdmin, etc. 
+
+-   [cPanel](https://support.cpanel.net/hc/en-us/articles/360057550753-How-to-create-a-database-and-database-user-in-cPanel)
+-   [Plesk](https://www.plesk.com/kb/support/how-to-create-a-database-in-plesk-2/)
+
+If your hosting is using another server management tool, they should have the detailed guide on this setup so please feel free to contact the Help Desk of your hosting provider if you don't know how to create database.
+
+You need to note the following details when completing this step:
+
+-   Database Host (if database is on the same server, the host will be **localhost**)
+-   Database Name
+-   Database User
+-   Password
+-   Port (default 3306 for MySQL and 5432 for Postgres)
+
+Congratulation! All preparation steps have been done. All are ready to start site now.

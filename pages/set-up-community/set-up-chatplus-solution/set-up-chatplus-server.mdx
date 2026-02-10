@@ -1,0 +1,86 @@
+---
+title: Set up ChatPlus server
+---
+
+# Set up ChatPlus server
+
+This article will guide you to set up ChatPlus on your server by yourself. In this article, we assume that you are already familiar with  Linux server management and docker, know how to use terminal, access SSH with root/super users privileges and set up necessary software such as Git, Docker, NginX/Apache as Reverse proxy, etc.
+
+If you aren't familiar with setting up ChatPlus server, please feel free to open ticket to request our support. You aren't charged any fee for the 1st setup.
+
+Firstly, you will need to install and run following software on your Linux server:
+
+-   Docker and Docker-compose
+-   NginX or Apache (as Reverse Proxy)
+-   Git
+
+Then, let's start setting up ChatPlus server
+
+## Configure subdomains for ChatPlus server
+
+-   Create 2 different domains or subdomains for chat and call features, such as [chat.yourdomain.com](http://chat.yourdomain.com) and [voip.yourdomain.com](http://voip.yourdomain.com)
+-   Configure these 2 domains/subdomains above with Reverse Proxy server (NginX or Apache) for Websocket.
+    -   Set up SSL for domain/subdomain
+    -   For Chat domain/subdomain, configure to proxy requests to port 3000 (default Port of Chatplus), such as [http://127.0.0.1:3000](http://127.0.0.1:3000) . You can use another port for Chatplus, but will need to update this port into `docker-compose.yml` file and `chatplus.env` file for Chat as described later.
+    -   For Call domain/subdomain, configure to proxy requests to port 8443 (default port of Call feature), such as [https://127.0.0.1:8443](https://127.0.0.1:8443) .  You can use another port for Call feature but will need to follow guide to configure this port for Call/VoIP server as described later.
+
+## Set up Chat
+
+-   Create main folder for Chat, such as at `/var/www/chatplus/chat`
+-   Go to the main folder for Chat, run following command to download the `docker-compose.yml` file and `chatplus.env`
+
+-   After the command runs completely, you will see that 2 files are downloaded into the folder: `docker-compose.yaml` and `chatplus.env` .
+    -   If you use another custom port instead of the default port 3000, you will need to update port custom port in the `docker-compose.yaml`
+    -   Open `chatplus.env` and update environment variables for Chat as below. Then, save it.
+
+#### Start Chat server
+
+-   Run following command to download/update docker images and run docker containers
+
+-   Once Chatplus docker containers are running properly, you will check to see if the Setup page is working at [https://chat.youdomain.com](https://chat.youdomain.com) . However, you don't need to proceed with any setup steps there at this time. It will be done automatically while configuring in AdminCP of MetaFox site.
+
+## Configure ChatPlus on MetaFox site
+
+-   Install **ChatPlus** app in your AdminCP (After purchasing the Chatplus solution, you should see the ChatPlus app under AdminCP > Apps > Purchased. If the ChatPlus app isn't available there, please feel free to open a Support ticket in [Client Area](https://clients.phpfox.com/).)
+-   Go to the AdminCP > App Settings > ChatPlus page
+-   In **Settings**, configure the following settings and save them:
+    -   **Server**: it is the URL of domain/subdomain for chat. In our example, it is "[https://chat.yourdomain.com](https://chat.yourdomain.com)". 
+    -   **ChatPlus Secret Code**: configure the same string as configured for SECRET\_CODE in `chatplus.env` file
+    -   Configure iOS settings for push notification on your iOS app such as iOS bundle ID, APN Key and APN Key ID, Apple Team ID.
+    -   **Select Video Bridge Service:** you can choose "Free Video Bridge Service" or "phpFox Video Bridge Service" for now. You can set up your self-host call service and configure all related settings later.
+        -   With *Free Video Bridge Service*, the Call will use free service for Jitsi Meet
+        -   With *phpFox Video Bridge service*, the service is provided by phpFox with limited usage.
+-   In **Sync Users**, click on the Sync Users to sync users from MetaFox site to Chatplus manually. ChatPlus server will need to get details of existing users at the 1st setup time. New signup or changes on user details then will be synced automatically.
+
+## Set up folders and environments for built-in Call feature (Optional)
+
+Chatplus server supports and can use the default VoIP server of [Jitsi](https://meet.jit.si/) to make voice/video calls. For better performance, please set up this **separately** with ChatPlus server. You can find the full guide [here](https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker)
+
+Once, Jitsi VoIP server is installed completely. You will need to update some configuration to update Jitsi branding with your own branding. Please replace the phrases with square blanket \[\] by respective value
+
+### Enable Jitsi JWT 
+
+To secure VoIP server to accept calls from your phpFox site only, you will need to enable Jitsi JWT as below:
+
+-   Go to `voip_folder/.env` and change all of these
+
+-   Delete folder ~/.jitsi-meet-config/ and restart VoIP docker again.
+-   Also, you will need to enable JWT Authentication and configure same values of JWT\_APP\_ID and JWT\_APP\_SECRET in the AdminCP > Apps > ChatPlus > Settings page
+
+![Screen Shot 2023-03-17 at 17.06.43.png](/images/Screen%20Shot%202023-03-17%20at%2017.06.43.png)
+
+### Change default Jitsi web configs
+
+Go to `~/.jitsi-meet-config/web` and change these in file `interface_config.js` :
+
+### Update Jitsi web images/logos
+
+-   Run "docker ps" to get the running container ID of jiti-web.
+-   Access docker container of `jiti-web` service :
+
+-   Go to directory:
+
+-   Replace any image/logs you want to:
+    -   `watermark.png` -> watermark image when user is in call/voice if flag SHOW\_JITSI\_WATERMARK is true
+    -   `logo-deep-linking.png` -> image at on top when deep linking page is showed (No mobile app installed) when flag MOBILE\_APP\_PROMO is true
+    -   `jitsiLogo.png`, `JitsiLogo_square.png`

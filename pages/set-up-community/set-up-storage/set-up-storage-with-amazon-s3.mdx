@@ -1,0 +1,45 @@
+---
+title: Set up Storage with Amazon S3
+---
+
+# Set up Storage with Amazon S3
+
+Amazon S3 (Simple Storage Service) offers secure and scalable cloud storage solutions for your media files, ensuring reliability and accessibility. Follow these steps to seamlessly integrate Amazon S3 storage into MetaFox
+
+**Set Up Amazon S3 Bucket**
+
+You can refer to the [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) for a detailed guide on this service. Generally, setting up an Amazon S3 bucket includes following steps:
+
+-   Log into [Amazon Web Services (AWS) Console](https://aws.amazon.com/) with your AWS account using your credentials. From the AWS Management Console, navigate to the Amazon S3 service.
+-   Click the "Create bucket" button to initiate the bucket creation process.
+-   Choose a unique bucket name and select the region closest to your target audience.
+-   Set bucket properties, such as logging, versioning, and tags, based on your requirements.
+-   Turn **Block all public access** setting off
+-   Define bucket-level permissions using Access Control List (ACL). Decide who can read and write data to the bucket.
+-   Create a bucket policy to control access on a granular level. Assign permissions to users, groups, or even specific IP addresses.
+
+  
+
+**Set Up User Credentials**
+
+Navigate to AWS Identity and Access Management (IAM) and create a new user with permissions to access the above Amazon S3 bucket. Please refer to [Amazon IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) if needed.
+
+-   Once user is created, obtain the **access key** and **secret** for the user. Ensure that these credentials are securely stored. We will use them to configure in MetaFox site then.
+
+  
+
+**Configure S3 on MetaFox**
+
+Let's log into AdminCP of your MetaFox site. Then go to **Settings** > **Storage** > **Configurations**
+
+There are some storage configurations in this page.
+
+![Screenshot 2023-08-31 at 11.33.30.png](/images/Screenshot%202023-08-31%20at%2011.33.30.png)
+
+You can edit the existing S3 configuration or create a new configuration of S3 storage if needed.
+
+![Screenshot 2023-08-31 at 11.34.39.png](/images/Screenshot%202023-08-31%20at%2011.34.39.png)
+
+You will need to fill in the Edit/Create form at least all required fields (**Access Key**, **Secret Key**, **Bucket** and **Region**) that you have obtained above. Then click the **Save Changes** button.
+
+Congratulation! You just completed the setup for Amazon S3 on MetaFox site. You can

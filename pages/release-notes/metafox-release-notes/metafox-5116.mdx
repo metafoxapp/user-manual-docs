@@ -1,0 +1,330 @@
+---
+title: MetaFox 5116
+---
+
+# MetaFox 5116
+
+**Release Date**: Jan 1st, 2025
+
+### Getting Started (New App)
+
+We’ve crafted a welcoming and engaging **Getting Started** experience that’s secure, responsive, and perfect for users on any device effortlessly. Our "Getting Started" process is built for simplicity, speed, and scalability, designed to provide a seamless onboarding experience.
+
+-   Allow Admin to manage To-do List in AdminCP.
+-   Show first-time members a list of what should be done after signing up.
+
+### Core
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   SEO
+    -   Support Structured data markup for Google Search
+    -   Change attribute of Meta OG tag from name to property
+    -   Improve the description below the Title field when editing a page.
+    -   Display the property list supporting each page.
+    -   Update the phrase for some specific page when editing.
+-   Support banning users with IPs and Emails
+-   Upgrade TikTok SDK
+-   Support new permission to download attachments in apps
+-   UI/UX Improvements
+    -   Mobile Apps  
+        -   Layout of Feed detail on Android.
+        -   When recording video, not reset the record time when switching camera
+        -   Improve the way push notifications are displayed when the app is running in the foreground state.
+        -   Improve the loading icon when waiting to validate the social account.
+        -   Move to the top when clicking on the "Overview" tab on the profile page.
+        -   Improve creation time on items.
+        -   Improve the layout of the suggestion locations of Google Map.
+        -   Remove the loading icon after canceling the "Logout Other Devices" popup.
+        -   Update Password - Remove the Logout Other Devices pop-up after user inputs password.
+    -   Web
+        -   New UI for Like-Share-Comment
+        -   Basic Information - Change the ordering on the Location field
+        -   Improve loading on the profile page of Page/Group/User when having a custom tab.
+        -   Improve behavior for the tooltip on the button/icon when user takes action on it.
+        -   Change the layout header to the same as a mobile app on the mobile web.
+        -   Improve the behavior of scrolling to the top when changing the page.
+        -   Apply same "Report" icon on the photo detail as Feed item.
+        -   Add the Featured icon on the user's feed.
+        -   Display the Scroll bar when loading the activity posts.
+        -   Improve the item border on the attachment file.
+        -   Update the default group cover photo on the Shortcut section.
+        -   Basic Information - Change the Address icon on the Basic Information block.
+        -   Update the message when users sign up for the account with the banned email.
+        -   Improve the position of the Save/Cancel button on the Custom Privacy popup.
+        -   Show the date time detail when the user hovers on the creation time on the item detail.
+        -   Notifications - Hide the notification related to the post Link when the Feed app has been inactivated.
+    -   AdminCP:
+        -   Site Statistic: add a new metric to count daily/weekly active users.
+        -   Improve "Require Basic Field" setting in Registration Settings page
+        -   Support validating and testing SMS after configuring Twillo settings in AdminCP
+        -   Custom fields - Display the options on the Selection field by Keyword
+        -   Flood Control: the counter ignores system generated items when validating users' capacities.
+        -   Browse Members: improve the label of the Display Name search box to enhance clarity.
+        -   Appearances: rename the footer menus to enhance clarity.
+        -   When deleting category, The "Category" dropdown only appears when selecting the "Move all blogs and its sub-categories to" option.
+-   Notifications: Admins can manage notification channels.
+-   Members - Inactive Mailing: Admin can stop the ongoing / pending mailing process.
+-   Security Upgrade: Upgrade framework from v10.25.2 to 10.48.23 for [CVE-2024-52301](https://github.com/advisories/GHSA-gv7v-rgg6-548h)
+-   Contact: Add "Can access contact page?" permission.
+-   Installation: Verify the presences of the GD extension before continuing.
+-   Fix bugs.
+
+### Event
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Add the "React" button on the Event's feed and Events on Listing page.
+    -   Web
+        -   Improve the size of contents/tabs on the event detail page.
+        -   Pin the Hosts/Similar Events/Guests blocks when users scroll the page.
+        -   Redirect to the event detail after users duplicate an event
+-   Fix bugs.
+
+### Groups
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Manage Group: Group administrators can manage invitations.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Update the text size of the Categories and Publish Date fields on the About page.
+        -   Move to top when clicking on the "Discussions" tab on Group
+        -   Improve the placeholder text when searching items in the group.
+    -   Web
+        -   Photos - Improve the user list when users tag friend on photo on closed/Secret Group.
+        -   Improve the layout for the photo block on the group.
+        -   About Group - Add the tooltip for all about fields.
+        -   Membership Requests - Add the column "Modified User".
+        -   Invite Link - Change the warning message when invitee confirms the cancelled invitation
+-   Fix bugs.
+
+### Pages
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   UI/UX Improvements
+    -   Web:
+        -   About Page - Add the tooltip for all about fields
+        -   Add the confirm popup when the admins' page removes/blocks the member.
+        -   Improve the Upcoming Events block layout on the page.
+        -   Improve the Photo block layout on the page.
+        -   Improve the page's avatar on the event detail page created on the page.
+    -   Mobile Apps
+        -   Improve the layout of the Featured/ Sponsor icons on the page.
+        -   Add the confirmation when the admins' page removes/blocks the member.
+        -   Move to the top when clicking on the "Overview" tab on the page.
+        -   Update the text size of the Categories and Publish Date fields on the About page.
+        -   Improve the placeholder text when searching items in the page.
+    -   AdminCP
+        -   Support pagination on the Manage Claims page.
+-   Fix bugs.
+
+### Stories
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Improve the clickable area for the Back icon on Android app.
+        -   Add the confirm popup when users leave the Create Story screen with the Back button of the Android device.
+    -   Web
+        -   Improve layout for the group actions on Story detail.
+        -   Create Text Story: Add more/less button for Backgrounds section.
+    -   AdminCP:
+        -   Settings: Admin can set default story lifespan.
+-   Fix bugs.
+
+### Site Background
+
+-   UI/UX Improvements
+    -   AdminCP: Add a success message after editing the collection
+
+### Comments
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   UI/UX Improvements
+    -   Web
+        -   Improve the layout when users mention friends in comments.
+        -   Improve the pointer when clicking on the comment button to open the comment screen. (Android devices)
+-   Fix bugs.
+
+### Feed
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Optimize performance.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Schedule Post - Not allow the user to select the past time when posting the scheduled post.
+        -   Change the title of the page when sharing the Video URL.
+        -   Disable the Post button when the post is empty.
+        -   Support map view when posting activity posts with a check-in location.
+        -   Link post - Improve the UX when users input the URL on the post
+    -   Web
+        -   Support map view when posting activity posts with a check-in location.
+        -   Keep the user-chosen value of the Sort Feed among login times.
+        -   Events - Add the feed's info for the feed in the Event.
+        -   Redirect to the location when clicking on the map view.
+        -   Improve the layout of the new feed after creating and scrolling down on the page/group/profile.
+        -   Improve the pointer when opening the composer post on Android devices.
+-   Fix bugs.
+
+### Invitations
+
+-   Ban Words: Check and sanitize banned words in all contents.
+
+### Marketplace
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Fix bugs
+
+### EWallet
+
+-   Ban Words: Check and sanitize banned words in all contents.
+
+### Photos
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Support users to edit privacy of default albums (Timeline, Profile and Cover Album) of User.
+-   UI/UX Improvements
+    -   Web
+        -   User Profile - Improve the layout of the Photos tab when the username is too long.
+        -   Edit Media modal: Add a divider between the media section and the Cancel/Save button.
+        -   Improve the layout of video items on the Edit Media dialog.
+    -   Mobile Apps
+        -   Update the phrase for the "Choose from Library" option.
+-   Fix bugs.
+
+### Blogs
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Fix bugs
+
+### Chat
+
+-   UI/UX Improvements
+    -   Improve the attachment file after clicking on the Send button.
+    -   Improve the size and number of photos per row after sending.
+    -   Hide the action button when users have no permission to delete the conversation.
+-   Fix bugs
+
+### Forums
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Fix bugs
+
+### Live Videos
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   Fix bugs
+-   MFOXLIVEVIDEOS-207 - Mobile - Improve the placeholder text on the Go Live screen.
+
+### Music
+
+-   Ban Words: Check and sanitize banned words in all contents.
+
+### Polls
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Improve layout for total votes on the poll when the votes = 0
+    -   Web
+        -   Add/ Edit Poll: Improve layout for click icon when hovering to the Change link at the Photo field.
+        -   Improve layout for the poll's feed share,  Poll detail and Poll title on Create Post modal
+-   Fix bugs.
+
+### Quizzes
+
+-   Ban Words: Check and sanitize banned words in all contents.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Improve layout for total plays on the quiz when the plays = 0
+        -   Update layout on the quiz feed
+-   Fix bugs
+
+### Friends
+
+-   UI/UX Improvements
+    -   Improve the layout of the member item and the "Profile Popup Viewer" when user name is too long.
+    -   Hide the Mutual Friends tab when the Guest users view User Profile
+-   Fix bugs.
+
+### SMS
+
+-   Fix bugs
+
+### Newsletter
+
+-   Fix bugs
+
+### Advertise
+
+-   UX Improvement - Limit the price on the Sponsor Setting
+-   Fix bugs
+
+### Featured Items
+
+-   UI/UX Improvements
+    -   AdminCP
+        -   Add New Package: Check and validate the "Price" field when admin tries to input invalid data
+    -   Web
+        -   Feature User - Prevent the users click continuously on the Feature button.
+-   Fix bugs.
+
+### Search
+
+-   Fix bugs
+
+### Video
+
+-   UI/UX Improvements
+    -   Web  
+        -   Improve the space between the Reaction and Comment icons on the video detail screen on Android devices.
+        -   Improve the title of the Edit video modal.
+        -   Display the total view on the video detail page.
+-   Count views from the activity stream for uploaded video views.
+-   Fix bugs.
+
+### ChatPlus
+
+-   UI/UX Improvements
+    -   Web
+        -   Change editor chat to lexical.
+        -   Improve the text when replying to messages.
+        -   Improve the background on the original message when the system jumps to it.
+-   Fix bugs.
+
+### Saved Items
+
+-   UI/UX Improvements
+    -   Web
+        -   Display the action button on the collection listing on mobile layout.
+        -   Add New Collection: Improve text holder on the Name field
+-   Fix bugs.
+
+### Subscription
+
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Available Packages: Hide "Choose Package" button on the Super-Admin view.
+    -   Web
+        -   Package Comparison - Improve the layout for the divider below the Feature/Package Name row.
+-   Fix bugs.
+
+### Hashtag
+
+-   Avoid to create hashtags with emoji
+-   Fix bugs
+
+### Activity Points
+
+-   Display "Deleted User" on the Transaction when the user has been deleted.
+-   Fix bugs.
+
+### Reactions
+
+-   Improve UX when users react/un-react comment.
+-   Fix bugs.
+
+### Stickers
+
+-   Improve compatibility with core v5.1.16.
+-   Fix bugs.

@@ -1,0 +1,69 @@
+---
+title: Live Streaming - Set up Mux
+---
+
+# Live Streaming - Set up Mux
+
+This guide will walk you through the step-by-step process of setting up Mux and configure Live Video app on the MetaFox site to enable Live Streaming feature.
+
+## Create a Mux Account and configure Mux
+
+If you haven't already, sign up for a Mux account at [https://mux.com/](https://mux.com/). Mux provides powerful video processing capabilities, including adaptive streaming and analytics.
+
+After registering Mux account successfully, you will need to set up Mux to get Access Token (**Client ID** and **Client Secret** ) and Webhook Secret
+
+**Set up Access Token**
+
+Once registered, log in to your Mux dashboard.
+
+Navigate to "Settings": In your Mux dashboard, locate and click on the "Settings" option, typically found in the top-right corner of the page.
+
+![Screenshot 2023-08-02 at 16.54.59.png](/images/Screenshot%202023-08-02%20at%2016.54.59.png)
+
+Choose the Access Tokens menu or within the "Settings" section, select "Access Tokens." Here, you can manage your API tokens.
+
+![Screenshot 2023-08-02 at 16.57.59.png](/images/Screenshot%202023-08-02%20at%2016.57.59.png)
+
+Click on the "Create New Token" button to generate a new Access Token. Provide a descriptive name for the token, and you can also assign permissions to control API access as below. Then click "Create" to generate the Access Token.
+
+![Screenshot 2023-08-02 at 17.00.39.png](/images/Screenshot%202023-08-02%20at%2017.00.39.png)
+
+Once the Access Token is generated, copy it immediately and store it securely in a safe location. This Access Token is essential for authenticating requests of your MetaFox site to the Mux API.
+
+**Setting Up Mux Webhook**
+
+In your Mux dashboard, go to the "Settings" section.
+
+Within the "Settings" section, select "Webhooks." This is where you'll set up and manage your Webhooks.
+
+![Screenshot 2023-08-02 at 17.03.26.png](/images/Screenshot%202023-08-02%20at%2017.03.26.png)
+
+Click on the "Create New Webhook" button to set up a new webhook. You'll need to provide specific details about the webhook.
+
+Enter the URL where you want to receive the webhook notifications in the "URL to notify" field. Please fill the URL ***https://yourdomain.com/api/v1/live-video/callback/mux*** . You need to replace the ***yourdomain.com*** part the URL with the proper domain of your MetaFox site
+
+![Screenshot 2023-08-16 at 15.08.29.png](/images/Screenshot%202023-08-16%20at%2015.08.29.png)
+
+After configuring the webhook details, click "Create Webhook.".
+
+Then you can click on the **Show Signing Secret** of the created webhook item to get the detailed signing secret. Copy and store it for later usage
+
+You have set up your Mux account successfully. Now we can move to the next step to configure the Mux service on your MetaFox site.
+
+## Configure Mux service on Live Videos app
+
+Assume that you could install Live Video app onto your MetaFox site successfully.
+
+Go to **AdminCP Dashboard** \> **App Settings** \> **Live Video** \> **Streaming Services**. Then choose **Mux** item as below
+
+![Screenshot 2023-08-16 at 15.10.18.png](/images/Screenshot%202023-08-16%20at%2015.10.18.png)
+
+Fill in the settings with the proper values you have when setting up your Mux account. Then save changes.
+
+![Screenshot 2023-08-16 at 15.14.15.png](/images/Screenshot%202023-08-16%20at%2015.14.15.png)
+
+Go to the **Settings** section by clicking on the Settings top menu. Choose the **Mux** option for the **Streaming Service** setting and save changes as below screenshot.
+
+![Screenshot 2023-08-16 at 15.16.52.png](/images/Screenshot%202023-08-16%20at%2015.16.52.png)
+
+Congratulations! You have successfully set up the Live Video functionality using Mux.

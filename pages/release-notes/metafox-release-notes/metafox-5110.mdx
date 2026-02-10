@@ -1,0 +1,283 @@
+---
+title: MetaFox 5110
+---
+
+# MetaFox 5110
+
+**Release Date: May 22, 2024**
+
+## **Core  and App Updates**
+
+### Featured Items (NEW)
+
+#### User Features
+
+1.  **Dashboard**
+    
+    -   Overview of featured items
+    -   Quick access to invoice management
+2.  **Item Management**
+    
+    -   Submit items to be featured
+    -   Track status of submitted items
+3.  **Invoice Management**
+    
+    -   View and download invoices
+    -   Payment history
+    -   Outstanding payments
+    -   Payment methods (credit card, PayPal, etc.)
+4.  **Package Selection**
+    
+    -   Browse and select packages for featuring items
+    -   Detailed package descriptions and pricing
+5.  **Notifications**
+    
+    -   Email and in-app notifications for invoice due dates
+
+#### Admin Features
+
+1.  **Dashboard**
+    
+    -   Overview of total earnings
+    -   Quick access to manage invoices, packages, and transactions
+    -   System alerts and notifications
+2.  **Invoice Management**
+    
+    -   View and manage all user invoices
+    -   Create, edit, and delete invoices
+    -   Track payment statuses
+    -   Generate reports on invoice activities
+3.  **Package Management**
+    
+    -   Create, edit, and delete featured packages
+    -   Set pricing, duration for each featured package
+    -   Special promotions and discounts management
+4.  **Transaction Management**
+    
+    -   View and manage all transactions
+    -   Track payment gateway integrations
+    -   Refund processing
+    -   Transaction history and reporting
+
+### Core
+
+-   UI/UX Improvements
+    -   On User Profile when switching tabs or showing user details
+    -   When editing items that belong to deactivated categories
+-   Custom Fields
+
+-   Enable validation on the Text field with regex rules.
+-   Support sortable options for Multiple Selection field
+-   Able to control role-based field visibilities.
+
+-   AdminCP - Storage: Add setting to control file deletion upon removing related entities.
+
+### Feed
+
+-   Support translation on posts with Google Translate
+-   Administrators can delete feeds and all of its related items.
+-   Support new permission to control "How many posts per day that user can post?"
+-   Support Setting to control maximum characters for Post Status
+-   UI/UX Improvements
+    -   The layout on the Feed Type's table
+    -   Change the Title on the Edit Post screen on mobile apps
+    -   Space between the keyboard and icon bar when sharing the feed
+
+### Pages
+
+-   Integrate with the Featured Items app
+-   Users can input an "External Link" when creating a page.
+-   UI/UX Improvements
+    -   AdminCP - Manage Custom/Section fields: Add "Add Custom Field"/ "Add Section" link to the manage page.
+    -   Change the label on the Manage Group screen on mobile app.
+    -   Hide profile/cover photo on page detail after the admin deletes the photo.
+-   Users can upload a profile picture for the page when creating it.
+
+### Groups
+
+-   Integrate with the Featured Items app
+-   Manage Group:
+    -   Allow group administrators to view the history of Membership Requests.
+    -   Support Membership Requests on mobile apps
+-   Allow non-registered users to access secret groups via invitation links.
+-   UI/UX Improvements
+    -   On workflow of sharing an item link from a Closed/Secret group to the discussion in the same group.
+    -   Add a confirmation message before saving the group privacy setting.
+    -   The success message when users invite friends to join the group.
+    -   Change the label on the Manage Group screen on mobile app.
+    -   AdminCP - Manage Custom/Section fields: Add "Add Custom Field"/ "Add Section" link to the manage page
+-   Add "Who can view members?" permission to control who can view the group members.
+
+### Comments
+
+-   Support translation on comments/replies with Google Translate
+-   UI/UX Improvements 
+    -   Mobile app - Add the background per comment when viewing the comment/reply listing.
+    -   Mobile app - The comment screen when there is no comment display.
+
+### Social Connect
+
+-   Update for compatibility with Core v5.1.10
+
+### Blog
+
+-   Support removing storage files after deleting the Blog.
+-   Integrate with the Featured Items app.
+
+### Events
+
+-   Integrate with the Featured Items app
+-   Support exporting events to ICS file
+-   Support importing events to Mobile Calendar
+-   UI/UX Improvements
+    -   Remove the text "Commenting on this post has been turned off." below the event feed.
+    -   Display the Name Page/Group on the Event detail when the user role has no permission to view the Page/Group
+    -   AdminCP: Enable event ordering by default for ongoing and upcoming events.
+
+### Stories
+
+-   UI/UX improvements
+    -   For the progress bar when viewing the video story.
+    -   The video story layout when waiting for processing.
+    -   The layout of the text story when viewing the detail.
+    -   Add the pointer on the Create Text Story page on mobile apps.
+    -   The line below the header on the story detail page.
+-   Improve performance
+-   Support parsing hyperlinks in the content when creating a new story on mobile apps.
+
+### Friends
+
+-   Optimize performance of Friend Suggestion.
+-   Minor UI/UX Improvements.
+
+### E-Wallet
+
+-   UI/UX Improvements
+    -   AdminCP - The text on the Exchange Rates page.
+    -   The message when there are no currencies to withdraw.
+-   Support users can define the minimum withdrawal for each currency.
+
+### Site Background
+
+-   Update for compatibility with Core v5.1.10
+
+### Status Background
+
+-   AdminCP - Admin can configure text color (black / white) for individual background photo.
+
+### Sticker
+
+-   UI/UX Improvements
+    -   Add the message when the Recent tab is empty
+
+### Search
+
+-   UI/UX Improvements
+    -   Automatically focus the cursor on search text box when opening the Global Search.
+
+### Marketplace
+
+-   Support Manage Invoices in AdminCP
+-   Integrate with the Featured Items app
+-   UI/UX Improvements
+    -   AdminCP - The workflow when users view the order details on ACP.
+    -   AdminCP - Phrases for an invoice detail page.
+    -   Mobile apps - The "To" field when searching for the Sold/Bought Invoices screen.
+
+### Photos
+
+-   UI/UX Improvements 
+    -   When adding photos to the album
+    -   Remove the black background on the Photo/Video on the Photo Album
+    -   The layout on the Photo Block
+    -   Add the pending icon in the pending video on the photo album
+-   Mobile apps - Support editing video after uploading them to the album photo
+-   Integrate with the Featured Items app
+
+### Video
+
+-   Integrate with the Featured Items app
+-   UI/UX Improvements
+    -   Layout for the Videos block when the video does not title
+    -   Hide the dot on "Remove from Saved list" on the saved video.
+    -   The loading page when users cancel the "Add New Video" page on the page, group, or user profile.
+    -   Remove a space on the notification when follower users upload a video.
+
+### Live Video
+
+-   Integrate with the Featured Items app.
+-   UI/UX Improvements
+    -   The workflow when viewing the live video detail page.
+    -   The loading screen on create live video page.
+
+### Music
+
+-   Integrate with the Featured Items app.
+-   Support removing storage files after deleting music songs or albums.
+-   UI/UX Improvements
+    -   Layout on "Your Playlist" block.
+
+### Poll
+
+-   Integrate with the Featured Items app.
+-   Support removing storage files after deleting polls.
+
+### Reactions
+
+-   Support creating reactions using GIF files.
+
+### Hashtag
+
+-   UI/UX Improvement on the hashtag when viewing the edit history popup (Post, Comment,..)
+
+### Advertise
+
+-   AdminCP - Improve the workflow when users view the order details on ACP.
+
+### Invitation
+
+-   Add a new setting to control whether invited users can be approved automatically after registration.
+
+### Subscription
+
+-   Mobile apps - Support "View Packages" on Register Form like Web version.
+-   UI/UX Improvements
+    -   AdminCP - Update the empty description when there is no result to show on the Manage Subscription page.
+
+### Activity Points
+
+-   UI/UX Improvements
+    
+    -   Phrase when Admin revoked user's point
+    
+    -   Mobile apps - Hide the submit button on the Conversion Request screen when users do not have points.
+    -   Mobile apps - Disable the Activity Point option on the Payment Gateway popup when users do not have enough points to pay.
+    -   The notification when admins give 1 point to a user.
+    -   The warning message when adjusting the member point.
+    -   The notification when users receive 1 point from other users.
+
+### Quizzes
+
+-   Integrate with the Featured Items app.
+-   Support removing storage files after deleting quizzes.
+
+### Saved Items
+
+-   Support removing storage files after deleting saved items.
+-   Updates for Compatibility with MetaFox 5.1.10
+
+### Chat
+
+-   UI/UX Improvements
+    -   Add the tooltip on the listing header for the New Conversation button
+    -   The Settings form in AdmiCP.
+
+### Chatplus
+
+-   Apply Firebase settings from Firebase app
+-   UI/UX Improvements on layout of action sheet, typing icon, video player on mobile app.
+
+### Forum
+
+-   UI/UX Improvements on the layout of dropdown in Search thread form.
+-   Updates for Compatibility with MetaFox 5.1.10

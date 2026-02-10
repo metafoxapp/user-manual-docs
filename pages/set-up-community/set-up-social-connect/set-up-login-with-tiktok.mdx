@@ -1,0 +1,52 @@
+---
+title: Set up Login with Tiktok
+---
+
+# Set up Login with Tiktok
+
+In this article, we are going to guide you to set up Login with Tiktok on MetaFox site with following steps:
+
+-   Obtain Ticket API Key and Secret Key
+-   Configure Login with Tiktok on MetaFox
+
+### Obtain Ticket API Client Key and Secret Key
+
+You will need to have Tiktok Developer account to get API Client Key and Client Secret key. If you haven't got one yet, please register your account at Tiktok Developer page ([https://developers.tiktok.com/](https://developers.tiktok.com/)).
+
+Now, log into Tiktok Developer with your credentials. Then go to the **Manage Apps** section at [https://developers.tiktok.com/apps/](https://developers.tiktok.com/apps/) 
+
+![Screenshot 2023-10-04 at 11.39.43.png](/images/Screenshot%202023-10-04%20at%2011.39.43.png)
+
+Click **Connect An App** button and follow the guide to create your app to use for Login with Tiktok.
+
+![Screenshot 2023-10-04 at 11.40.04.png](/images/Screenshot%202023-10-04%20at%2011.40.04.png)
+
+At this step, you will need to fill all required details of your app and submit for review to get approval.
+
+![Screenshot 2023-10-04 at 11.40.24.png](/images/Screenshot%202023-10-04%20at%2011.40.24.png)
+
+Once the app is created successfully and approved, you can obtain the **Client Key** and **Client Secret** in the App Details page. We will configure these values in MetaFox to enable Login with Tiktok then.
+
+Now, we will add 2 products within Tiktok App: **Login Kit** and **Scopes**
+
+![image_2024-05-06_14_29_51.png](/images/image_2024-05-06_14_29_51.png)
+
+![image_2024-05-06_14_29_21.png](/images/image_2024-05-06_14_29_21.png)
+
+Then, configure the ***Web Redirect URI*** of Login Kit and the ***user.info.basic*** of Scopes as the screenshot
+
+![image_2024-05-06_14_27_23.png](/images/image_2024-05-06_14_27_23.png)
+
+  
+
+### Configure Login with Tiktok on MetaFox
+
+Now, let's log into AdminCP Dashboard and go to **App Settings** > **Social Connect** > **Tiktok** page.
+
+In this page, you can configure Client Key and Client Secret key that you have obtained in the previous step. And use your site URL as the **Redirect URL** as the below screenshot
+
+![Screenshot 2023-10-04 at 11.54.48.png](/images/Screenshot%202023-10-04%20at%2011.54.48.png)
+
+Click Save Changes button to complete the setup for Login with Tiktok. The Login option with Tiktok is now available on the Signup form as below
+
+![Screenshot 2023-10-04 at 12.00.57.png](/images/Screenshot%202023-10-04%20at%2012.00.57.png)

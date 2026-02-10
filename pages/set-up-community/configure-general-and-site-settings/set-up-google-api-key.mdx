@@ -1,0 +1,119 @@
+---
+title: Set up Google API Key
+---
+
+# Set up Google API Key
+
+An API key is a unique identifier. Each time that you use the Google Maps API or Google Youtube API, you must include a key, or other credentials, to validate your request.
+
+Google API key is a necessary component for several apps and pages to display content correctly and completely such as Maps, Places, Youtube, Date... This guide will instruct you on how to obtain and setup Google API key with all fundamental services.
+
+## Create Google App
+
+  
+First of all, you need to create a Google app to generate the key.
+
+1/ Go to Google Console Page & Login into your Google account.
+
+[https://console.cloud.google.com/apis/dashboard?project=php-app-9d6e6](https://console.cloud.google.com/apis/dashboard?project=php-app-9d6e6)
+
+2/ Select Create Project from Console Dashboard or Select projects menu, then click on the + symbol on the popup window to create a new project.
+
+![image2022-11-22_16-50-48.png](/images/image2022-11-22_16-50-48.png)
+
+  
+3/ Enter the name for the new project, select your preference of email notification and lastly choose Yes to agree on Terms of Service >> Create.
+
+![image2022-11-22_16-51-46.png](/images/image2022-11-22_16-51-46.png)
+
+## Enable Services for Google App
+
+  
+From the project Dashboard, click on Go to APIs overview under API section.
+
+![image2022-11-22_16-53-8.png](/images/image2022-11-22_16-53-8.png)
+
+  
+
+On the next page, choose Enable APIs and Services on top of the page.
+
+![image2022-11-22_16-53-20.png](/images/image2022-11-22_16-53-20.png)
+
+  
+
+You will see the library of available services you can apply to your Google app. From here, you can find the services you want to enable in the list or Use the search box for quick reference.
+
+![image2022-11-22_16-53-59.png](/images/image2022-11-22_16-53-59.png)
+
+  
+
+  
+
+Next, we will guide you on how to enable a service, for instance, "Google Calendar API" which is vital for displaying dates and times on several components. 
+
+1.  Type "Google Calendar API" into the search box, and select it from the result list.
+
+![image2022-11-22_16-54-42.png](/images/image2022-11-22_16-54-42.png)
+
+  
+
+      2\. Select **Enable** to activate this service. You *successfully enabled the service* for your Google app.
+
+![image2022-11-22_17-16-23.png](/images/image2022-11-22_17-16-23.png)
+
+  
+
+You can enable these below services for your Google app to ensure all settings work and content displays correctly on your site.
+
+**Map & Location services:**
+
+-   Google Places API Web Service
+
+-   Google Maps Geocoding API
+
+-   Google Maps Geolocation API
+
+-   Google Maps JavaScript API
+
+-   Google Static Maps API
+
+**Youtube services:**
+
+-   YouTube Data API v3
+    
+
+## Generate Google API Key from Google App
+
+After enabling all necessary services, we need to generate the API key to use to setup in the phpFox setting.
+
+Go back to **Dashboard** and select **Credentials** from the left menu.
+
+![image2022-11-22_17-19-24.png](/images/image2022-11-22_17-19-24.png)
+
+  
+
+Select **Create credentials** and choose **API key** from the drop-down list. 
+
+![image2022-11-22_17-22-13.png](/images/image2022-11-22_17-22-13.png)
+
+  
+
+A popup will show up with a **generated API key** of the app. You now have your Google API key, *note this key down*.
+
+![image2022-11-22_17-25-9.png](/images/image2022-11-22_17-25-9.png)
+
+  
+
+## Setup Google API Key for MetaFox Settings
+
+As you just retrieved your Google API key, you need to set up and put it into your MetaFox settings.
+
+From AdminCP, type "**Google Map API Key**" to search in the settings box and select the result or go to **AdminCP > Settings > Site Settings**
+
+![Screen Shot 2023-02-12 at 23.43.34.png](/images/Screen%20Shot%202023-02-12%20at%2023.43.34.png)
+
+Enter your Google Map API key to the setting  and Save Changes. 
+
+You can do above step to search and configure the "**YouTube Data API Key**" setting with your Google API key.
+
+Congratulations, you just successfully set up Google API keys for your MetaFox site.
