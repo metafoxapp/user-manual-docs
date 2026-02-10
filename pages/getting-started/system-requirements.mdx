@@ -1,0 +1,75 @@
+---
+title: System Requirements
+---
+
+# System Requirements
+
+In this article, we are going to give you more details about the standard recommendations for a server when running MetaFox. 
+
+### Here is the Minimal Server Configuration
+
+-   CPU: Single core (2 GHz)
+-   RAM: 2GB
+-   Disk: SSD
+
+MetaFox can be installed with either **Docker** or **normal hosting service.** Now we will take a deeper look into the requirements for each setup option below
+
+### Setup with Docker
+
+This is the easiest and highly recommended setup for MetaFox as it can be quickly installed and run well on servers or cloud hosting supporting [Docker](https://www.docker.com/) applications. You can consider using the following hosting service type for the MetaFox site:
+
+-   ***Dedicated server***: On a dedicated server, you will have root permission to set up Docker environment and install the MetaFox site quickly and easily.
+-   ***VPS / Cloud Hosting***: Your SSH account needs to have permission to run the Docker application
+-   ***Docker hosting platforms***: There are many hosting platforms providing powerful, reliable infrastructure and services for Docker applications such as Amazon ECS, Digital Ocean, Google Cloud Run, etc.
+
+### Normal Setup on hosting service with LAMP or LEMP stack
+
+Hosting plans of hosting service providers usually supports a **bundle of software technology** for websites to run, such as LAMP or LEMP stack, etc by default. MetaFox can also be installed on such server or web hosting with the following requirements: 
+
+-   ***Server OS***: Linux
+-   ***Web server***:  Apache or (NginX + PHP-FPM)
+    -   If using Apache server, mod\_rewrite is required
+-   ***Database***: Postgres (13.0 or higher), MySQL (8.0 or higher), MariaDB (10.6 or higher)
+    -   Postgres is recommended
+-   ***PHP***: PHP 8.2 or higher
+    -   *The new PHP 8.4 has recently been released and will soon be fully compatible with MetaFox.*
+-   **PHP params**:
+    -   *disable\_function* does not include:
+        -   exec
+        -   shell\_exec
+        -   proc\_open
+        -   proc\_close
+    -   *memory\_limit*: at least 256MB
+-   ***PHP Extensions***:
+    -   *Required*: 
+        -   **mysqlnd** (nd\_pdo\_mysql) (recommended) or MySQLi: if using MySQL database
+        -   pgsql: if using Postgres database
+        -   gd
+        -   cURL
+        -   zip
+        -   mbstring
+        -   xml
+        -   dom
+        -   json
+        -   bcmath
+        -   ctype
+        -   openssl
+        -   pcntl
+        -   pcre
+        -   fileinfo
+        -   tokenizer
+        -   exif
+        -   sodium
+        -   intl
+        -   socket
+    -   *Optional*:
+        -   imagick
+        -   redis
+        -   apcu
+        -   opcache
+-   ***Additional Requirement for the [Video App](https://store.phpfox.com/product/1819/videos) :*** 
+    
+    -   If you want to allow users to ***upload videos from their computer***, your server must be able to encode/transcode videos so that they can be displayed on your website properly. So [FFMPEG](https://www.ffmpeg.org/) mus be installed on your server. Be aware that **video encoding/transcoding is a CPU-intension task** and can take a long time to run, you should only install it on a dedicated environment such as a dedicated server. If you are using Shared Hosting or VPS / Cloud Hosting environments, be sure to check with your hosting provider to see if they allow this encoding task.
+        
+
+If you are unsure if your server meets the product requirements, please contact your host and send them this page.

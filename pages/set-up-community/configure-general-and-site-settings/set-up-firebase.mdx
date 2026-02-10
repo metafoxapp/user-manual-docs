@@ -1,0 +1,63 @@
+---
+title: Set up Firebase
+---
+
+# Set up Firebase
+
+MetaFox uses Firebase to many functionalities, such Live Video, push notifications on mobile apps and web, crash analytics, etc.
+
+In this article, we will walk you through step by step to set up Google Firebase on MetaFox site.
+
+### Create a Firebase Project
+
+Go to the [Firebase Console](https://console.firebase.google.com/), and sign in with your Google account.  
+Click on "Add project" to create a new Firebase project.  
+Follow the on-screen instructions to set up your project.
+
+### Obtain Configuration for Web App 
+
+On the Dashboard of your Fireabase project, let's create a new **Web App** and follow the on-screen instructions to register the Web app.
+
+![Screenshot 2024-04-17 at 11.28.47.png](/images/Screenshot%202024-04-17%20at%2011.28.47.png)
+
+After registering Web app successfully, go to the **Project Settings** > **General** tab. Choose the Web App that you just created and obtain the Firebase configuration as below
+
+![Screenshot 2024-04-17 at 11.45.32.png](/images/Screenshot%202024-04-17%20at%2011.45.32.png)
+
+The Firebase configuration of your Web app will be as be below
+
+We are going to configure the Firebase configuration within MetaFox site.
+
+Let's log in to your MetaFox site with Admin user and go to **AdminCP Dashboard** > **App Settings** > **Firebase**
+
+Configure Firebase settings with the related values above as the screenshot
+
+![Screenshot 2024-04-17 at 12.00.37.png](/images/Screenshot%202024-04-17%20at%2012.00.37.png)
+
+Click the **Save Changes** button to apply the settings.
+
+### Enable Firebase Cloud Messaging (FCM)
+
+In the Firebase **Project Settings**, navigate to the "**Cloud Messaging**" tab from the left sidebar. Then, follow the on-screen instructions to enable FCM
+
+![Screenshot 2024-04-17 at 12.04.08.png](/images/Screenshot%202024-04-17%20at%2012.04.08.png)
+
+  
+
+### Generate Service Account
+
+Now, in the Firebase Project Settings, navigate to the **Service accounts** tab and to generate New Private Key 
+
+![Screenshot 2024-04-17 at 12.08.01.png](/images/Screenshot%202024-04-17%20at%2012.08.01.png)
+
+At this step, you can download the JSON file for the Service Account.
+
+### Configure Service Account in MetaFox
+
+Let's get back to AdminCP Dashboard of your MetaFox site. Go to **App Settings** > **Firebase** > **Import Settings** page
+
+![Screenshot 2024-04-17 at 12.11.18.png](/images/Screenshot%202024-04-17%20at%2012.11.18.png)
+
+Upload the JSON file obtained in the previous step. The Firebase configuration of Service Account will be updated automatically then.  
+  
+That's it! You've successfully set up Firebase on your MetaFox site.

@@ -1,0 +1,85 @@
+---
+title: Migrate data from phpFox V4
+---
+
+# Migrate data from phpFox V4
+
+This article will guide you to migrate your community from phpFox V4 to MetaFox. The migration process includes 2 parts: Export data on phpFox V4 site and then Import data on the MetaFox.
+
+## Export data on phpFox V4 site
+
+Log into the AdminCP of your phpFox V4 site
+
+Go to AdminCP > Apps > Find More, then search and install the **MetaFox Exporter** app from phpFox Store ([https://store.phpfox.com/apps/metafox-exporter/](https://store.phpfox.com/apps/metafox-exporter/))
+
+![Screenshot 2023-05-17 at 16.55.49.png](/images/Screenshot%202023-05-17%20at%2016.55.49.png)
+
+  
+
+  
+
+Go to AdminCP > Apps > Installed > MetaFox Exporter, and click the **Export** button to start exporting data on your phpFox V4 site.
+
+![Screenshot 2023-05-17 at 16.34.30.png](/images/Screenshot%202023-05-17%20at%2016.34.30.png)
+
+A phpFox cron job will handle the Export process. Once the exported file is ready, you can click the **Download Zip** button to download the zip file to your local machine. We will upload this zip file on the MetaFox site to import data.
+
+It may take up to a few hours to complete the Export process
+
+## Import data on MetaFox
+
+We assume that you could install the MetaFox site successfully. We can go ahead to import data into the MetaFox site.
+
+### Import data
+
+Log into the MetaFox site and go to AdminCP > Maintenance > Import Data, click on the **Upload Data** link on the top menu
+
+![Screenshot 2023-05-17 at 17.20.34.png](/images/Screenshot%202023-05-17%20at%2017.20.34.png)
+
+Click on the **Attach** button and choose the zip file that you have downloaded in the **Export data on phpFox V4 site** step. Then, click on the **Upload** button.
+
+A MetaFox cron job will handle the Import process. You can check the status of Import process in the Browse tab. It may take up to a few hours to complete the Export process
+
+![Screenshot 2023-05-17 at 17.27.46.png](/images/Screenshot%202023-05-17%20at%2017.27.46.png)
+
+### Migrate user files
+
+Now, we will migrate user files (such as photos, music, videos, etc.) from phpFox V4 to MetaFox. You can copy the following folders from the server hosting phpFox V4 to the server hosting MetaFox:
+
+Folder path on server hosting phpFox V4
+
+Folder path on server hosting MetaFox
+
+PF.Base/file/pic
+
+storage/app/public/file/pic
+
+PF.Base/file/attachment
+
+storage/app/public/file/attachment
+
+PF.Base/file/video
+
+storage/app/public/file/video
+
+PF.Base/file/music
+
+storage/app/public/file/music
+
+PF.Site/Apps/core-comments/assets/images/stickers
+
+storage/app/public/PF.Site/Apps/core-comments/assets/images/stickers
+
+PF.Site/Apps/p-status-background/assets/images
+
+storage/app/public/PF.Site/Apps/p-status-background/assets/images
+
+For files stored on external storage systems, such as Amazon S3, Digital Ocean Space, etc. , they will work on the MetaFox site seamlessly as the external storage configurations will be migrated to MetaFox automatically. There are no additional steps to migrate them.
+
+### Update for searching
+
+We will need to reindex migrated data for global searching. Let's go to AdminCP > Maintenance > Reindexing page. And click on the ReIndex button. Please note that it will take a while for migrated data to be searched.
+
+  
+
+**Congratulations. You have completed the Migration from phpFox V4 to MetaFox.**

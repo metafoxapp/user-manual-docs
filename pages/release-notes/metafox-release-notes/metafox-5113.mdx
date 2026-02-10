@@ -1,0 +1,305 @@
+---
+title: MetaFox 5113
+---
+
+# MetaFox 5113
+
+**Release Date**: Sep 10th, 2024
+
+### Core 
+
+-   Mobile apps 
+    -   Upgrade Facebook SDK
+-   UI/UX Improvements
+    -   Frontend Web  
+        -   Localization - Support detecting language based on the browser setting.
+        -   Login with MFA
+            -   User will be back to the original page after logging in using MFA.
+            -   First authentication option should be automatically selected by default.
+        -   Unify the icon style across the platform using the outlined variant.
+        -   Sign-In - Improve the layout of the Social Login button
+        -   Scroll to the top of the Homepage when the user is on the Homepage and clicks on Home menu or Site logo
+        -   Authenticator page - Hide Create account link
+    -   AdminCP
+        -   Localization - Countries:
+            -   Make Fips Code, Geonames Code optional when creating/editing states.
+            -   Add action to add new items to the Options menu.
+        -   Members/Inactive: Support auto-compete on City field.
+        -   SEO
+            -   Improve Apps filter in SEO settings manage page
+            -   Improve SEO manage settings page
+        -   Schedule Jobs - Add the Settings page with detailed cron commands
+        -   Point Settings - Users can input the integer starting with 0 in the Point Settings
+        -   Mobile Services/Smart Banner - Moving Google/Apple ID Settings from Admob page to the Smart Banner page
+        -   Email Inactive Members - Improve the UI/UX for processing inactive email.
+        -   Health Check: improve the process of checking the queue worker state.
+        -   Install / Reinstall App - Display popup whenever the installation process is successful
+        -   Login with MFA - Admin will be redirected to AdminCP via the AdminCP Login form
+        -   Storage: hide storage configurations unless they are properly configured.
+    -   Mobile Apps
+        -   Remove the redundant line on the profile page (Android).
+        -   Improve the Featured/Sponsored label on the feed item.
+        -   Settings: Improve the layout for the action sheet header when viewing some setting pages
+        -   Improve phrase for the Privacy menu
+
+-   Support Progressive Web App on Chrome
+-   Support settings to require users in specific roles to enable MFA.
+-   SEO - Support descriptive URLs.
+-   Toggle Site: support WYSIWYG editor for Offline Message
+-   Site Statistic: Add a new page to manage Site Statistics.
+-   Notification: Allow administrators to disable notifications for the entire app.
+-   Brute-force Protection: improve the brute-force workflow.
+-   Performance Improvement - Not to reset the global cache when performing specific actions
+-   AdminCP Site Settings - Support translating some components on the Site Settings page.
+-   Email Inactive Members: Process inactive email in batch to avoid being marked as spam
+-   Flatten Theme - Move background default to asset
+-   Support environment variable to control site backups.
+-   Installation Wizard: Improve validation for database version
+-   Smart Banner: Support setting to allow administrators to reposition the Smart Banner.
+-   Fix bugs
+
+### Stories
+
+-   Allow a user to mute stories from other users.
+-   Support users to view archived stories that are created on the same date.
+-   Support user can add multiple text on the story
+-   Apply permission settings of the Reaction app to the stories
+-   UI/UX Improvements
+    -   Improve phrase for the Story Archive page
+    -   Improve text for the Story Archive menu on mobile layout
+    -   Improve layout for the Comment section on the story
+-   Fix bugs
+
+### Saved Items
+
+-   UI/UX Improvements
+    -   Change the phrases of the "Remove from Saved list" option and the Add Friends popup.
+    -   Improve the Save button status on the Add Collection popup after clicking.
+    -   Add the "maximum number of characters" description when editing the collection.
+-   Fix bugs
+
+### Stickers
+
+-   UI/UX Improvements
+    -   Improve the sticker file type on the listing page in the mobile browser layout.
+    -   Improve the order of the sticker collection on the All Stickers/ My Stickers tab for the web browser and mobile app.
+-   Fix bugs
+
+### Page
+
+-   UI/UX Improvements
+    -   Mobile Apps - Add labels on the post and comment of Admin and Moderator users.
+    -   Add the Featured/Sponsored icon on the Page feed.
+    -   Update layout on the pending page.
+    -   My Claim Page: Update the success message when the user cancels the claim request
+-   Fix bugs
+
+### Advertise
+
+-   Fix bugs
+
+-   UI/UX Improvements
+    -   Hide the Edit/Delete option when the users have not permission 
+    -   Hide the Edit action on the Completed Ads
+-   Manage Sponsorship - Users can filter sponsorship created in Feed
+
+### Event
+
+-   Support slugs in event URL
+-   UI/UX Improvements
+    -   Mobile Flatten - Add the "Going" option on the "Interested" button
+    -   Mobile App - Improve the layout of the Action list on the Event
+    -   Hide the Sort Feeds action when users cannot view the Discussions tab
+-   Fix bugs
+
+### Quiz
+
+-   Support slugs in quiz URL
+-   Fix bugs
+
+### Poll
+
+-   Support slugs in poll URL
+-   UI/UX Improvements - Improve the notification after the poll is approved.
+-   Fix bugs
+
+### Follow
+
+-   Improve compatibility with Core v5.1.13
+
+### Friends
+
+-   Performance: optimize the performance of Friend Suggestions query.
+-   UI/UX Improvements:
+    -   User Profile - Add the sub-tab "Mutual Friends" on the Friends tab
+    -   User profiles - Add total of Friends, Requests, Following, Follower request on the title of tabs
+    -   AdminCP - Focus on the Settings page when users access the Friends app
+
+  
+
+### Groups
+
+-   Group Members: Able to sort group members by name or joined date.
+-   UI/UX Improvements
+    -   Change layout of custom fields on the Search Group page
+    -   The member count is based on the "Who can view members?" permission, regardless of the group privacy.
+    -   Change the phrase from "Publish Date" to "Created At".
+    -   The group cover photo has the same size as the listing cover and detail.
+    -   Manage Example Group Rules - Add the message when users deactivate/activate an Example Group Rules.
+    -   Mobile Apps
+        -   Add the Admin/Moderator label on the post and comment
+        -   Centralize the selected sub-tab on the Search Members page
+-   Fix bugs
+
+### Live Videos
+
+-   UI/UX Improvements
+    -   Improve the Live Videos block on the Home Feed page.
+    -   Improve the pointer when replying to the comment on the live video.
+-   Fix bugs
+
+### Comment
+
+-   Mobile Apps - When edit history, add the hyperlink on the mentioned user/group/page 
+-   Fix bugs
+
+### Social Connect
+
+-   Fix bugs
+
+### Music
+
+-   Support slugs in music URL
+-   UI/UX Improvements
+    -   Improve the line color between the menu list and the Saved Playlists section.
+    -   Improve the layout of the song/music album/playlist item.
+-   Fix bugs
+
+### SMS
+
+-   Fix bugs
+
+### Announcement
+
+-   Hide the number of views on the announcement listing and detail pages.
+
+### Hashtag
+
+-   Updates for compatibilities with Core v5.1.13.
+
+### Activity Points
+
+-   AdminCP - Improve performance on the Manage Packages page when the Google and Apple payment methods are inactivated.
+-   Fix bugs
+
+### Photos
+
+-   Support slugs in photo detail URL.
+-   UI/UX Improvements
+    -   Improve the background on the suggestion list when tagging a user in a photo.
+    -   Improve the action click when tagging a user in the photo.
+    -   Improve page title when editing media on the composer post in the mobile app.
+-   Fix bugs
+
+### Chat
+
+-   UI/UX Improvements
+    -   Improve the order in the bubble conversation section.
+    -   Improve the text when users reply to themselves.
+-   Fix bugs
+
+### ChatGPT Bot
+
+-   Allows Admin to select number of days to apply for permission "Limit messages with Chat Bot".
+-   Change permission "Limit the length of returned messages" to "Limit the length of returned tokens”.
+
+### ChatPlus
+
+-   Allow users to view another profile from the Reacted by popup.
+-   Add the warning message on AdminCP Dashboard when having new version of ChatPlus server.
+-   UI/UX Improvements
+    -   Improve phrases.
+    -   The pointer automatically displays on the text field when opening the conversation.
+    -   Display progress bar per file when sending many files simultaneously (Videos, audio,....).
+    -   Add the "Edited" icon on the edited message.
+    -   Improve the file name when viewing the Files tab.
+    -   Improve playback rate for audio message.
+    -   Mobile Apps
+        -   Allow users to choose playback speeds like 1x, 1.5x, and 2x.
+        -   Improve the layout when viewing the reaction list per icon.
+-   Fix bugs
+
+### Marketplace
+
+-   Support setting to show/hide Short description when creating/editing Listing.
+-   Support slugs in listing URL.
+-   UI/UX Improvements
+    -   Mobile Apps - Support users in reordering photos when adding/editing the listing.
+    -   Move Sold/Expired label to same position with Sponsor/Feature Label
+-   Fix bugs
+
+### Subscriptions
+
+-   Manage Reasons: Define the search filters in Manage Reasons page.
+-   AdminCP - Improve performance on the Manage Packages and Manage Subscriptions page when the Google and Apple payment methods are inactivated.
+-   Manage Comparison: enable drag and drop feature to enable administrators to reorder the comparisons.
+-   Fix bugs
+
+### EWallet
+
+-   UI/UX Improvements
+    -   Improve the currency when users convert their points to the currency.
+    -   Improve the layout for the Transactions page.
+    -   Mobile Apps - Improve the layout for the Transactions listing page.
+    -   Update phases on the Deny Request form.
+
+### Video
+
+-   UI/UX Improvements
+    -   Improve the video progress bar layout when users hover over it.
+    -   Support opening the video detail page from the feed when clicking on it.
+    -   Mobile Apps - Improve the video layout when editing the post (has only 1 video).
+-   Fix bugs
+
+### Newsletter
+
+-   Support to send test newsletter.
+-   Support to select the SMS channel when creating a new newsletter.
+-   Fix bugs
+
+### Site Background
+
+-   Improve the warning message when user drop and drag the photo to upload
+-   Fix bugs
+
+### Status Background
+
+-   Updates for compatibilities with Core 5.1.13
+
+### Feed
+
+-   Improve the feed layout when users remove tags.
+-   Fix bugs
+
+### Blog
+
+-   Support slugs in blog URL
+-   Fix bugs
+
+### Reactions
+
+-   Updates for compatibilities with Core 5.1.13
+-   Improve performances.
+-   Fix bugs
+
+### Search
+
+-   Improve the scrolling position of the page in the mobile browser when users navigate tabs.
+
+### Forum
+
+-   Fix bugs
+
+### Featured Items
+
+-   Fix bugs

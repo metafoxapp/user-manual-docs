@@ -1,0 +1,232 @@
+---
+title: MetaFox 5117
+---
+
+# MetaFox 5117
+
+**Release Date**: Feb 12th, 2025
+
+### Core
+
+-   Notification
+    -   Add ability to mark individual notification as \[Read\] or \[Unread\] instead of all of them
+-   AdminCP
+    -   Support Manage Items page.
+    -   Support Mass Actions to admin can delete/ approve all items
+    -   Site Settings - PWA: The App Description and Install Description can be translatable.
+    -   Deny User: Administrators can either send an email or SMS when denying a user account.
+-   Support CLI commands to activate/deactivate an app.
+-   Check & refactor the URLs to avoid being matched against standard firewall rules.
+-   UI/UX Improvements
+    -   AdminCP
+        -   Relationship - Remove the redundant setting "Enable Relationships".
+        -   App - Installed
+            -   Support sortable columns
+            -   Add the Upgrade button to upgrade all apps
+            -   Support mass actions to activate/deactivate apps.
+        -   Members - Update phrases on the Search form of Inactive Members 
+            -   Change the Search field to Display Name field.
+            -   Change the "Any" role text to "All".
+        -   Show the total items on all data grid pages.
+    -   Mobile Apps
+        -   Improve the pointer's behavior on screens having a text field/ area when closing the keyboard.
+        -   User Profile: add options to Approve or Deny a user account on the user profile page.
+    -   Frontend Web:
+        -   Improve Shortcut dialog popup.
+        -   Remove the horizontal bar on the notification dialog.
+        -   CK Editor - Remove the action sheet when users input the link to the content field.
+        -   Improve the filter field on the transaction/invoice page.
+        -   Improve the Layout when users select the location.
+-   Fix bugs
+
+### Event
+
+-   AdminCP - Add Manage Items page.
+-   UI/UX Improvement - Hide the options: "Duplicated Event/Export Event/Add to Calendar (mobile)" on the pending events.
+-   Fix bugs
+
+### Groups
+
+-   AdminCP - Add Manage Items page.
+-   Member Request - Group administrators / moderators can enter reason when declining member requests
+-   UI/UX Improvements
+    -   Notifications - Add the hyperlink for the "Accept your request to join the group" notification.
+    -   Mobile App - Manage Group - Adjust the layout on the Manage group on moderator
+    -   Members - Admin/Moderator Group will not unmute themselves.
+-   Fix bugs.
+
+### Pages
+
+-   AdminCP - Add Manage Items page.
+-   Fix bugs
+
+### Feed
+
+-   Support the "Hide all from <user>" option.
+-   Account Settings - Add the Manage Hidden page.
+-   Improve feed performance by utilizing resource cache.
+-   UI/UX Improvements
+    -   Change the "Video URL" shortcut to avoid confusion with media upload (photos and videos).
+    -   Mobile app - When post with link, allow user to input the characters when the loading icon displays.
+    -   Frontend Web
+        -   Improve border photo on feed item
+        -   Hide some actions on Group when viewing the Group's post on the NewFeeds
+-   Fix bugs.
+
+### Marketplace
+
+-   AdminCP - Add Manage Items page.
+
+-   UI/UX Improvements
+    -   Mobile Flatten - When viewing photos on the listing, improve layout of count total on the image.
+    -   Hide sponsor/feature action on the expired/ closed listing.
+
+### Videos
+
+-   AdminCP - Add Manage Items page.
+-   Users can move videos to different albums when editing videos.
+-   UI/UX Improvements
+    -   Improve the layout of "Created a new video" notification.
+    -   Improve the videos' title uploaded to the composer post on the Manage Videos page.
+    -   Composer Feeds - Display the Title when sharing the URL video on Feed
+-   Fix bugs.
+
+### Blogs
+
+-   AdminCP - Add Manage Blogs page.
+-   Minor UI/UX Improvements.
+
+### ChatPlus
+
+-   Sanitize banned Words in messages.
+-   UI/UX Improvements  
+    -   Mobile App
+        -   Improve speed when opening a direct conversation from the group conversation.
+    -   Frontend Web
+        -   Improve the player of the video message on the conversation.
+        -   Improve the position of the action button when hovering over the two photos message.
+-   Upgrade lib-jitsi-meet Library for Video calls.
+-   Fix bugs.
+
+### Forums
+
+-   AdminCP - Add Manage Items page.
+-   UI/UX Improvements
+    -   Change the font size of Thread Title on the feed.
+    -   Improve layout of the "Created a new thread" notification.
+    -   Order the post with the newest creation date on the Manage Posts page.
+-   Fix bugs.
+
+### Live Videos
+
+-   AdminCP - Add Manage Blogs page.
+-   UI/UX Improvements
+    -   Mobile Apps
+        -   Improve layout of the sticker comment on the living video.
+        -   Hide the Go Live button when no services are configured.
+    -   Frontend Web
+        -   Remove the item border in dark mode.
+-   Fix bugs.
+
+### Music
+
+-   AdminCP - Add Manage Blogs page.
+-   Fix bugs
+
+### Polls
+
+-   AdminCP - Add. Manage Blogs page.
+-   Fix bugs.
+
+### Quizzes
+
+-   AdminCP - Add Manage Items page.
+-   Users can play quizzes on activity feeds.
+-   UI/UX Improvements - Web - Improve layout for Submit button on the quiz feed.
+-   Fix bugs
+
+### Photos
+
+-   AdminCP - Add Manage Items page.
+-   Fix bugs.
+
+### Advertise
+
+-   Do not allow the admin to edit the Started Time.
+-   UI/UX Improvements
+    -   Improve warning/error messages when creating new ad.
+
+### Newsletter
+
+-   Support multiple languages when creating newsletters.
+-   Fix bugs.
+
+### Story
+
+-   UI/UX Improvements
+    -   Story Archive: Support viewing more stories in the Story Details section
+    -   Move Editor to Lexical
+-   Fix bugs
+
+### Comment
+
+-   UI/UX Improvement - Improve the animation of comments after clicking on Send button.
+-   Fix bugs
+
+  
+
+### Subscription
+
+-   UI/UX Improvements
+    -   Package Comparison: enhance the visibility of feature marks
+    -   Remove some redundant lines on Packages Comparison section.
+    -   Improve the payment workflow when buying the package has the first free time and recurring manual.
+
+### Featured Items
+
+-   UI/UX Improvement - Feature User - Prevent the users from continuously clicking on the Feature button.
+-   Fix bugs
+
+### Announcement
+
+-   Fix bugs
+
+### Status Background
+
+-   UI/UX Improvements
+    -   Improve the pointer behavior after users change the status background.
+    -   Not display the horizontal scroll bar after switching to the status background.
+    -   Improve UI of the mentioned user/page/group name on the status background.
+-   Fix bugs
+
+### Chat
+
+-   Fix bugs
+
+### Friend
+
+-   Improve compatibility with Core v5.1.17.
+
+### Invitations
+
+-   Improve compatibility with Core v5.1.17.
+
+### E-Wallet
+
+-   Improve compatibility with Core v5.1.17.
+
+### Hashtag
+
+-   Improve compatibility with Core v5.1.17.
+
+### Activity Points
+
+-   Improve compatibility with Core v5.1.17.
+
+### Search
+
+-   Improve compatibility with Core v5.1.17.
+
+### Reactions
+
+-   Improve UX when user react on comment

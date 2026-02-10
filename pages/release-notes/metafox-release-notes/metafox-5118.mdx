@@ -1,0 +1,233 @@
+---
+title: MetaFox 5118
+---
+
+# MetaFox 5118
+
+Release Date:
+
+## What's new
+
+### Tour Guide (New App)
+
+Excited to show off your platform? So are we! The **Tour Guide** app is here to help you create engaging, interactive walkthroughs that guide your users through the heart of your community. Whether they’re brand new or exploring fresh features, Tour Guide makes every step feel intuitive and exciting. It’s easy to set up, fun to use, and a powerful way to turn first-time visitors into confident, happy members. Let’s show them around!
+
+#### Highlighted Features
+
+-   Site administrators can create a unique tour guide for each page and add multiple steps to guide users through specific elements or workflows.
+    
+-   Users can experience the tour guide step-by-step on the selected page.
+    
+-   Users can repeat the tour, go back to a previous step, refresh the guide, move forward, or end it at any time.
+    
+-   The tour guide is automatically disabled once the user finishes it, ensuring a clean and unobtrusive experience.
+    
+
+![0. FE- tour guide badge.png](/images/0.%20FE-%20tour%20guide%20badge.png)
+
+![tour guilde - view 2.png](/images/tour%20guilde%20-%20view%202.png)
+
+  
+
+### Core
+
+-   Compatible with PHP 8.3
+-   Optimize performance for API endpoint /settings
+-   REST API Generation: scan and fix general issues.
+-   Improve the avatar's resolution when logging in with a social account.
+-   Support In-app purchase on mobile apps
+-   AdminCP
+    -   Members: 
+        -   Admin can export users to CSV file.
+        -   Super Administrator can designate another user as a Super Administrator.
+    -   Member Settings: Add a new setting to control token lifetime.
+    -   Registration Settings:
+        -   Administrators can configure multiple users for the 'On Signup New Friend' settings.
+        -   Remove the Send Welcome Email setting. Welcome email will be managed on AdminCP > App Settings > Notifications > Types > App Name (User)
+    -   Add a new setting to configure Email logo
+    -   Reports: Add settings to control who will receive notifications whenever there are new reports.
+    -   Build Histories - Remove build bundles immediately after extracting to save disk space.
+    -   Localization - Add options for admin to set the default country and language.
+    -   Control Staff access within AdminCP.
+    -   Storage - The admin can remove storage configurations even if they contain uploaded files.
+    -   Ban Filters:
+        -   Add the Active column for the ban filter page (Email/IP Address/ Word).
+        -   Validate the email's format before adding it to the banned email list.
+    -   Regex Rules: Validate the regex rules format before adding to the system.
+-   UI/UX Improvements
+    -   Frontend Web
+        -   Hide the member item viewer when hovering over the member's name on the Dashboard page.
+        -   Update user information immediately after editing.
+        -   Installation Wizard
+            -   Verify the existence of functions (symlink, link) upon installation.
+            -   Improve the workflow when process functions (proc\_open, proc\_close) are missing
+        -   Limit the page Title meta to 60 characters.
+        -   Mobile layout - Hide the total badge notification after opening the notification popup.
+        -   Enhance color border contrast.
+        -   Hide the title when viewing the type detail on the global search.
+        -   Support changing languages on the Registration page.
+        -   Autofocus on the "Email Address or Phone Number" field in the Forgot Password section.
+        -   Support SEO meta schemas for live videos
+    -   AdminCP
+        -   The Backup Wizard should be executed in the background to avoid the timeout issue.
+        -   Improve queue processing to avoid long-run background jobs from being retried unexpectedly.
+        -   Dashboard: reflect the statistical chart data by date accordingly.
+        -   Site Statistic: Support monthly statistics. 
+        -   Clear the search box after the admin selects a suggested option or go to another page.
+        -   Support the close button "X" to the "Is Core" dropdown of the App> Installed page.
+        -   Admin can reassign a category to a different sub-category during the modification process.
+    -   Mobile App
+        -   Composer Feed - Hide the URL Video button on the Event/User Profile/ Group/ Page
+        -   Flatten App - Improve behavior of the Birth Date field after selecting data.
+-   Fix bugs
+
+### Groups
+
+-   UI/UX Improvements
+    -   Update the notification text of new posts in the group.
+-   Fix bugs
+
+### Pages
+
+-   UI/UX Improvements
+    -   AdminCP:
+        -   Add a new settings "Automatically follow selected pages on sign-up".
+
+### Social Connect
+
+-   Login with Facebook: compatibility with JWT token
+
+### Invitations
+
+-   Add permissions to manage who can invite others to the site.
+-   Support Refresh Invite Code feature.
+-   Add the Manage Invite Codes page.
+-   Inactivate the invite code if the inviter is deleted from the site.
+-   UI/UX Improvements
+    -   AdminCP:
+        -   Improve the position of Search button.
+        -   Support mass Delete action and sortable columns in the Manage Invitations page.
+        -   UI improvement for the checkbox after users use the mass action to resend their invitations.
+        -   Improve the invitation content when having no personal message.
+-   Fix bugs
+
+### PayPal
+
+-   Support Payment Return Url on Success and Cancelled Payment.
+
+### EWallet
+
+-   Support Adjust Balance for Admin to control the user balance.
+-   Withdraw Request:
+    -   Send withdrawal request notifications to all users who have Super Admin roles.
+    -   Redirect to the Withdrawal Requests page after creating the request.
+-   UI/UX Improvements  
+    -   Mobile 
+        -   Add the "Fees" and "Amount will be received" rows on the Conversion Request popup.
+-   Fix bugs.
+
+### Marketplace
+
+-   UI/UX Improvements
+    -   Improve workflow for pending invoices when the listing has expired/changed price.
+    -   On the listing that has expired/changed price, the PayNow button needs to be shown on the listing.
+    -   Remake the option "Repayment" to "Pay Now"
+    -   More options for Status filter on Search form.
+    -   Not zoom in on the map when clicking on the listing title on the map.
+-   Fix bugs
+
+### Activity Points
+
+-   UI/UX Improvements
+    -   On Package Transaction page
+        -   Add "Pay Now" option on the Pending transaction so that user can pay again.
+        -   Remake column ID to Transaction ID
+        -   Admin/ users can order data by columns
+    -   AdminCP -  Add Payment Method column and filter to admin can manage  package transactions via payment method.
+-   Fix bugs
+
+### Search
+
+-   UI/UX Improvements
+    -   Hide the empty member section on the search result page.
+    -   Hide empty sections on the search result page.
+
+### Chat
+
+-   UI/UX Improvements
+    -   Mobile apps - Jump to the original message when tapping it on the reply message.
+    -   Frontend Web - Hide the total badge notification after opening the message popup.
+-   Compatible with MetaFox 5.1.18
+
+### ChatPlus
+
+-   UI/UX Improvements
+    -   Frontend Web - Hide the total badge notification after opening the message popup.
+    -   Disable Chat app when enabling ChatPlus and vice versa.
+-   Compatible with MetaFox 5.1.18
+-   Fix bugs
+
+### ChatGPT BOT
+
+-   Support report ChatBot message
+-   UI/UX Improvements
+    -   Improve chatbot to support creative works
+    -   Hide all ChatBot conversations when admin turn ChatBot feature off.
+-   Compatible with MetaFox 5.1.18
+
+### Forums
+
+-   UI/UX Improvements
+    -   Frontend Web - Improve the layout for thread items when searching on the global search/page/group.
+    -   AdminCP - Open Manage Threads page by default when admin open the Forum app
+-   Compatible with MetaFox 5.1.18
+
+### Photos
+
+-   Mature Images: Support blur image thumbnail when user shares link of mature images on the site.
+-   Support Google Image metadata for structured data.
+-   Compatible with MetaFox 5.1.18
+-   Fix bugs.
+
+### Videos
+
+-   Support Setting for Mature Videos.
+-   Support playback speed for natively uploaded videos.
+-   Compatible with MetaFox 5.1.18
+-   Fix bugs.
+
+### Getting Started
+
+-   UI/UX Improvements
+    -   Frontend Web - Change the ordering display the Getting Started pop-up when the system has too many pop-up.
+    -   AdminCP - Add the Check List on the Welcome page
+-   Compatible with MetaFox 5.1.18
+-   Fix bugs.
+
+### Announcement
+
+-   UI/UX Improvements - Display the newest announcement on the first in the Announcements block.
+-   Fix bugs
+
+### Stories
+
+-   UI/UX Improvements
+    -   The publishing order of stories follows the posting order instead of the processing status.
+    -   Improve the performance when loading story.
+    -   Improve mobile layout for "Create Story" button on feed.
+-   Fix bugs
+
+### Newsletter
+
+-   Support multiple languages when creating newsletters.
+-   Fix bugs
+
+### Captcha
+
+-   UI/UX Improvements
+    -   Improve the UX of Recaptcha V3 when viewing pages that have no captcha rule.
+-   Fix bugs
+
+### And,
+
+-   There are many bug fixes, minor UI/UX Improvements, and updates for compatibility with MetaFox 5.1.18 on other apps, such as **Blog, Quiz, Poll, Event, Music, Site Background**, **Stickers**, **Follow**, **Status Background**, **Friends**, **Reactions**, **Save Items**, **Featured Items**, **Subscriptions**, **Advertise**, **Comment**, **Feed**, **SMS**, **Twilio**, etc.

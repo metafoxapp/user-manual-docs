@@ -1,0 +1,178 @@
+---
+title: MetaFox 519
+---
+
+# MetaFox 519
+
+**Release Date: Apr 12, 2024**
+
+## **Core Updates**
+
+### UI/UX Improvements
+
+-   Enhance the typing experience with the new Rich Text Editor.
+-   Hide the placeholder when users fill in saved data in the Username field on the Login page.
+-   Enhance the profile popup position when hovering over the User/Page/Group profile.
+-   Enhance the visibility of the Feedback column in the Canceled Members page in AdminCP.
+-   Improve the color consistency of the pagination controls on some pages (Point Settings, Phrases).
+-   Support general player button control for video
+-   Improve the Turn Off Two-factor Authentication popup.
+-   Improve the Display Name column when searching Members in AdminCP.
+-   Enhance the layout of the Registration form with less than 5 fields.
+-   Enhance wording on the Global Search box.
+-   Improve the comment box on the feed item on mobile
+-   In User Profile, scroll back to the top of the profile page instead of opening the user story page when clicking on a sticky avatar icon.
+
+### Localization
+
+-   Show the original translation key when enabling the Active Translation setting.
+-   Replace the "User Group" with the "Role" in phrases.
+
+### Mobile apps
+
+-   Display the Previous Sign-In screen instead of the Sign-In screen if the user has previously logged in.
+-   Update React Native Firebase library to the latest.
+-   Support the "Profile Menu Settings" page
+
+### AdminCP
+
+-   Members - Show confirm popup when clicking on the Logout All Users button
+-   Appearances - Themes: Support modifying variant thumbnails.
+-   Appearances - Should not reload the page after editing the theme variant
+-   Custom Fields - Use the toggle button instead of text (Yes/No) at Active column
+-   Custom Fields -  Optimize the column width in the Manage Custom Fields page**.**
+-   Add a warning to remind for Migration from legacy FCM APIs
+-   Edit text color: Automatically change the color code when the admin points to another place in the Color Picker
+
+### Others
+
+-   Layout Editor - Only display newly added block within the layout editor after saving.
+-   Firebase - Migrate from legacy FCM APIs to HTTP v1
+-   Forgot Password: Enhance the security of the workflow by limiting the maximum number of attempts to get the verification code.
+-   Custom Fields - Enhance the workflow of role-specific fields by supporting multiple roles and displaying them on registration accordingly.
+-   Email - Support predefined variables to enhance the customizability of the email greetings.
+-   Account Setting - Hide settings of inactive Apps in Account Settings > Privacy Settings > Your Profile Settings & Sharing Items
+-   Pagination - Support "Go To Page" option so users can quickly navigate through paginated items.
+-   Rich-text Editor - Support adding link to an image on Rich-text-editor
+-   Notification - Support deleting all notifications on the frontend web
+
+## **App Updates**
+
+### Pages
+
+-   Support Schedule post
+-   Improve the layout of the Edit Page Info page
+-   Claim Page: Improve wording of the success message when the user resubmits a claim request
+-   Improve wording of the privacy when users edit the post on the page
+
+### Groups
+
+-   Support custom fields for groups.
+-   Support Schedule post
+-   Enhance the logic of ordering Similar Groups by adding the factor of group member count.
+-   Group administrators can disable Discussions, Members and Photos tabs.
+-   UI/UX Improvement for the Edit Page Info group
+
+### Events:
+
+-   Support Schedule post
+-   Compatibility with Core v5.1.9
+
+### Stories
+
+-   Improve the font text when typing the text on the story on mobile apps
+-   Process videos asynchronously while creating media stories.
+-   Support the "Friends Only" setting in AdminCP to restrict all stories to users' friends only
+-   Allow users to mute/unmute on the Video Story
+-   UI/UX improvement on the Create story page.
+-   Users can close the Privacy Settings with the gear button on the Mobile layout
+-   Support context menu when users click on their profile who have already created stories.
+
+### Comments
+
+-   Add settings for Reply Order and Reply Detail View
+-   UI/UX Improvement on the Comment screen
+-   Users can comment with text and stickers at the same time.
+-   Validate fields belonging the "Comment Hash Check" setting.
+
+### Marketplace
+
+-   UI/UX Improvement for the listing section on the view on map page after users scroll down the menu app.
+-   UI/UX Improvement for Label in Sponsor Settings section
+-   When users input the decimal amount for prices, automatically rebound to the second decimal place.
+-   UI/UX Improvement for the Back button of the browser on the "View on Map" page.
+
+### Reactions
+
+-   Support creating new or deleting reactions in AdminCP.
+-   In Manage Reactions, automatically split the characters of the Reaction Label field when it has reached the limit
+-   Add a setting that the admin can change the reaction icon
+-   UI/UX Improvement for font color of the warning message once the reactions are activated more than 6
+-   Limit the reaction list on the tooltip when hovering over the total reactions.
+-   Don't reload the page after removing the reaction.
+
+### Friends
+
+-   Remove the unnecessary description of the setting "Maximum Length for Friend List Title"
+
+### Newsletters
+
+-   UI/UX Improvement on the 'View Newsletter' form
+
+### Advertise
+
+-   When users input the decimal amount, the system should automatically rebound to the second decimal.
+-   Add Description For Image Tooltip
+
+### Feed
+
+-   UI/UX Improvement when sharing a post with a long location
+-   Support Editing the schedule post on mobile
+-   On shared posts, redirect to the original post detail when clicking on the original post's time
+
+### Subscriptions
+
+-   When users input the decimal amount, the system automatically rebound to the second decimal place.
+
+### E-Wallet
+
+-   UI/UX Improvement on scroll bar when viewing the Transactions page.
+
+### Announcement
+
+-   Update announcement Intro as optional.
+
+### Activity Points
+
+-   When users input the decimal amount, the system automatically rebounds to the second decimal place.
+
+### Photos
+
+-   Support editing videos after uploading them to the album photo
+-   Support view next / previous photo with pagination
+-   UI/UX Improvement with viewing the photo detail page (not the popup).
+
+### Status Background
+
+-   UI/UX Improvement for the select background box when users have selected a background and opened this box again.
+
+### Stickers
+
+-   Improve wording on the Manage Stickers page.
+
+### Videos
+
+-   UI/UX Improvement for the comment section on the video detail on mobile apps.
+-   Support new user role permission to control upload file/ share URLs in AdminCP
+-   Remove "Untitled" title for video posted in Feed
+-   UI/UX Improvement with viewing the video detail page(not the popup).
+
+### Live Videos
+
+-   UI/UX Improvement for the notification when users start a live video on the page/group.
+-   UI/UX Improvement when sharing to Story
+-   Support view live video as popup mode and page mode
+
+### Saved Items
+
+-   Add the "Owner" label when viewing the members list.

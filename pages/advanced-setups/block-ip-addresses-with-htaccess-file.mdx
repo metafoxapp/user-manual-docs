@@ -1,0 +1,47 @@
+---
+title: Block IP Addresses with htaccess file
+---
+
+# Block IP Addresses with htaccess file
+
+Blocking an IP address in the `.htaccess` file is a common way to prevent unwanted traffic from reaching your website. Here are the steps to block an IP address using the `.htaccess` file:
+
+**Access Your `.htaccess` File**:
+
+This file is usually located in the root directory of your website.
+
+Use an FTP client, a file manager provided by your web hosting control panel, or SSH to access the file.
+
+**Add the IP Block Rule**:
+
+To block a specific IP address, add the following lines to the top of your `.htaccess` file:
+
+  
+
+Replace `123.456.789.000` with the IP address you want to block.
+
+You can block multiple IP addresses by adding additional **`deny from`** lines:
+
+**Save and Upload the `.htaccess` File**:
+
+Save the changes to your `.htaccess` file.
+
+If you used FTP or SSH, upload the modified file back to your server.
+
+**Test the Configuration**:
+
+Verify that the IP address is blocked by attempting to access your website from the blocked IP address.
+
+You can use a proxy service or ask someone with the specific IP address to test it.
+
+### Additional Notes
+
+**Blocking an IP Range**: If you need to block an entire range of IP addresses, you can use CIDR notation or a partial IP match:
+
+Or:
+
+**Blocking by Hostname**: To block by hostname, use:
+
+Be careful when editing the `.htaccess` file as incorrect configurations can lead to website downtime or other issues. Always keep a backup of the original `.htaccess` file before making any changes.
+
+By following these steps, you can effectively block specific IP addresses from accessing your website using the `.htaccess` file.

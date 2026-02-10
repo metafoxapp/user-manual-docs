@@ -1,0 +1,56 @@
+---
+title: Add and edit Custom Fields
+---
+
+# Add and edit Custom Fields
+
+**Custom fields** in a user profile are additional data fields that you can add to a user's profile to store information beyond the standard set of user attributes, such as username, email address, and password. These custom fields allow you to collect, store, and display specific information about a user on your MetaFox site. MetaFox supports the custom group "About" and some certain custom fields by default and you can have a quick look on how custom fields are displayed on user profile below.
+
+![Screenshot 2023-10-18 at 16.02.28.png](/images/Screenshot%202023-10-18%20at%2016.02.28.png)
+
+In this article, we are going to walk you through step-by-step to create new custom groups as well as their custom fields. To explain you more conveniently, we will add a new custom group "Working Info" and a custom field "Company Name" into this group
+
+## Add new custom group
+
+Let's log into AdminCP Dashboard and go to **Members** > **Custom Fields** > **Manage Custom Section**
+
+In this page, you will see the list of all available of custom groups. The **About** and **Basic Information** section group are added by default.
+
+![Screenshot 2024-12-03 at 09.27.22.png](/images/Screenshot%202024-12-03%20at%2009.27.22.png)
+
+Click on the **Add Section** button at the top menu bar, then fill info of new group into the form as below. 
+
+![Screenshot 2024-12-03 at 09.31.54.png](/images/Screenshot%202024-12-03%20at%2009.31.54.png)
+
+Then click the **Create** button. You can see that a active custom group "working" is now created.
+
+![Screenshot 2024-12-03 at 09.32.54.png](/images/Screenshot%202024-12-03%20at%2009.32.54.png)
+
+## Add custom fields to custom section
+
+Now, we will add a custom field "Company Name" info the custom group "Working Info" added in the previous step.
+
+Let's go to **AdminCP** > **Members** > **Custom Fields** > **Add Custom Field** page and fill the form as screenshot below.
+
+![Screenshot 2023-10-18 at 16.26.36.png](/images/Screenshot%202023-10-18%20at%2016.26.36.png)
+
+There are many supported options for Editing Component such as Radios, Checkbox, TextArea, etc. In this example, we choose using Text for users to input.
+
+Once completing the form, you can click on the **Create** button.
+
+Congratulation! You just finished adding a custom field into user profile. Users can fill the info when editing their profiles. The new custom field will display on the **About** tab of User Profile page now.
+
+![Screenshot 2023-10-18 at 16.29.17.png](/images/Screenshot%202023-10-18%20at%2016.29.17.png)
+
+## Translate phrases of custom fields
+
+If your MetaFox site supports multi-languages, you can easily translate phrases of new add custom field as below
+
+Let's go to **AdminCP** > **Localization** > **Phrases**. The translation keys associated with the label and description of your custom field "companyname" are:
+
+-   profile::phrase.companyname\_description
+-   profile::phrase.companyname\_label
+
+You can add above keys and their phrases to the supported languages. Then click on **Save Changes** button.
+
+Now, clear the site cache and refresh the profile page(s) in that language,  you will see the label and description of custom field are translated accordingly.

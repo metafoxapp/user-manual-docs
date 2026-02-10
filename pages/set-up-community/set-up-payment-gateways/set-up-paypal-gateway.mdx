@@ -1,0 +1,63 @@
+---
+title: Set up Paypal gateway
+---
+
+# Set up Paypal gateway
+
+This guide will walk you through the process of integrating PayPal as a payment method, enabling smooth and secure transactions.
+
+#### Prerequisites
+
+Before proceeding, you will also need to create a PayPal Business Account.
+
+## Creating a PayPal Business Account
+
+#### Registering for a PayPal Business Account
+
+1.  Visit the [PayPal website](https://www.paypal.com/).
+2.  Sign up for a PayPal Business Account using your email address.
+3.  Follow the prompts to provide necessary information and verify your account.
+
+You will have to follow PayPal's verification process, which may include linking your bank account and confirming your identity.
+
+## Get Paypal Client ID and Client Secret
+
+PayPal integrations use a client ID and client secret to authenticate API calls:
+
+-   A client ID identifies an app. 
+-   A client secret authenticates a client ID so you will need to keep this secret safe.
+
+Here's how to get your client ID and client secret:
+
+1.  Select [Log in to Dashboard](https://developer.paypal.com/dashboard/) and log in or sign up.
+2.  Select **Apps & Credentials**.
+3.  New accounts come with a Default Application in the REST API apps section. To create a new project, select **Create App** with the type of **Merchant**.
+4.  Copy the **Client ID** and **Client Secret** to configure in MetaFox site in the next step
+
+![Screenshot 2023-08-16 at 16.15.09.png](/images/Screenshot%202023-08-16%20at%2016.15.09.png)
+
+After creating app successfully, in the App Details page, you can add Webhook with URL **https://yourdomain.com/api/v1/paypal/notify** (replace *yourdomain.com* with your actual domain) and check **All Events** option as shown below screenshot.
+
+![Screenshot 2023-10-05 at 11.14.48.png](/images/Screenshot%202023-10-05%20at%2011.14.48.png)
+
+Click **Save** button on the Add Webhook popup to complete the setup at Paypal's end. You can get the **Webhook ID** as below. You need to save this value to configure in MetaFox site later.
+
+![Screenshot 2023-12-01 at 10.19.34.png](/images/Screenshot%202023-12-01%20at%2010.19.34.png)
+
+## Configuring PayPal Integration in MetaFox
+
+Log in to the AdminCP of your MetaFox platform using your admin credentials and go to App Settings > Payments. Then click on Edit option of Paypal item as below
+
+![Screenshot 2023-08-16 at 16.17.30.png](/images/Screenshot%202023-08-16%20at%2016.17.30.png)
+
+On the Edit Gateway popup you can fill in 2 settings of Client ID, Client Secret and Webhook ID that you got above. Then save changes.
+
+![Screenshot 2023-12-01 at 10.24.35.png](/images/Screenshot%202023-12-01%20at%2010.24.35.png)
+
+## Enabling Sandbox Mode
+
+To testing payments, you can set up Paypal with Sandbox mode as below
+
+1.  In Paypal Developer Dasboard, switch to the Sandbox mode and then create Paypal app
+2.  Configure corresponding Client ID and Client Secret of the Sandbox app for Paypal gateway
+3.  Enable Test Mode setting

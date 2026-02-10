@@ -1,0 +1,43 @@
+---
+title: Set up Video Sharing with URL
+---
+
+# Set up Video Sharing with URL
+
+MetaFox supports sharing video URLs of many popular Video providers such as Youtube, Facebook, Vimeo. This guide will guide you how to set up Video Sharing with a URL 
+
+### Youtube
+
+Here is step-by-step guide to enable video sharing with Youtube on MetaFox
+
+Assume that you can and obtain the API key.
+
+In Google Cloud Console, go to APIs & Services > Enable APIs & Services section, search, and enable **YouTube Data API v3** service.
+
+![Screenshot 2024-03-12 at 09.11.21.png](/images/Screenshot%202024-03-12%20at%2009.11.21.png)
+
+Now, you can go to AdminCP of MetaFox site > **Settings** > **Service Keys**
+
+Configure the Google API key obtained in the previous step to the **Youtube Data API Key** setting. And click the **Save Changes** button to apply the config.
+
+![Screenshot 2024-03-12 at 09.15.32.png](/images/Screenshot%202024-03-12%20at%2009.15.32.png)
+
+### Facebook Videos
+
+In this section, we are going to set up for video sharing with Facebook Videos
+
+Assume that you can and obtain the Facebook **App ID** and **Secret Key**.
+
+In the Facebook App Dashboard, go to App Reviews and submit requests for the **OEmbed Read** feature. You will follow the Facebook guide to get the approval for this permission.
+
+![Screenshot 2024-03-12 at 09.24.48.png](/images/Screenshot%202024-03-12%20at%2009.24.48.png)
+
+Now, you can go to AdminCP of MetaFox site > **Settings** > **Service Keys**
+
+Configure the **Facebook App ID** and **Facebook App Secret** settings with details obtained in the previous step. And click the **Save Changes** button to apply the config.
+
+![Screenshot 2024-03-12 at 09.26.22.png](/images/Screenshot%202024-03-12%20at%2009.26.22.png)
+
+  
+
+#### *That's all. The setup for video sharing is done. You now can share videos with URLs of videos of these providers on your MetaFox site as of now.*

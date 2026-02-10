@@ -1,0 +1,38 @@
+---
+title: Set up NOWPayments gateway
+---
+
+# Set up NOWPayments gateway
+
+This guide will walk you through the process of integrating NOWPayments gateway as a payment method, enabling smooth and secure transactions.
+
+### Prerequisites
+
+Before proceeding, you will also need to create a [NOWPayments](https://nowpayments.io) (https://nowpayments.io) account and install the NOWPayments app on your MetaFox site.
+
+### Configure NOWPayments in MetaFox AdminCP
+
+Log into your site with Admin user and go to **AdminCP** > **App Settings > Payment > Gateways.** Then Edit the NOWPayments option.  
+
+On the Edit form, configure fields as below
+
+![nowpayments - guide 2.jpg](/images/nowpayments%20-%20guide%202.jpg)
+
+1.  **Title:** the gateway title shown to end-users. This can be freely configured according to your preferences.
+2.  **API Key:** must be configured after generating API credentials on NOWPayments. Please visit the following URLs to obtain your API key
+    -   Production: [https://account.nowpayments.io/store-settings#keys](https://account.nowpayments.io/store-settings#keys)
+    -   Sandbox: [https://account-sandbox.nowpayments.io/store-settings#keys](https://account-sandbox.nowpayments.io/store-settings#keys)
+3.  **IPN Secret:** must be configured to verify IPN callbacks sent by the gateway, preventing frauds. The IPN secret is available after configuring Instant Payment Notifications on NOWPayments. 
+    -   Production: [https://account.nowpayments.io/store-settings#notifications](https://account.nowpayments.io/store-settings#notifications)
+    -   Sandbox: [https://account-sandbox.nowpayments.io/store-settings#notifications](https://account-sandbox.nowpayments.io/store-settings#notifications)
+    -   The IPN handler should be pointed to [*https://YOUR\_DOMAIN/api/v1/nowpayments/notify*](https://your_domain/api/v1/nowpayments/notify) 
+4.  **Active:** Check to enable the gateway to allow end-users to make payments using NOWPayments.
+5.  **Test Mode:** Check to enable test mode (sandbox) to fully test the workflow without affecting real balances.
+    -   Ensure that you have configured the correct API and IPN credentials according to  your preferences.
+
+### REFERENCES
+
+-   Integration Guide: [https://nowpayments.io/blog/integration-guide](https://nowpayments.io/blog/integration-guide) 
+-   API Key: [https://nowpayments.io/help/dashboard/how-to-create-an-api-key](https://nowpayments.io/help/dashboard/how-to-create-an-api-key) 
+-   IPN: [https://nowpayments.io/help/what-is/what-is-ipn](https://nowpayments.io/help/what-is/what-is-ipn) 
+-   Test Mode (sandbox): [https://nowpayments.io/blog/how-to-use-the-sandbox-a-guide](https://nowpayments.io/blog/how-to-use-the-sandbox-a-guide)
