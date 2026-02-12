@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1967],{1726:(_,u,t)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/set-up-community/set-up-chatplus-solution/_meta",function(){return t(2889)}])},2889:(_,u,t)=>{"use strict";t.r(u),t.d(u,{__N_SSG:()=>e,default:()=>s});var e=!0;let s=()=>null}},_=>{_.O(0,[636,6593,8792],()=>_(_.s=1726)),_N_E=_.O()}]);

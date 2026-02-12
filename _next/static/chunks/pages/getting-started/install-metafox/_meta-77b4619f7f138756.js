@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9008],{940:(_,t,e)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/getting-started/install-metafox/_meta",function(){return e(6796)}])},6796:(_,t,e)=>{"use strict";e.r(t),e.d(t,{__N_SSG:()=>n,default:()=>s});var n=!0;let s=()=>null}},_=>{_.O(0,[636,6593,8792],()=>_(_.s=940)),_N_E=_.O()}]);

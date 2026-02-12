@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[7169],{14:(e,_,s)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/release-notes/metafox-release-notes/_meta",function(){return s(7363)}])},7363:(e,_,s)=>{"use strict";s.r(_),s.d(_,{__N_SSG:()=>n,default:()=>t});var n=!0;let t=()=>null}},e=>{e.O(0,[636,6593,8792],()=>e(e.s=14)),_N_E=e.O()}]);
