@@ -24,7 +24,7 @@ const config = {
           <span>
           Copyright {new Date().getFullYear()} © &nbsp;
               <a href="https://phpfox.com" target="_blank">
-            phpFox LLC
+            phpFox Corp
           </a>
           . All rights reserved.
         </span>
