@@ -41,20 +41,20 @@ Folder ***scripts***: contains all utilities scripts
 
 You can update our mobile configuration and assets for Android app in:
 
--   Copy the ***android/app/configuration\_example.json*** to ***android/app/configuration.json*** and configure this file with proper values.
+-   Copy the ***android/app/configuration_example.json*** to ***android/app/configuration.json*** and configure this file with proper values.
     -   Set \`enableGooglePay: true\` to enable Google Pay
 -   Firebase config file ***android/app/google-services.json***
     -   Please refer this [guide](https://support.google.com/firebase/answer/7015592?hl=en#zippy=%2Cin-this-article) to download it from your Firebase project for Android app
--   KeyStore file at ***android/app/<your\_app>.keystore***
+-   KeyStore file at ***android/app/&lt;your_app&gt;.keystore***
     -   Refer to this [guide](https://developer.android.com/studio/publish/app-signing) to create your keystore file
 
 ### Mobile assets
 
 -   Update images of app icon, logo and login background in the folder ***android/app/src/main/res*** 
 
--   Update splash screen: You can run following command to generate splash screen after updating app icon
+-   Update splash screen: You can run the following command to generate splash screen after updating app icon:
 
-\--logo-width=100 --assets-path=assets\]\] >
+  `--logo-width=100 --assets-path=assets`
 
 ### Load configuration
 
