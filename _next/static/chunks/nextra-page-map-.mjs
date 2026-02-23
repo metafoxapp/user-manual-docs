@@ -8,7 +8,6 @@ import getting_started_install_metafox_meta from "../../../pages/getting-started
 import manage_community_meta from "../../../pages/manage-community/_meta.js";
 import manage_community_manage_users_meta from "../../../pages/manage-community/manage-users/_meta.js";
 import release_notes_meta from "../../../pages/release-notes/_meta.js";
-import release_notes_metafox_release_notes_meta from "../../../pages/release-notes/metafox-release-notes/_meta.js";
 import set_up_community_meta from "../../../pages/set-up-community/_meta.js";
 import set_up_community_configure_app_settings_meta from "../../../pages/set-up-community/configure-app-settings/_meta.js";
 import set_up_community_configure_appearances_layout_and_themes_meta from "../../../pages/set-up-community/configure-appearances-layout-and-themes/_meta.js";
@@ -242,24 +241,6 @@ export const pageMap = [{
   children: [{
     data: manage_community_meta
   }, {
-    name: "check-logs",
-    route: "/manage-community/check-logs",
-    frontMatter: {
-      "title": "Check logs"
-    }
-  }, {
-    name: "manage-ban-filters",
-    route: "/manage-community/manage-ban-filters",
-    frontMatter: {
-      "title": "Manage ban filters"
-    }
-  }, {
-    name: "manage-reported-items",
-    route: "/manage-community/manage-reported-items",
-    frontMatter: {
-      "title": "Manage Reported items"
-    }
-  }, {
     name: "manage-users",
     route: "/manage-community/manage-users",
     children: [{
@@ -308,166 +289,154 @@ export const pageMap = [{
   children: [{
     data: release_notes_meta
   }, {
-    name: "metafox-release-notes",
-    route: "/release-notes/metafox-release-notes",
-    children: [{
-      data: release_notes_metafox_release_notes_meta
-    }, {
-      name: "metafox-501",
-      route: "/release-notes/metafox-release-notes/metafox-501",
-      frontMatter: {
-        "title": "MetaFox 501"
-      }
-    }, {
-      name: "metafox-502",
-      route: "/release-notes/metafox-release-notes/metafox-502",
-      frontMatter: {
-        "title": "MetaFox 502"
-      }
-    }, {
-      name: "metafox-503",
-      route: "/release-notes/metafox-release-notes/metafox-503",
-      frontMatter: {
-        "title": "MetaFox 503"
-      }
-    }, {
-      name: "metafox-510",
-      route: "/release-notes/metafox-release-notes/metafox-510",
-      frontMatter: {
-        "title": "MetaFox 510"
-      }
-    }, {
-      name: "metafox-511",
-      route: "/release-notes/metafox-release-notes/metafox-511",
-      frontMatter: {
-        "title": "MetaFox 511"
-      }
-    }, {
-      name: "metafox-5110",
-      route: "/release-notes/metafox-release-notes/metafox-5110",
-      frontMatter: {
-        "title": "MetaFox 5110"
-      }
-    }, {
-      name: "metafox-5111",
-      route: "/release-notes/metafox-release-notes/metafox-5111",
-      frontMatter: {
-        "title": "MetaFox 5111"
-      }
-    }, {
-      name: "metafox-5112",
-      route: "/release-notes/metafox-release-notes/metafox-5112",
-      frontMatter: {
-        "title": "MetaFox 5112"
-      }
-    }, {
-      name: "metafox-5113",
-      route: "/release-notes/metafox-release-notes/metafox-5113",
-      frontMatter: {
-        "title": "MetaFox 5113"
-      }
-    }, {
-      name: "metafox-5114",
-      route: "/release-notes/metafox-release-notes/metafox-5114",
-      frontMatter: {
-        "title": "MetaFox 5114"
-      }
-    }, {
-      name: "metafox-5115",
-      route: "/release-notes/metafox-release-notes/metafox-5115",
-      frontMatter: {
-        "title": "MetaFox 5115"
-      }
-    }, {
-      name: "metafox-5116",
-      route: "/release-notes/metafox-release-notes/metafox-5116",
-      frontMatter: {
-        "title": "MetaFox 5116"
-      }
-    }, {
-      name: "metafox-5117",
-      route: "/release-notes/metafox-release-notes/metafox-5117",
-      frontMatter: {
-        "title": "MetaFox 5117"
-      }
-    }, {
-      name: "metafox-5118",
-      route: "/release-notes/metafox-release-notes/metafox-5118",
-      frontMatter: {
-        "title": "MetaFox 5118"
-      }
-    }, {
-      name: "metafox-5119",
-      route: "/release-notes/metafox-release-notes/metafox-5119",
-      frontMatter: {
-        "title": "MetaFox 5119"
-      }
-    }, {
-      name: "metafox-512",
-      route: "/release-notes/metafox-release-notes/metafox-512",
-      frontMatter: {
-        "title": "MetaFox 512"
-      }
-    }, {
-      name: "metafox-513",
-      route: "/release-notes/metafox-release-notes/metafox-513",
-      frontMatter: {
-        "title": "MetaFox 513"
-      }
-    }, {
-      name: "metafox-514",
-      route: "/release-notes/metafox-release-notes/metafox-514",
-      frontMatter: {
-        "title": "MetaFox 514"
-      }
-    }, {
-      name: "metafox-515",
-      route: "/release-notes/metafox-release-notes/metafox-515",
-      frontMatter: {
-        "title": "MetaFox 515"
-      }
-    }, {
-      name: "metafox-516",
-      route: "/release-notes/metafox-release-notes/metafox-516",
-      frontMatter: {
-        "title": "MetaFox 516"
-      }
-    }, {
-      name: "metafox-517",
-      route: "/release-notes/metafox-release-notes/metafox-517",
-      frontMatter: {
-        "title": "MetaFox 517"
-      }
-    }, {
-      name: "metafox-518",
-      route: "/release-notes/metafox-release-notes/metafox-518",
-      frontMatter: {
-        "title": "MetaFox 518"
-      }
-    }, {
-      name: "metafox-519",
-      route: "/release-notes/metafox-release-notes/metafox-519",
-      frontMatter: {
-        "title": "MetaFox 519"
-      }
-    }, {
-      name: "metafox-520",
-      route: "/release-notes/metafox-release-notes/metafox-520",
-      frontMatter: {
-        "title": "MetaFox 520"
-      }
-    }, {
-      name: "metafox-521",
-      route: "/release-notes/metafox-release-notes/metafox-521",
-      frontMatter: {
-        "title": "MetaFox 521"
-      }
-    }]
-  }, {
-    name: "metafox-release-notes",
-    route: "/release-notes/metafox-release-notes",
+    name: "metafox-501",
+    route: "/release-notes/metafox-501",
     frontMatter: {
-      "title": "MetaFox - Release Notes"
+      "title": "MetaFox 5.0.1"
+    }
+  }, {
+    name: "metafox-502",
+    route: "/release-notes/metafox-502",
+    frontMatter: {
+      "title": "MetaFox 5.0.2"
+    }
+  }, {
+    name: "metafox-503",
+    route: "/release-notes/metafox-503",
+    frontMatter: {
+      "title": "MetaFox 5.0.3"
+    }
+  }, {
+    name: "metafox-510",
+    route: "/release-notes/metafox-510",
+    frontMatter: {
+      "title": "MetaFox 5.1.0"
+    }
+  }, {
+    name: "metafox-511",
+    route: "/release-notes/metafox-511",
+    frontMatter: {
+      "title": "MetaFox 5.1.1"
+    }
+  }, {
+    name: "metafox-5110",
+    route: "/release-notes/metafox-5110",
+    frontMatter: {
+      "title": "MetaFox 5.1.10"
+    }
+  }, {
+    name: "metafox-5111",
+    route: "/release-notes/metafox-5111",
+    frontMatter: {
+      "title": "MetaFox 5.1.11"
+    }
+  }, {
+    name: "metafox-5112",
+    route: "/release-notes/metafox-5112",
+    frontMatter: {
+      "title": "MetaFox 5.1.12"
+    }
+  }, {
+    name: "metafox-5113",
+    route: "/release-notes/metafox-5113",
+    frontMatter: {
+      "title": "MetaFox 5.1.13"
+    }
+  }, {
+    name: "metafox-5114",
+    route: "/release-notes/metafox-5114",
+    frontMatter: {
+      "title": "MetaFox 5.1.14"
+    }
+  }, {
+    name: "metafox-5115",
+    route: "/release-notes/metafox-5115",
+    frontMatter: {
+      "title": "MetaFox 5.1.15"
+    }
+  }, {
+    name: "metafox-5116",
+    route: "/release-notes/metafox-5116",
+    frontMatter: {
+      "title": "MetaFox 5.1.16"
+    }
+  }, {
+    name: "metafox-5117",
+    route: "/release-notes/metafox-5117",
+    frontMatter: {
+      "title": "MetaFox 5.1.17"
+    }
+  }, {
+    name: "metafox-5118",
+    route: "/release-notes/metafox-5118",
+    frontMatter: {
+      "title": "MetaFox 5.1.18"
+    }
+  }, {
+    name: "metafox-5119",
+    route: "/release-notes/metafox-5119",
+    frontMatter: {
+      "title": "MetaFox 5.1.19"
+    }
+  }, {
+    name: "metafox-512",
+    route: "/release-notes/metafox-512",
+    frontMatter: {
+      "title": "MetaFox 5.1.2"
+    }
+  }, {
+    name: "metafox-513",
+    route: "/release-notes/metafox-513",
+    frontMatter: {
+      "title": "MetaFox 5.1.3"
+    }
+  }, {
+    name: "metafox-514",
+    route: "/release-notes/metafox-514",
+    frontMatter: {
+      "title": "MetaFox 5.1.4"
+    }
+  }, {
+    name: "metafox-515",
+    route: "/release-notes/metafox-515",
+    frontMatter: {
+      "title": "MetaFox 5.1.5"
+    }
+  }, {
+    name: "metafox-516",
+    route: "/release-notes/metafox-516",
+    frontMatter: {
+      "title": "MetaFox 5.1.6"
+    }
+  }, {
+    name: "metafox-517",
+    route: "/release-notes/metafox-517",
+    frontMatter: {
+      "title": "MetaFox 5.1.7"
+    }
+  }, {
+    name: "metafox-518",
+    route: "/release-notes/metafox-518",
+    frontMatter: {
+      "title": "MetaFox 5.1.8"
+    }
+  }, {
+    name: "metafox-519",
+    route: "/release-notes/metafox-519",
+    frontMatter: {
+      "title": "MetaFox 5.1.9"
+    }
+  }, {
+    name: "metafox-520",
+    route: "/release-notes/metafox-520",
+    frontMatter: {
+      "title": "MetaFox 5.2.0"
+    }
+  }, {
+    name: "metafox-521",
+    route: "/release-notes/metafox-521",
+    frontMatter: {
+      "title": "MetaFox 5.2.1"
     }
   }]
 }, {
