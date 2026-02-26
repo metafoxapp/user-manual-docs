@@ -68,13 +68,12 @@ const config = {
     placeholder: 'Search documentation...',
   },
 
-  editLink: {
-    content: 'Edit this page →'
-  },
+  editLink: false,
 
   feedback: {
     content: 'Question? Give us feedback →',
-    labels: 'feedback'
+    labels: 'feedback',
+    useLink: () => 'https://clients.phpfox.com/submitticket.php?step=2&deptid=1'
   },
 
   darkMode: true,
