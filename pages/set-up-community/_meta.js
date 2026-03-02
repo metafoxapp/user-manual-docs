@@ -12,4 +12,6 @@ export default {
   "set-up-storage": "Set up Storage",
   "configure-user-settings": "Configure User Settings",
   "set-up-subscription": "Set up Subscription",
+  "set-up-menus": "Set up Menus",
+  "set-up-contact-form": "Set up Contact Form",
 }
