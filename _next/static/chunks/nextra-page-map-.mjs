@@ -685,6 +685,16 @@ export const pageMap = [{
       "title": "Set Up ChatPlus Solution"
     }
   }, {
+    name: "set-up-contact-form",
+    route: "/set-up-community/set-up-contact-form",
+    children: [{
+      name: "set-up-staff-emails-for-contact-us-form",
+      route: "/set-up-community/set-up-contact-form/set-up-staff-emails-for-contact-us-form",
+      frontMatter: {
+        "title": "Set up staff emails for Contact Us form"
+      }
+    }]
+  }, {
     name: "set-up-languages",
     route: "/set-up-community/set-up-languages",
     children: [{
@@ -756,6 +766,16 @@ export const pageMap = [{
     frontMatter: {
       "title": "Set Up Live Streaming Solution"
     }
+  }, {
+    name: "set-up-menus",
+    route: "/set-up-community/set-up-menus",
+    children: [{
+      name: "order-profile-menu",
+      route: "/set-up-community/set-up-menus/order-profile-menu",
+      frontMatter: {
+        "title": "Manage and Order Profile Menu Items"
+      }
+    }]
   }, {
     name: "set-up-payment-gateways",
     route: "/set-up-community/set-up-payment-gateways",
