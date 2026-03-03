@@ -35,7 +35,12 @@ Then, let's start setting up ChatPlus server
 
 #### Start Chat server
 
--   Run following command to download/update docker images and run docker containers
+-   Run following command to download/update docker images and run docker containers
+```
+cd /var/www/chatplus/chat
+docker-compose pull
+docker-compose up -d
+```
 
 -   Once Chatplus docker containers are running properly, you will check to see if the Setup page is working at [https://chat.youdomain.com](https://chat.youdomain.com) . However, you don't need to proceed with any setup steps there at this time. It will be done automatically while configuring in AdminCP of MetaFox site.
 
