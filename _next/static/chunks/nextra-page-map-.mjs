@@ -20,7 +20,6 @@ import set_up_community_set_up_languages_meta from "../../../pages/set-up-commun
 import set_up_community_set_up_live_streaming_solution_meta from "../../../pages/set-up-community/set-up-live-streaming-solution/_meta.js";
 import set_up_community_set_up_payment_gateways_meta from "../../../pages/set-up-community/set-up-payment-gateways/_meta.js";
 import set_up_community_set_up_social_connect_meta from "../../../pages/set-up-community/set-up-social-connect/_meta.js";
-import set_up_community_set_up_storage_meta from "../../../pages/set-up-community/set-up-storage/_meta.js";
 import set_up_community_set_up_subscription_meta from "../../../pages/set-up-community/set-up-subscription/_meta.js";
 import software_migration_meta from "../../../pages/software-migration/_meta.js";
 export const pageMap = [{
@@ -858,7 +857,11 @@ export const pageMap = [{
     name: "set-up-storage",
     route: "/set-up-community/set-up-storage",
     children: [{
-      data: set_up_community_set_up_storage_meta
+      name: "configure-max-file-size-by-type",
+      route: "/set-up-community/set-up-storage/configure-max-file-size-by-type",
+      frontMatter: {
+        "title": "Configure max file size by type"
+      }
     }, {
       name: "set-up-different-storage-system-for-user-files",
       route: "/set-up-community/set-up-storage/set-up-different-storage-system-for-user-files",
