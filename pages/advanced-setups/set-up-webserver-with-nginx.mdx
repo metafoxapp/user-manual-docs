@@ -1,0 +1,78 @@
+---
+title: "Set up webserver with NginX"
+---
+
+This article describes how to set up NginX web server for MetaFox site. In this article, we assume that you are already familiar with Linux server management and know how to use terminal, access SSH with root/super users privileges and set up necessary software such as NginX, PHP, MySQL/MariaDB, etc.
+
+You Need to 
+
+Below is the sample NginX configuration for MetaFox site. You can use this sample configuration to set up your NginX web server for MetaFox site. Please note that this is just a sample configuration and you may need to adjust it based on your specific server environment and requirements. You need to replace the placeholder values such as `<yourdomain.com>`, `<path to document root>`, `<fpm port>` with your actual values.
+
+```
+server {
+  server_name <yourdomain.com>;
+
+  index index.html index.htm;
+  client_max_body_size 100M;
+  root <path to document root>;
+
+  gzip on;
+  gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+  gzip_proxied any;
+  gzip_buffers 16 8k;
+  gzip_types   image/png text/plain application/javascript application/x-javascript text/javascript text/xml text/css;
+  gzip_vary on;
+  allow all;
+
+
+  add_header X-Frame-Options "SAMEORIGIN";
+  add_header X-XSS-Protection "1; mode=block";
+  add_header X-Content-Type-Options "nosniff";
+
+  
+  rewrite ^/(oauth|api|sharing|sitemap)/(.*)$ /public/index.php/$1/$2 last;
+
+  
+  location ~ \.php$ {
+        fastcgi_pass php-fpm:<fpm port>;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        fastcgi_read_timeout 300;
+        fastcgi_buffer_size 128k;
+        fastcgi_buffers 256 16k;
+        fastcgi_busy_buffers_size 256k;
+        fastcgi_temp_file_write_size 256k;
+  }
+
+  
+  location /storage/ {
+    alias <path to document root>/storage/app/public/;
+    try_files $uri $uri/ /index.html =404;
+  }
+ 
+  
+  location /install {
+    alias <path to document root>/public/install;
+    try_files $uri $uri/ /index.html =404;
+  }
+  
+  
+  location /admincp {
+    alias <path to document root>/storage/app/web/admincp;
+    try_files $uri $uri/ /index.html =404;
+  }
+
+  
+  location / {
+    if ($http_user_agent ~* "facebookexternalhit|telegrambot|whatsapp|twitterbot" ) {
+      rewrite /(.*) /sharing/$1?$query_string;
+    }
+  
+    try_files $uri $uri/ /index.html =404;
+  }
+
+   listen 80;
+
+}
+
+```
