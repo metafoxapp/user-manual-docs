@@ -113,6 +113,12 @@ export const pageMap = [{
     frontMatter: {
       "title": "Set up Google reCaptcha"
     }
+  }, {
+    name: "set-up-webserver-with-nginx",
+    route: "/advanced-setups/set-up-webserver-with-nginx",
+    frontMatter: {
+      "title": "Set up webserver with NginX"
+    }
   }]
 }, {
   name: "advanced-setups",
