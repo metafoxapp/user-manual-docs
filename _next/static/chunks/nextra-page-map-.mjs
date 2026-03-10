@@ -1,6 +1,5 @@
 import meta from "../../../pages/_meta.js";
 import account_and_license_meta from "../../../pages/account-and-license/_meta.js";
-import advanced_setups_meta from "../../../pages/advanced-setups/_meta.js";
 import advanced_setups_configure_cache_meta from "../../../pages/advanced-setups/configure-cache/_meta.js";
 import build_mobile_apps_meta from "../../../pages/build-mobile-apps/_meta.js";
 import getting_started_meta from "../../../pages/getting-started/_meta.js";
@@ -58,8 +57,6 @@ export const pageMap = [{
   name: "advanced-setups",
   route: "/advanced-setups",
   children: [{
-    data: advanced_setups_meta
-  }, {
     name: "block-ip-addresses-with-htaccess-file",
     route: "/advanced-setups/block-ip-addresses-with-htaccess-file",
     frontMatter: {
