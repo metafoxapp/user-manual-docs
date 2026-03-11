@@ -180,7 +180,7 @@ export const pageMap = [{
     name: "dowload-metafox-source",
     route: "/getting-started/dowload-metafox-source",
     frontMatter: {
-      "title": "Dowload MetaFox Source"
+      "title": "Download MetaFox Source"
     }
   }, {
     name: "essential-steps-after-installing-metafox",
