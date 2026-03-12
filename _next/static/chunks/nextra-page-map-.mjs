@@ -775,6 +775,46 @@ export const pageMap = [{
       "title": "Set Up Live Streaming Solution"
     }
   }, {
+    name: "set-up-marketplace",
+    route: "/set-up-community/set-up-marketplace",
+    children: [{
+      name: "configure-default-category",
+      route: "/set-up-community/set-up-marketplace/configure-default-category",
+      frontMatter: {
+        "title": "Configure default category for Marketplace"
+      }
+    }, {
+      name: "configure-marketplace-permissions",
+      route: "/set-up-community/set-up-marketplace/configure-marketplace-permissions",
+      frontMatter: {
+        "title": "Configure Permissions for Roles on Marketplace"
+      }
+    }, {
+      name: "define-expiration-notifications",
+      route: "/set-up-community/set-up-marketplace/define-expiration-notifications",
+      frontMatter: {
+        "title": "Define Expiration Notifications for Marketplace Listings"
+      }
+    }, {
+      name: "define-listing-expiration",
+      route: "/set-up-community/set-up-marketplace/define-listing-expiration",
+      frontMatter: {
+        "title": "Define listing expiration for Marketplace"
+      }
+    }, {
+      name: "manage-marketplace-categories",
+      route: "/set-up-community/set-up-marketplace/manage-marketplace-categories",
+      frontMatter: {
+        "title": "Manage Marketplace Categories"
+      }
+    }]
+  }, {
+    name: "set-up-marketplace",
+    route: "/set-up-community/set-up-marketplace",
+    frontMatter: {
+      "title": "Set Up Marketplace"
+    }
+  }, {
     name: "set-up-menus",
     route: "/set-up-community/set-up-menus",
     children: [{
