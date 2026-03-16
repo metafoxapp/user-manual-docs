@@ -41,7 +41,7 @@ const config = {
   head: () => {
     React.useEffect(() => {
       TagManager.initialize({
-        gtmId: "GTM-WB52HRS",
+        gtmId: "GTM-NHRD5DBS",
       });
     }, [])
 
