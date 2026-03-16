@@ -29,11 +29,11 @@ server {
   add_header X-XSS-Protection "1; mode=block";
   add_header X-Content-Type-Options "nosniff";
 
+  location ~ ^/(oauth|api|sharing|sitemap)/ {
+    rewrite ^/(.*)$ /public/index.php/$1 last;
+  }
   
-  rewrite ^/(oauth|api|sharing|sitemap)/(.*)$ /public/index.php/$1/$2 last;
-
-  
-  location ~ \.php$ {
+  location ~ \.php {
         fastcgi_pass php-fpm:<fpm port>;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
@@ -67,7 +67,7 @@ server {
     if ($http_user_agent ~* "facebookexternalhit|telegrambot|whatsapp|twitterbot" ) {
       rewrite /(.*) /sharing/$1?$query_string;
     }
-  
+    root <path to document root>/storage/app/web;
     try_files $uri $uri/ /index.html =404;
   }
 
