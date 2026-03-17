@@ -58,7 +58,7 @@ server {
   
   
   location /admincp {
-    alias <path to document root>/storage/app/web/admincp;
+    root <path to document root>/storage/app/web/admincp;
     try_files $uri $uri/ /index.html =404;
   }
 

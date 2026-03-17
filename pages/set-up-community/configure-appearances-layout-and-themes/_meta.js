@@ -3,4 +3,5 @@ export default {
   "enable-live-editor-mode": "Enable Live Editor mode",
   "rebuild-web-frontend": "Rebuild web frontend",
   "add-google-adsense-block": "Add Google Adsense Block",
+  "enforce-display-mode": "Enforce Display Mode",
 }
