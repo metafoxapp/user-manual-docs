@@ -677,7 +677,7 @@ export const pageMap = [{
       name: "set-up-reverse-proxy-with-nginx",
       route: "/set-up-community/set-up-chatplus-solution/set-up-reverse-proxy-with-nginx",
       frontMatter: {
-        "title": "Set up reverse proxy with NginX"
+        "title": "Set up reverse proxy with Nginx"
       }
     }, {
       name: "update-chatplus-server",
