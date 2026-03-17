@@ -4,14 +4,14 @@ title: Set up ChatPlus server
 
 # Set up ChatPlus server
 
-This article will guide you to set up ChatPlus on your server by yourself. In this article, we assume that you are already familiar with  Linux server management and docker, know how to use terminal, access SSH with root/super users privileges and set up necessary software such as Git, Docker, NginX/Apache as Reverse proxy, etc.
+This article will guide you to set up ChatPlus on your server by yourself. In this article, we assume that you are already familiar with  Linux server management and docker, know how to use terminal, access SSH with root/super users privileges and set up necessary software such as Git, Docker, Nginx/Apache as Reverse proxy, etc.
 
 If you aren't familiar with setting up ChatPlus server, please feel free to open ticket to request our support. You aren't charged any fee for the 1st setup.
 
 Firstly, you will need to install and run following software on your Linux server:
 
 -   Docker and Docker-compose
--   NginX or Apache (as Reverse Proxy)
+-   Nginx or Apache (as Reverse Proxy)
 -   Git
 
 Then, let's start setting up ChatPlus server
@@ -19,7 +19,7 @@ Then, let's start setting up ChatPlus server
 ## Configure subdomains for ChatPlus server
 
 -   Create 2 different domains or subdomains for chat and call features, such as [chat.yourdomain.com](http://chat.yourdomain.com) and [voip.yourdomain.com](http://voip.yourdomain.com)
--   Configure these 2 domains/subdomains above with Reverse Proxy server (NginX or Apache) for Websocket.
+-   Configure these 2 domains/subdomains above with Reverse Proxy server (Nginx or Apache) for Websocket.
     -   Set up SSL for domain/subdomain
     -   For Chat domain/subdomain, configure to proxy requests to port 3000 (default Port of Chatplus), such as [http://127.0.0.1:3000](http://127.0.0.1:3000) . You can use another port for Chatplus, but will need to update this port into `docker-compose.yml` file and `chatplus.env` file for Chat as described later.
     -   For Call domain/subdomain, configure to proxy requests to port 8443 (default port of Call feature), such as [https://127.0.0.1:8443](https://127.0.0.1:8443) .  You can use another port for Call feature but will need to follow guide to configure this port for Call/VoIP server as described later.

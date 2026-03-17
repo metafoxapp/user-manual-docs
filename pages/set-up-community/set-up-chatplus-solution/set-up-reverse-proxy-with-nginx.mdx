@@ -1,14 +1,14 @@
 ---
-title: Set up reverse proxy with NginX
+title: Set up reverse proxy with Nginx
 ---
 
-# Set up reverse proxy with NginX
+# Set up reverse proxy with Nginx
 
-Assume that you would like to set up Chatplus with 2 subdomains *chat.yourdomain.com* and *voip.yourdomain.com* . Here are NginX configurations for ChatPlus:
+Assume that you would like to set up Chatplus with 2 subdomains *chat.yourdomain.com* and *voip.yourdomain.com* . Here are Nginx configurations for ChatPlus:
 
 ### Chat
 
-Create a new NginX configuration file for ChatPlus, such as at `/etc/nginx/conf.d/chatplus.conf` and add the following content into the file. Then, save it.  
+Create a new Nginx configuration file for ChatPlus, such as at `/etc/nginx/conf.d/chatplus.conf` and add the following content into the file. Then, save it.
 ```nginx
 upstream chat_backend {
     server 127.0.0.1:3000;
@@ -47,7 +47,7 @@ server {
 
 
 ### Video **Bridge**
-Create a new NginX configuration file for Call/VoIP server, such as at `/etc/nginx/conf.d/voip.conf` and add the following content into the file. Then, save it.
+Create a new Nginx configuration file for Call/VoIP server, such as at `/etc/nginx/conf.d/voip.conf` and add the following content into the file. Then, save it.
 ```nginx
 upstream voip_backend {
     server 127.0.0.1:8443;
@@ -92,16 +92,16 @@ server {
 }
 ```
 
-Note that SSL configuration is not included in the above NginX configuration. You can set up SSL for your subdomains with your preferred method, such as with Certbot or with other SSL providers. After setting up SSL, you will need to update the above NginX configuration to listen on port 443 and add SSL related configuration such as `ssl_certificate` and `ssl_certificate_key` for each server block.
+Note that SSL configuration is not included in the above Nginx configuration. You can set up SSL for your subdomains with your preferred method, such as with Certbot or with other SSL providers. After setting up SSL, you will need to update the above Nginx configuration to listen on port 443 and add SSL related configuration such as `ssl_certificate` and `ssl_certificate_key` for each server block.
 
-After adding the above configuration, run following command to check if there is any error in NginX configuration. If there is no error, you will see "syntax is ok" and "test is successful" messages.
+After adding the above configuration, run following command to check if there is any error in Nginx configuration. If there is no error, you will see "syntax is ok" and "test is successful" messages.
 ```bash
 nginx -t
 ``` 
 
-Then, run following command to reload NginX configuration
+Then, run following command to reload Nginx configuration
 ```bash
 systemctl reload nginx
 ```
 
-Done! You have successfully set up NginX as reverse proxy for ChatPlus server. You can check if the reverse proxy is working properly by accessing to ChatPlus server with the subdomain URL, such as [https://chat.yourdomain.com](https://chat.yourdomain.com) and [https://voip.yourdomain.com](https://voip.yourdomain.com)
+Done! You have successfully set up Nginx as reverse proxy for ChatPlus server. You can check if the reverse proxy is working properly by accessing to ChatPlus server with the subdomain URL, such as [https://chat.yourdomain.com](https://chat.yourdomain.com) and [https://voip.yourdomain.com](https://voip.yourdomain.com)
