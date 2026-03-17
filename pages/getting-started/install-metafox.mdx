@@ -54,10 +54,14 @@ Many features require cron to work. Please configure two following crons. You ca
 
 Cron for Schedule runs ***every minute***
 
-/dev/null 2>&1\]\] >
+```bash
+php path_to_webroot/artisan schedule:run > /dev/null 2>&1
+```
 
 Cron for Queue runs ***every 5 minutes***
 
-/dev/null 2>&1\]\] >
+```bash
+php path_to_webroot/artisan queue:work --max-time=300 > /dev/null 2>&1
+```
 
 ### The MetaFox Installation is done. You can start to enjoy and go ahead to configure your MetaFox site.

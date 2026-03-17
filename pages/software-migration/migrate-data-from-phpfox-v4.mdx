@@ -46,33 +46,13 @@ A MetaFox cron job will handle the Import process. You can check the status of I
 
 Now, we will migrate user files (such as photos, music, videos, etc.) from phpFox V4 to MetaFox. You can copy the following folders from the server hosting phpFox V4 to the server hosting MetaFox:
 
-Folder path on server hosting phpFox V4
-
-Folder path on server hosting MetaFox
-
-PF.Base/file/pic
-
-storage/app/public/file/pic
-
-PF.Base/file/attachment
-
-storage/app/public/file/attachment
-
-PF.Base/file/video
-
-storage/app/public/file/video
-
-PF.Base/file/music
-
-storage/app/public/file/music
-
-PF.Site/Apps/core-comments/assets/images/stickers
-
-storage/app/public/PF.Site/Apps/core-comments/assets/images/stickers
-
-PF.Site/Apps/p-status-background/assets/images
-
-storage/app/public/PF.Site/Apps/p-status-background/assets/images
+- Folder path on server hosting phpFox V4 -> Folder path on server hosting MetaFox
+- PF.Base/file/pic -> storage/app/public/file/pic
+- PF.Base/file/attachment -> storage/app/public/file/attachment
+- PF.Base/file/video -> storage/app/public/file/video
+- PF.Base/file/music -> storage/app/public/file/music
+- PF.Site/Apps/core-comments/assets/images/stickers -> storage/app/public/PF.Site/Apps/core-comments/assets/images/stickers
+- PF.Site/Apps/p-status-background/assets/images -> storage/app/public/PF.Site/Apps/p-status-background/assets/images
 
 For files stored on external storage systems, such as Amazon S3, Digital Ocean Space, etc. , they will work on the MetaFox site seamlessly as the external storage configurations will be migrated to MetaFox automatically. There are no additional steps to migrate them.
 

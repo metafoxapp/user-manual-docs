@@ -1,14 +1,16 @@
 ---
-title: "Set up webserver with NginX"
+title: Set up web server with Nginx
 ---
 
-This article describes how to set up NginX web server for MetaFox site. In this article, we assume that you are already familiar with Linux server management and know how to use terminal, access SSH with root/super users privileges and set up necessary software such as NginX, PHP, MySQL/MariaDB, etc.
+# Set up web server with Nginx
+
+This article describes how to set up Nginx web server for MetaFox site. In this article, we assume that you are already familiar with Linux server management and know how to use terminal, access SSH with root/super users privileges and set up necessary software such as Nginx, PHP, MySQL/MariaDB, etc.
 
 You Need to 
 
-Below is the sample NginX configuration for MetaFox site. You can use this sample configuration to set up your NginX web server for MetaFox site. Please note that this is just a sample configuration and you may need to adjust it based on your specific server environment and requirements. You need to replace the placeholder values such as `<yourdomain.com>`, `<path to document root>`, `<fpm port>` with your actual values.
+Below is the sample Nginx configuration for MetaFox site. You can use this sample configuration to set up your Nginx web server for MetaFox site. Please note that this is just a sample configuration and you may need to adjust it based on your specific server environment and requirements. You need to replace the placeholder values such as `<yourdomain.com>`, `<path to document root>`, `<fpm port>` with your actual values.
 
-```
+```nginx
 server {
   server_name <yourdomain.com>;
 
