@@ -114,7 +114,7 @@ export const pageMap = [{
     name: "set-up-webserver-with-nginx",
     route: "/advanced-setups/set-up-webserver-with-nginx",
     frontMatter: {
-      "title": "Set up webserver with NginX"
+      "title": "Set up web server with Nginx"
     }
   }]
 }, {
@@ -516,12 +516,6 @@ export const pageMap = [{
       route: "/set-up-community/configure-appearances-layout-and-themes/enable-live-editor-mode",
       frontMatter: {
         "title": "Enable Live Editor mode"
-      }
-    }, {
-      name: "enforce-display-mode",
-      route: "/set-up-community/configure-appearances-layout-and-themes/enforce-display-mode",
-      frontMatter: {
-        "title": "Enforce Display Mode"
       }
     }, {
       name: "rebuild-web-frontend",
