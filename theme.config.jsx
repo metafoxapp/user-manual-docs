@@ -24,7 +24,7 @@ const config = {
           <span>
           Copyright {new Date().getFullYear()} © &nbsp;
               <a href="https://phpfox.com" target="_blank">
-            phpFox LLC
+            phpFox Corp
           </a>
           . All rights reserved.
         </span>
@@ -41,7 +41,7 @@ const config = {
   head: () => {
     React.useEffect(() => {
       TagManager.initialize({
-        gtmId: "GTM-WB52HRS",
+        gtmId: "GTM-NHRD5DBS",
       });
     }, [])
 
@@ -68,13 +68,12 @@ const config = {
     placeholder: 'Search documentation...',
   },
 
-  editLink: {
-    content: 'Edit this page →'
-  },
+  editLink: false,
 
   feedback: {
     content: 'Question? Give us feedback →',
-    labels: 'feedback'
+    labels: 'feedback',
+    useLink: () => 'https://clients.phpfox.com/submitticket.php?step=2&deptid=1'
   },
 
   darkMode: true,

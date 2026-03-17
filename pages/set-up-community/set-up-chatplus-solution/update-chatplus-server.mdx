@@ -6,8 +6,13 @@ title: Update ChatPlus server
 
 This guide will guide you to update ChatPlus server. 
 
-Assume that ChatPlus server has been set up at `*/var/www/chatplus/chat*` on your server. Let's log into your server with the SSH root account and run the following commands to update the ChatPlus server
+Assume that ChatPlus server has been set up in `/var/www/chatplus/chat` folder on your server. Let's log into your server with the SSH root account and run the following commands to update the ChatPlus server
 
-  
+```bash
+cd /var/www/chatplus/chat
+docker-compose pull
+docker-compose down
+docker-compose up -d
+```  
 
 Congratulation. You have just updated ChatPlus server!
