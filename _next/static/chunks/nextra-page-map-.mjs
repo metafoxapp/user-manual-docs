@@ -518,6 +518,12 @@ export const pageMap = [{
         "title": "Enable Live Editor mode"
       }
     }, {
+      name: "enforce-display-mode",
+      route: "/set-up-community/configure-appearances-layout-and-themes/enforce-display-mode",
+      frontMatter: {
+        "title": "Enforce Display Mode"
+      }
+    }, {
       name: "rebuild-web-frontend",
       route: "/set-up-community/configure-appearances-layout-and-themes/rebuild-web-frontend",
       frontMatter: {
