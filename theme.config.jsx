@@ -1,5 +1,6 @@
 import React from 'react'
 import TagManager from 'react-gtm-module'
+import { useConfig } from 'nextra-theme-docs'
 
 const config = {
   logo: <img src="/logo.png" alt="document" height="32px" width={112} />,
@@ -39,6 +40,12 @@ const config = {
   },
 
   head: () => {
+    const { frontMatter } = useConfig()
+    const title = frontMatter.title || 'phpFox User Manual'
+    const fullTitle = frontMatter.title 
+      ? `${frontMatter.title} – phpFox User Manual`
+      : 'phpFox User Manual'
+    
     React.useEffect(() => {
       TagManager.initialize({
         gtmId: "GTM-NHRD5DBS",
@@ -47,9 +54,10 @@ const config = {
 
     return (
         <>
+          <title>{fullTitle}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <meta name="description" content="phpFox User Manual and Documentation"/>
-          <meta property="og:title" content="phpFox User Manual"/>
+          <meta property="og:title" content={title}/>
           <meta property="og:description" content="Comprehensive user manual for phpFox social networking platform"/>
         </>
     )
