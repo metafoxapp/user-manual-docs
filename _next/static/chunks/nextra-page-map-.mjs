@@ -953,6 +953,12 @@ export const pageMap = [{
       frontMatter: {
         "title": "Enable Subscription on Registration"
       }
+    }, {
+      name: "how-subscription-works",
+      route: "/set-up-community/set-up-subscription/how-subscription-works",
+      frontMatter: {
+        "title": "How Subscription works"
+      }
     }]
   }, {
     name: "set-up-subscription",
