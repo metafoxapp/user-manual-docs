@@ -1,0 +1,78 @@
+---
+title: How Subscription works
+---
+
+# How Subscription works
+
+This article will help you understand the key settings that affect subscriptions as well as common use cases.
+
+## Settings that affect workflow
+
+### Site Settings
+
+The following site settings control the subscription workflow behavior:
+
+#### Default Downgraded User Role
+
+When a subscription expires or is canceled (either by the user or admin), if the package does not have "Default Package For Canceled or Expired Subscription" configured, the user will be reassigned to this role.
+
+#### Enable Subscription Packages
+
+Admin must enable this setting to use the subscription feature.
+
+#### Is a Subscription required in Registration?
+
+Forces users to select a package when creating an account. If the user selects a paid package, they must pay the invoice or choose another package (which can be free or paid). Users can only access your site features once the subscription is activated.
+
+#### Extra Days For Subscriptions Before They Expire Completely
+
+Number of extra days added to an invoice before it is marked as expired.
+
+### Package Settings
+
+The following package-level settings control individual subscription behavior:
+
+#### User Role On Success
+
+The user role that will be assigned when the subscription is activated.
+
+#### Packages that this package can be upgraded to
+
+Packages that users will see when their subscription is activated on the current package.
+
+#### Default Package For Canceled or Expired Subscription
+
+When a user subscription expires or is canceled (by user or admin), the system will check this setting first to downgrade to this package. This means creating a new activated subscription on the downgraded package. The downgraded package is typically the default free package.
+
+#### Available For User Roles
+
+Roles that can see this package.
+
+## Common Use Cases
+
+### Requiring Package Selection During Registration
+
+When admins want users to select a package during account creation:
+
+1. Enable the site setting "Is a Subscription required in Registration?" at:
+   - Navigate to: [AdminCP > App Settings > Subscription > Settings](https://your_domain/admincp/app/subscription/setting)
+
+2. When creating packages, you need to:
+   - Enable the setting "Enable on Registration?"
+   - Select the "Guest User" role to allow users without accounts to see the package
+
+3. **Recommendation**: If you set up a default free package that allows users to try before buying other packages, you should have an intermediate role. This role will be the default role after users create their account. Please update the "Role on Registration" setting with the intermediate role at [https://your_domain/admincp/user/setting/registration](https://your_domain/admincp/user/setting/registration).
+
+   This setup avoids deadlock situations. For example:
+   - Both free and paid packages have "Guest User" as the visible role
+   - Free package upgrades account to "Register User"
+   - Paid package upgrades user role to "VIP"
+   - If a user selects a paid package during account creation, they cannot see the free package because the free package's visible role does not include "Register User"
+   - This creates a deadlock where they cannot go back to select the free package
+
+   If you have any questions, please create a ticket at [https://clients.phpfox.com](https://clients.phpfox.com).
+
+## Related Documentation
+
+- [Create Subscription packages](./create-subscription-packages)
+- [Enable Subscription on Registration](./enable-subscription-on-registration)
