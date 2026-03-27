@@ -638,6 +638,12 @@ export const pageMap = [{
     children: [{
       data: set_up_community_set_up_advertise_meta
     }, {
+      name: "configure-ad-placement-for-sponsored-items",
+      route: "/set-up-community/set-up-advertise/configure-ad-placement-for-sponsored-items",
+      frontMatter: {
+        "title": "Configure ad placement for sponsored item"
+      }
+    }, {
       name: "create-advertise-placements",
       route: "/set-up-community/set-up-advertise/create-advertise-placements",
       frontMatter: {
