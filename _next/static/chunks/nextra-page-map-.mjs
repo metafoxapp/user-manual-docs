@@ -715,6 +715,12 @@ export const pageMap = [{
       }
     }]
   }, {
+    name: "set-up-countries",
+    route: "/set-up-community/set-up-countries",
+    frontMatter: {
+      "title": "Set up countries"
+    }
+  }, {
     name: "set-up-languages",
     route: "/set-up-community/set-up-languages",
     children: [{
