@@ -14,4 +14,5 @@ export default {
   "set-up-subscription": "Set up Subscription",
   "set-up-menus": "Set up Menus",
   "set-up-contact-form": "Set up Contact Form",
+  "set-up-countries": "Set up Countries",
 }
