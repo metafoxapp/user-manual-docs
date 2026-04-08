@@ -601,6 +601,12 @@ export const pageMap = [{
       frontMatter: {
         "title": "Add and edit Custom Fields"
       }
+    }, {
+      name: "force-user-basic-info-on-registration",
+      route: "/set-up-community/configure-user-settings/force-user-basic-info-on-registration",
+      frontMatter: {
+        "title": "Force user basic info on registration"
+      }
     }]
   }, {
     name: "configure-user-settings",
