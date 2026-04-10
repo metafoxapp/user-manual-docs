@@ -15,4 +15,5 @@ export default {
   "set-up-menus": "Set up Menus",
   "set-up-contact-form": "Set up Contact Form",
   "set-up-countries": "Set up Countries",
+  "set-up-currencies": "Set up Currencies",
 }
