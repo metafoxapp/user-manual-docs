@@ -727,6 +727,12 @@ export const pageMap = [{
       "title": "Set up countries"
     }
   }, {
+    name: "set-up-currencies",
+    route: "/set-up-community/set-up-currencies",
+    frontMatter: {
+      "title": "Set up currencies"
+    }
+  }, {
     name: "set-up-languages",
     route: "/set-up-community/set-up-languages",
     children: [{
