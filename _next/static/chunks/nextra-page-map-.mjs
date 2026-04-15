@@ -669,6 +669,12 @@ export const pageMap = [{
       "title": "Set up Advertise"
     }
   }, {
+    name: "set-up-backup",
+    route: "/set-up-community/set-up-backup",
+    frontMatter: {
+      "title": "Set up backup"
+    }
+  }, {
     name: "set-up-chatplus-solution",
     route: "/set-up-community/set-up-chatplus-solution",
     children: [{
