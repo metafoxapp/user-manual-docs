@@ -1,0 +1,60 @@
+---
+title: Set up in-app purchases
+---
+
+# Set up in-app purchases
+
+In this article, you will learn how to set up in-app purchases for your phpFox V5 platform. In-app purchases allow users to buy subscriptions directly within your app. By configuring in-app purchases correctly, you can provide a seamless purchasing experience for your users and generate revenue for your community.
+
+To set up in-app purchases, you first need to install the In-App Purchases app from the phpFox App Store.
+
+## Configure the In-App Purchases app
+
+1. Log in to your Admin Control Panel (AdminCP) with an administrator account.
+2. Navigate to: **Apps** > **App Settings** > **In-App Purchases** > **Settings**.
+3. In the In-App Purchases settings, you will see options to configure your in-app purchase settings for iOS an Android apps.
+
+
+### Set up In-app purchase for iOS app
+
+#### Apple App Store Connect
+You must Enabling Server-to-Server Notifications, to work with Auto-renew subscription package on iOS App version. You can refer to [the official Apple documentation](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/enter-server-urls-for-app-store-server-notifications) for more details.
+
+On the Apple App Store Connect, you need to add the following URL in the **Subscription Status URL** field: https://[yourdomain.com]/api/v1/in-app-purchase/callback/ios
+
+To generate keys for in-app purchases, you can follow the instructions provided in this [official Apple documentation](https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/generate-keys-for-in-app-purchases/). 
+
+#### Configure iOS Settings in AdminCP
+1. Log in to your Admin Control Panel (AdminCP) with an administrator account.
+2. Navigate to: **Apps** > **App Settings** > **In-App Purchases** > **Settings**.
+3. In the In-App Purchases settings, you will see options to configure your in-app purchase settings for iOS:
+    - **Enable In-App Purchases for iOS**: Toggle this option to enable or disable in-app purchases on iOS app.
+    - **Apple App ID**: Enter your Apple App ID to connect your iOS app with the in-app purchase system.
+    - **Apple Issuer ID**: Enter your Apple Issuer ID for authentication purposes.
+    - **Apple Key ID**: Enter your Apple Key ID to enable secure communication between your app and Apple's servers.
+    - **Apple Private Key**: Upload your Apple Private Key file to complete the setup for iOS in-app purchases.
+    - **Apple Bundle ID**: Enter your Apple Bundle ID to identify your app for in-app purchases.
+
+### Set up In-app purchase for Android app
+
+#### Set up in-app purchases on Google Play Console
+To set up in-app purchases for your Android app, you need to configure your products in the Google Play Console. 
+
+In order to support recurring subscriptions, you must configure Real-time developer notifications on your Google Cloud Console and Google Play Console, please follow step-by-step on this (link)[https://developer.android.com/google/play/billing/getting-ready#configure-rtdn] to grant permissions and create a new "Topic" in Google Cloud Console (Pub/Sub). 
+
+You also need to create a  "Subscription" with delivery type is "Push" and add https://your_domain_here/api/v1/in-app-purchase/callback/android to **Endpoint URL**.
+
+#### Configure Android Settings in Admin
+1. Log in to your Admin Control Panel (AdminCP) with an administrator account.
+2. Navigate to: **Apps** > **App Settings** > **In-App Purchases** > **Settings**.
+3. In the In-App Purchases settings, you will see options to configure your in-app purchase settings for Android:
+    - **Enable In-App Purchases for Android**: Toggle this option to enable or disable in-app purchases on Android app.
+    - **Google Package Name**: Enter your Google Package Name to connect your Android app with the in-app purchase system.
+
+
+### Note
+
+- Mobile apps (iOS and Android) must be rebuilt to enable in-app purchases.
+
+
+Done! You have successfully set up in-app purchases for your phpFox V5 platform.
