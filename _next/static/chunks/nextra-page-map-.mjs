@@ -854,6 +854,12 @@ export const pageMap = [{
     name: "set-up-menus",
     route: "/set-up-community/set-up-menus",
     children: [{
+      name: "manage-menu-items",
+      route: "/set-up-community/set-up-menus/manage-menu-items",
+      frontMatter: {
+        "title": "Manage Menu Items"
+      }
+    }, {
       name: "order-profile-menu",
       route: "/set-up-community/set-up-menus/order-profile-menu",
       frontMatter: {
