@@ -500,6 +500,12 @@ export const pageMap = [{
     children: [{
       data: set_up_community_configure_appearances_layout_and_themes_meta
     }, {
+      name: "add-block-to-all-pages",
+      route: "/set-up-community/configure-appearances-layout-and-themes/add-block-to-all-pages",
+      frontMatter: {
+        "title": "Add Block to All Pages with Layout Editor"
+      }
+    }, {
       name: "add-google-adsense-block",
       route: "/set-up-community/configure-appearances-layout-and-themes/add-google-adsense-block",
       frontMatter: {
