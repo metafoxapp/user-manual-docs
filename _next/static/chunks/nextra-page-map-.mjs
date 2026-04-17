@@ -745,6 +745,12 @@ export const pageMap = [{
       "title": "Set up currencies"
     }
   }, {
+    name: "set-up-in-app-purchases",
+    route: "/set-up-community/set-up-in-app-purchases",
+    frontMatter: {
+      "title": "Set up in-app purchases"
+    }
+  }, {
     name: "set-up-languages",
     route: "/set-up-community/set-up-languages",
     children: [{
