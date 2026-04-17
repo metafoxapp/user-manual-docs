@@ -17,5 +17,5 @@ export default {
   "set-up-countries": "Set up Countries",
   "set-up-currencies": "Set up Currencies",
   "set-up-backup": "Set up Backup",
-  "set-up-in-app-purchase": "Set up In-App Purchase",
+  "set-up-in-app-purchases": "Set up In-App Purchases",
 }
