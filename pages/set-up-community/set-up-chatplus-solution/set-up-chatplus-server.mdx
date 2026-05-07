@@ -27,15 +27,101 @@ Then, let's start setting up ChatPlus server
 ## Set up Chat
 
 -   Create main folder for Chat, such as at `/var/www/chatplus/chat`
--   Go to the main folder for Chat, run following command to download the `docker-compose.yml` file and `chatplus.env`
+-   Go to the main folder for Chat, create the `docker-compose.yml` file and `chatplus.env` as below:
 
--   After the command runs completely, you will see that 2 files are downloaded into the folder: `docker-compose.yaml` and `chatplus.env` .
-    -   If you use another custom port instead of the default port 3000, you will need to update port custom port in the `docker-compose.yaml`
-    -   Open `chatplus.env` and update environment variables for Chat as below. Then, save it.
+docker-compose.yml
+```
+services:
+  
+  chatplus:
+    image: foxsystem/metafox-chatplus:latest
+    command: >
+      bash -c
+        "for i in `seq 1 30`; do
+          node main.js &&
+          s=$$? && break || s=$$?;
+          echo \"Tried $$i times. Waiting 5 secs...\";
+          sleep 5;
+        done; (exit $$s)"
+    restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads
+    env_file:
+      - ./.env
+    environment:
+      - MONGO_OPLOG_URL=mongodb://chatplusdb:27017/local
+    depends_on:
+      - chatplusdb
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    ports:
+      - 3000:3000
+    networks:
+      - "chatplus-tier"
+
+  chatplusdb:
+    image: mongo:4.4
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+    command: mongod --oplogSize 128 --replSet rs0 --storageEngine=wiredTiger
+    networks:
+      - "chatplus-tier"
+
+  chatplusdb-init-replica:
+    image: mongo:4.4
+    command: >
+      bash -c
+        "for i in `seq 1 30`; do
+          mongo chatplusdb/rocketchat --eval \"
+            rs.initiate({
+              _id: 'rs0',
+              members: [ { _id: 0, host: 'localhost:27017' } ]})\" &&
+          s=$$? && break || s=$$?;
+          echo \"Tried $$i times. Waiting 5 secs...\";
+          sleep 5;
+        done; (exit $$s)"
+    depends_on:
+      - chatplusdb
+    networks:
+      - "chatplus-tier"
+networks:
+  chatplus-tier:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1300
+
+```
+
+chatplus.env
+```
+# ChatPlus server environment variables
+# Please update values for these variables before starting ChatPlus server
+
+PORT=3000
+ROOT_URL=http://localhost:3000
+MONGO_URL=mongodb://chatplusdb:27017/rocketchat
+MONGO_OPLOG_URL=mongodb://chatplusdb:27017/local
+MAIL_URL=smtp://[ chatplus_service_smtp_email ]:[ chatplus_service_smtp_password ]@[ chatplus_service_smtp_host ]:[ chatplus_service_smtp_port ]
+ADMIN_USERNAME=[ chatplus_service_admin_user ]
+ADMIN_PASSWORD=[ chatplus_service_admin_password ]
+ADMIN_EMAIL=[ chatplus_service_admin_email ]
+SECRET_CODE=[ chatplus_service_secret_code ]
+NODE_ENV=production
+METAFOX_LICENSE_ID=[ metafox_license_key ]
+METAFOX_LICENSE_KEY=[ metafox_license_private_key ]
+
+```
+
+- If you use another custom port instead of the default port 3000, you will need to update port custom port in the `docker-compose.yml`
+
+- Update environment variables for Chat by replacing the phrases in square brackets [ ] by respective value. Please make sure to update the SECRET_CODE variable with a random string, which will be used to connect ChatPlus server with your MetaFox site and should be kept secret.
 
 #### Start Chat server
 
 -   Run following command to download/update docker images and run docker containers
+
 ```bash
 cd /var/www/chatplus/chat
 docker-compose pull
