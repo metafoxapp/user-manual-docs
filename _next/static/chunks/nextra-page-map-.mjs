@@ -14,6 +14,7 @@ import set_up_community_configure_general_and_site_settings_meta from "../../../
 import set_up_community_configure_user_settings_meta from "../../../pages/set-up-community/configure-user-settings/_meta.js";
 import set_up_community_manage_apps_meta from "../../../pages/set-up-community/manage-apps/_meta.js";
 import set_up_community_set_up_advertise_meta from "../../../pages/set-up-community/set-up-advertise/_meta.js";
+import set_up_community_set_up_authentication_meta from "../../../pages/set-up-community/set-up-authentication/_meta.js";
 import set_up_community_set_up_chatplus_solution_meta from "../../../pages/set-up-community/set-up-chatplus-solution/_meta.js";
 import set_up_community_set_up_languages_meta from "../../../pages/set-up-community/set-up-languages/_meta.js";
 import set_up_community_set_up_live_streaming_solution_meta from "../../../pages/set-up-community/set-up-live-streaming-solution/_meta.js";
@@ -446,12 +447,6 @@ export const pageMap = [{
     frontMatter: {
       "title": "MetaFox 5.2.2"
     }
-  }, {
-    name: "metafox-523",
-    route: "/release-notes/metafox-523",
-    frontMatter: {
-      "title": "MetaFox 5.2.3"
-    }
   }]
 }, {
   name: "release-notes",
@@ -505,12 +500,6 @@ export const pageMap = [{
     route: "/set-up-community/configure-appearances-layout-and-themes",
     children: [{
       data: set_up_community_configure_appearances_layout_and_themes_meta
-    }, {
-      name: "add-block-to-all-pages",
-      route: "/set-up-community/configure-appearances-layout-and-themes/add-block-to-all-pages",
-      frontMatter: {
-        "title": "Add Block to All Pages with Layout Editor"
-      }
     }, {
       name: "add-google-adsense-block",
       route: "/set-up-community/configure-appearances-layout-and-themes/add-google-adsense-block",
@@ -613,12 +602,6 @@ export const pageMap = [{
       frontMatter: {
         "title": "Add and edit Custom Fields"
       }
-    }, {
-      name: "force-user-basic-info-on-registration",
-      route: "/set-up-community/configure-user-settings/force-user-basic-info-on-registration",
-      frontMatter: {
-        "title": "Force user basic info on registration"
-      }
     }]
   }, {
     name: "configure-user-settings",
@@ -656,12 +639,6 @@ export const pageMap = [{
     children: [{
       data: set_up_community_set_up_advertise_meta
     }, {
-      name: "configure-ad-placement-for-sponsored-items",
-      route: "/set-up-community/set-up-advertise/configure-ad-placement-for-sponsored-items",
-      frontMatter: {
-        "title": "Configure ad placement for sponsored item"
-      }
-    }, {
       name: "create-advertise-placements",
       route: "/set-up-community/set-up-advertise/create-advertise-placements",
       frontMatter: {
@@ -681,10 +658,23 @@ export const pageMap = [{
       "title": "Set up Advertise"
     }
   }, {
-    name: "set-up-backup",
-    route: "/set-up-community/set-up-backup",
+    name: "set-up-authentication",
+    route: "/set-up-community/set-up-authentication",
+    children: [{
+      data: set_up_community_set_up_authentication_meta
+    }, {
+      name: "set-up-passkey",
+      route: "/set-up-community/set-up-authentication/set-up-passkey",
+      frontMatter: {
+        "title": "Set up Passkey",
+        "description": "A friendly guide for site admins to understand, enable, test, and support passkeys."
+      }
+    }]
+  }, {
+    name: "set-up-authentication",
+    route: "/set-up-community/set-up-authentication",
     frontMatter: {
-      "title": "Set up backup"
+      "title": "Set up Authentication"
     }
   }, {
     name: "set-up-chatplus-solution",
@@ -738,24 +728,6 @@ export const pageMap = [{
         "title": "Set up staff emails for Contact Us form"
       }
     }]
-  }, {
-    name: "set-up-countries",
-    route: "/set-up-community/set-up-countries",
-    frontMatter: {
-      "title": "Set up countries"
-    }
-  }, {
-    name: "set-up-currencies",
-    route: "/set-up-community/set-up-currencies",
-    frontMatter: {
-      "title": "Set up currencies"
-    }
-  }, {
-    name: "set-up-in-app-purchases",
-    route: "/set-up-community/set-up-in-app-purchases",
-    frontMatter: {
-      "title": "Set up in-app purchases"
-    }
   }, {
     name: "set-up-languages",
     route: "/set-up-community/set-up-languages",
@@ -872,12 +844,6 @@ export const pageMap = [{
     name: "set-up-menus",
     route: "/set-up-community/set-up-menus",
     children: [{
-      name: "manage-menu-items",
-      route: "/set-up-community/set-up-menus/manage-menu-items",
-      frontMatter: {
-        "title": "Manage Menu Items"
-      }
-    }, {
       name: "order-profile-menu",
       route: "/set-up-community/set-up-menus/order-profile-menu",
       frontMatter: {
