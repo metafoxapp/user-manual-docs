@@ -112,6 +112,12 @@ export const pageMap = [{
       "title": "Set up Google reCaptcha"
     }
   }, {
+    name: "set-up-server-with-octane",
+    route: "/advanced-setups/set-up-server-with-octane",
+    frontMatter: {
+      "title": "Set up server with Laravel Octane"
+    }
+  }, {
     name: "set-up-webserver-with-nginx",
     route: "/advanced-setups/set-up-webserver-with-nginx",
     frontMatter: {
