@@ -28,4 +28,5 @@ export default {
   "metafox-523": "MetaFox 5.2.3",
   "metafox-524": "MetaFox 5.2.4",
   "metafox-525": "MetaFox 5.2.5",
+  "metafox-526": "MetaFox 5.2.6",
 }
