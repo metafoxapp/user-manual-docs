@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9811],{35104:(_,e,t)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/set-up-community/set-up-payment-gateways/_meta",function(){return t(61129)}])},61129:(_,e,t)=>{"use strict";t.r(e),t.d(e,{__N_SSG:()=>u,default:()=>n});var u=!0;let n=()=>null}},_=>{_.O(0,[636,6593,8792],()=>_(_.s=35104)),_N_E=_.O()}]);

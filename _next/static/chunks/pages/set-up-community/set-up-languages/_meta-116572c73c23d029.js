@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8088],{63460:(_,u,e)=>{"use strict";e.r(u),e.d(u,{__N_SSG:()=>n,default:()=>s});var n=!0;let s=()=>null},87348:(_,u,e)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/set-up-community/set-up-languages/_meta",function(){return e(63460)}])}},_=>{_.O(0,[636,6593,8792],()=>_(_.s=87348)),_N_E=_.O()}]);
