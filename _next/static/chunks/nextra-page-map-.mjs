@@ -477,6 +477,12 @@ export const pageMap = [{
     frontMatter: {
       "title": "MetaFox 5.2.6"
     }
+  }, {
+    name: "metafox-527",
+    route: "/release-notes/metafox-527",
+    frontMatter: {
+      "title": "MetaFox 5.2.7"
+    }
   }]
 }, {
   name: "release-notes",
